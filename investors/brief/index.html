@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MiTL Studio — Confidential Investment Overview</title>
+<link rel="canonical" href="https://mitl.studio/investors/brief">
+<meta name="description" content="MiTL Studio — Confidential Investment Overview. The Future of Live Storytelling. $2.5M Seed Round.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="MiTL Studio — Confidential Investment Overview">
+<meta property="og:description" content="The Future of Live Storytelling. $2.5M Seed Round at $12.5M Pre-Money.">
+<meta property="og:url" content="https://mitl.studio/investors/brief">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MiTL Studio">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@keithbilous">
+<meta name="twitter:title" content="MiTL Studio — Confidential Investment Overview">
+<meta name="twitter:description" content="The Future of Live Storytelling. $2.5M Seed Round at $12.5M Pre-Money.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ── Reset & Base ── */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #faf9f6;
+  color: #1a1a1a;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ── Typography ── */
+.serif { font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; }
+.mono { font-family: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace; }
+
+/* ── Section Label ── */
+.section-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 1rem;
+}
+
+.section-rule {
+  width: 48px;
+  height: 2px;
+  background: #1a1a1a;
+  margin: 1.25rem 0 2rem;
+}
+
+/* ── Container ── */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ── Navigation ── */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(250, 249, 246, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  transform: translateY(-100%);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  height: 72px;
+}
+.nav.visible { transform: translateY(0); }
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-brand {
+  font-family: 'Playfair Display', serif;
+  font-weight: 800;
+  font-size: 1.15rem;
+  color: #1a1a1a;
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+.nav-brand span { font-style: italic; }
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2.25rem;
+}
+.nav-links a {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.nav-links a:hover { color: #666; }
+.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.75rem;
+  background: #1a1a1a;
+  color: #fff !important;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.nav-cta:hover { background: #333 !important; color: #fff !important; }
+
+/* ── Hero ── */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  position: relative;
+}
+.hero-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 2.5rem;
+}
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(4rem, 10vw, 9rem);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  color: #1a1a1a;
+  margin-bottom: 1.5rem;
+}
+.hero-subtitle {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-weight: 400;
+  font-style: italic;
+  color: #666;
+  margin-bottom: 4rem;
+}
+.hero-metrics {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 5rem;
+}
+.hero-metric {
+  text-align: center;
+}
+.hero-metric-value {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.75rem;
+}
+.hero-metric-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #999;
+  max-width: 240px;
+}
+.scroll-cta {
+  position: absolute;
+  bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: #bbb;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  animation: float 2.5s ease-in-out infinite;
+}
+.scroll-cta svg {
+  width: 16px;
+  height: 16px;
+  stroke: #bbb;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+
+/* ── Sections ── */
+.section { padding: 7rem 0; }
+.section-centered { text-align: center; }
+
+.section-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #1a1a1a;
+}
+
+/* ── Opportunity ── */
+.opportunity-content {
+  max-width: 720px;
+}
+.opportunity-body {
+  font-size: 1.15rem;
+  line-height: 1.75;
+  color: #666;
+  margin-top: 2rem;
+}
+.opportunity-key {
+  font-size: 1.25rem;
+  line-height: 1.65;
+  color: #1a1a1a;
+  margin-top: 2rem;
+  font-weight: 400;
+}
+.opportunity-key strong {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* ── Revenue Cards ── */
+.revenue-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3.5rem;
+}
+.revenue-card {
+  border: 1px solid #e5e3de;
+  padding: 2.5rem 2rem;
+  background: #fff;
+  transition: border-color 0.2s ease;
+}
+.revenue-card:hover { border-color: #ccc; }
+.engine-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 1rem;
+}
+.engine-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  line-height: 1.15;
+  margin-bottom: 0.75rem;
+}
+.engine-price {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 1.5rem;
+}
+.engine-bullets {
+  list-style: none;
+  padding: 0;
+}
+.engine-bullets li {
+  position: relative;
+  padding-left: 1rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+}
+.engine-bullets li::before {
+  content: '–';
+  position: absolute;
+  left: 0;
+  color: #999;
+}
+
+/* ── Numbers (Dark Section) ── */
+.numbers-section {
+  background: #111;
+  color: #fff;
+  padding: 7rem 0;
+}
+.numbers-section .section-label { color: #777; }
+.numbers-section .section-heading { color: #fff; }
+.numbers-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 3.5rem;
+}
+.numbers-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.number-item {}
+.number-value {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+.number-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  color: #999;
+  line-height: 1.4;
+}
+.numbers-caption {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #333;
+  font-size: 1rem;
+  font-style: italic;
+  color: #bbb;
+  line-height: 1.65;
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ── Growth Table ── */
+.growth-table-wrap {
+  margin-top: 3rem;
+  overflow-x: auto;
+}
+.growth-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+.growth-table thead th {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #999;
+  text-align: left;
+  padding: 1rem 1rem 1rem 0;
+  border-bottom: 2px solid #1a1a1a;
+}
+.growth-table tbody td {
+  padding: 1rem 1rem 1rem 0;
+  border-bottom: 1px solid #e5e3de;
+  color: #444;
+  vertical-align: top;
+}
+.growth-table tbody td:first-child {
+  font-weight: 500;
+  color: #1a1a1a;
+}
+.growth-table tbody td.mono-cell {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+/* ── Founder ── */
+.founder-section {
+  padding: 7rem 0;
+  background: #f5f4f0;
+}
+.founder-header {
+  max-width: 600px;
+  margin-bottom: 3rem;
+}
+.founder-name {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  color: #1a1a1a;
+  line-height: 1.1;
+}
+.founder-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.35rem;
+  font-weight: 400;
+  font-style: italic;
+  color: #888;
+  margin-top: 0.5rem;
+}
+.founder-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+.founder-stat {}
+.founder-stat-value {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 0.35rem;
+  line-height: 1.2;
+}
+.founder-stat-desc {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.55;
+}
+
+/* ── Investment Terms ── */
+.terms-table {
+  max-width: 800px;
+  margin: 3rem auto 0;
+}
+.terms-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid #e5e3de;
+}
+.terms-label {
+  font-size: 1rem;
+  color: #555;
+}
+.terms-value {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  text-align: right;
+}
+
+/* ── Use of Funds ── */
+.funds-section {
+  padding: 5rem 0 7rem;
+}
+.funds-chart {
+  max-width: 800px;
+  margin: 3rem auto 0;
+}
+.fund-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.25rem;
+  gap: 1rem;
+}
+.fund-label {
+  min-width: 200px;
+  font-size: 0.9rem;
+  color: #444;
+  text-align: right;
+}
+.fund-bar-wrap {
+  flex: 1;
+  height: 6px;
+  background: #eee;
+  position: relative;
+}
+.fund-bar {
+  height: 100%;
+  background: #1a1a1a;
+  transition: width 0.8s ease;
+}
+.fund-pct {
+  min-width: 48px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+/* ── Team ── */
+.team-section {
+  padding: 7rem 0;
+  background: #faf9f6;
+}
+.team-subtitle {
+  font-size: 1.1rem;
+  color: #888;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+.team-group-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 1.5rem;
+}
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+.team-member {
+  text-align: center;
+}
+.team-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 0.25rem;
+}
+.team-role {
+  font-size: 0.8rem;
+  color: #888;
+}
+.team-divider {
+  height: 1px;
+  background: #e5e3de;
+  margin: 3rem 0;
+}
+.advisory-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+/* ── Thesis ── */
+.thesis-section {
+  padding: 7rem 0;
+}
+.thesis-list {
+  max-width: 800px;
+  margin: 3rem auto 0;
+}
+.thesis-item {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  align-items: flex-start;
+}
+.thesis-num {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #ccc;
+  min-width: 28px;
+  padding-top: 0.3rem;
+}
+.thesis-content {}
+.thesis-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+.thesis-desc {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.65;
+}
+
+/* ── CTA ── */
+.cta-section {
+  padding: 7rem 0;
+  text-align: center;
+  background: #f5f4f0;
+  border-top: 1px solid #e5e3de;
+}
+.cta-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: #1a1a1a;
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+}
+.cta-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.65;
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+}
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2.5rem;
+  background: #1a1a1a;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid #1a1a1a;
+  transition: all 0.2s ease;
+  min-width: 200px;
+}
+.btn-primary:hover { background: #333; border-color: #333; }
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2.5rem;
+  background: #fff;
+  color: #1a1a1a;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid #1a1a1a;
+  transition: all 0.2s ease;
+  min-width: 200px;
+}
+.btn-secondary:hover { background: #1a1a1a; color: #fff; }
+
+/* ── Footer ── */
+.footer {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: #f0efeb;
+  border-top: 1px solid #e5e3de;
+}
+.footer-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 0.75rem;
+}
+.footer-legal {
+  font-size: 0.8rem;
+  color: #999;
+  line-height: 1.8;
+}
+.footer-legal a {
+  color: #888;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.footer-legal a:hover { color: #1a1a1a; }
+
+/* ── Fade-in Animations ── */
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .revenue-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .numbers-grid { grid-template-columns: repeat(2, 1fr); }
+  .numbers-grid-2 { grid-template-columns: repeat(2, 1fr); }
+  .founder-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+  .team-grid { grid-template-columns: repeat(3, 1fr); }
+  .advisory-grid { grid-template-columns: repeat(2, 1fr); }
+  .hero-metrics { gap: 2.5rem; }
+  .fund-label { min-width: 150px; font-size: 0.8rem; }
+}
+@media (max-width: 600px) {
+  .nav-links a:not(.nav-cta) { display: none; }
+  .hero-metrics { flex-direction: column; gap: 2.5rem; }
+  .numbers-grid { grid-template-columns: 1fr 1fr; }
+  .numbers-grid-2 { grid-template-columns: 1fr 1fr; }
+  .founder-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .team-grid { grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+  .advisory-grid { grid-template-columns: repeat(2, 1fr); }
+  .terms-row { flex-direction: column; gap: 0.25rem; }
+  .terms-value { text-align: left; }
+  .section { padding: 5rem 0; }
+  .fund-label { min-width: 120px; font-size: 0.75rem; }
+  .cta-buttons { flex-direction: column; align-items: center; }
+  .thesis-item { gap: 1rem; }
+  .growth-table { font-size: 0.8rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── Navigation ── -->
+<nav class="nav" id="mainNav">
+  <div class="nav-inner">
+    <a href="#" class="nav-brand">MiTL<span>.</span> Studio</a>
+    <div class="nav-links">
+      <a href="#opportunity">Opportunity</a>
+      <a href="#revenue">Revenue</a>
+      <a href="#numbers">Numbers</a>
+      <a href="#the-round">The Round</a>
+      <a href="https://ro.am/keith" class="nav-cta" target="_blank" rel="noopener">Let's Talk</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ── Hero ── -->
+<section class="hero" id="hero">
+  <p class="hero-label">CONFIDENTIAL INVESTMENT OVERVIEW</p>
+  <h1 class="hero-title serif">MiTL Studio</h1>
+  <p class="hero-subtitle serif">The Future of Live Storytelling</p>
+  <div class="hero-metrics">
+    <div class="hero-metric">
+      <div class="hero-metric-value mono">$4.2M</div>
+      <div class="hero-metric-label">PROJECTED ARR BY MONTH 24</div>
+    </div>
+    <div class="hero-metric">
+      <div class="hero-metric-value mono">$2.5M</div>
+      <div class="hero-metric-label">SEED ROUND AT $12.5M PRE-MONEY</div>
+    </div>
+    <div class="hero-metric">
+      <div class="hero-metric-value mono">1,000+</div>
+      <div class="hero-metric-label">LIVE EPISODES PRODUCED BY FOUNDER</div>
+    </div>
+  </div>
+  <div class="scroll-cta">
+    SCROLL TO EXPLORE
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+  </div>
+</section>
+
+<!-- ── The Opportunity ── -->
+<section class="section" id="opportunity">
+  <div class="container">
+    <div class="opportunity-content fade-in">
+      <p class="section-label">THE OPPORTUNITY</p>
+      <div class="section-rule"></div>
+      <h2 class="section-heading serif">Building the infrastructure for live storytelling at scale.</h2>
+      <p class="opportunity-body">MiTL Studio produces daily live shows, powers them with ConversationOS — our proprietary AI-enhanced technology platform — and licenses our format and character IP to third parties globally.</p>
+      <p class="opportunity-key">We're not pitching an idea. We have revenue, customers, a proven founder, and a clear path to <strong>$4.2M&nbsp;&nbsp;ARR</strong> in 24 months.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── Revenue Model ── -->
+<section class="section" id="revenue">
+  <div class="container">
+    <div class="section-centered fade-in">
+      <p class="section-label">REVENUE MODEL</p>
+      <h2 class="section-heading serif">Three Revenue Engines</h2>
+    </div>
+    <div class="revenue-grid">
+      <div class="revenue-card fade-in">
+        <p class="engine-label">ENGINE 01</p>
+        <h3 class="engine-title serif">The Network</h3>
+        <p class="engine-price">$2K/mo per member</p>
+        <ul class="engine-bullets">
+          <li>B2B daily live storytelling subscriptions</li>
+          <li>2 → 103 members in 24 months</li>
+          <li>~60% gross margin</li>
+        </ul>
+      </div>
+      <div class="revenue-card fade-in">
+        <p class="engine-label">ENGINE 02</p>
+        <h3 class="engine-title serif">ConversationOS</h3>
+        <p class="engine-price">$200/mo per subscriber</p>
+        <ul class="engine-bullets">
+          <li>Proprietary AI-enhanced storytelling platform</li>
+          <li>Launching July 2027, 20% MoM growth to ~671 subscribers by Month 24</li>
+          <li>~90–95% SaaS gross margins</li>
+        </ul>
+      </div>
+      <div class="revenue-card fade-in">
+        <p class="engine-label">ENGINE 03</p>
+        <h3 class="engine-title serif">Character &amp; Format Licensing</h3>
+        <p class="engine-price">$15K upfront + $5K/mo</p>
+        <ul class="engine-bullets">
+          <li>Licensing show format and character IP globally</li>
+          <li>2 active licensees by Month 24</li>
+          <li>~65–70% gross margin</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Financial Projections (Dark) ── -->
+<section class="numbers-section" id="numbers">
+  <div class="container">
+    <div class="section-centered fade-in">
+      <p class="section-label">FINANCIAL PROJECTIONS</p>
+      <h2 class="section-heading serif">The Numbers</h2>
+    </div>
+    <div class="numbers-grid fade-in">
+      <div class="number-item">
+        <div class="number-value">$349,823</div>
+        <div class="number-label">MRR at Month 24</div>
+      </div>
+      <div class="number-item">
+        <div class="number-value">$4.2M</div>
+        <div class="number-label">ARR at Month 24</div>
+      </div>
+      <div class="number-item">
+        <div class="number-value">$3.13M</div>
+        <div class="number-label">24-Month Total Revenue</div>
+      </div>
+      <div class="number-item">
+        <div class="number-value">$4.16M</div>
+        <div class="number-label">24-Month Total Expenses</div>
+      </div>
+    </div>
+    <div class="numbers-grid-2 fade-in">
+      <div class="number-item">
+        <div class="number-value">$1.46M</div>
+        <div class="number-label">Ending Cash Position</div>
+      </div>
+      <div class="number-item">
+        <div class="number-value">65–70%</div>
+        <div class="number-label">Blended Gross Margin</div>
+      </div>
+    </div>
+    <p class="numbers-caption fade-in">Cash flow positive at Month 18. $1.46M ending cash at Month 24. Capital deployed into growth — the $2.5M raise funds the company to self-sufficiency.</p>
+  </div>
+</section>
+
+<!-- ── Growth Trajectory ── -->
+<section class="section">
+  <div class="container">
+    <div class="section-centered fade-in">
+      <p class="section-label">QUARTER BY QUARTER</p>
+      <h2 class="section-heading serif">Growth Trajectory</h2>
+    </div>
+    <div class="growth-table-wrap fade-in">
+      <table class="growth-table">
+        <thead>
+          <tr>
+            <th>Period</th>
+            <th>Network</th>
+            <th>COS Subs</th>
+            <th>Licensees</th>
+            <th>Monthly Rev</th>
+            <th>ARR</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Today (Jul 2026)</td>
+            <td>2</td>
+            <td>—</td>
+            <td>—</td>
+            <td class="mono-cell">$6,000</td>
+            <td class="mono-cell">$72K</td>
+          </tr>
+          <tr>
+            <td>Month 6 (Dec 2026)</td>
+            <td>~16</td>
+            <td>—</td>
+            <td>—</td>
+            <td class="mono-cell">$32,000</td>
+            <td class="mono-cell">$384K</td>
+          </tr>
+          <tr>
+            <td>Month 12 (Jun 2027)</td>
+            <td>~45</td>
+            <td>—</td>
+            <td>1</td>
+            <td class="mono-cell">$95,000</td>
+            <td class="mono-cell">$1.14M</td>
+          </tr>
+          <tr>
+            <td>Month 18 (Dec 2027)</td>
+            <td>~76</td>
+            <td>~180</td>
+            <td>2</td>
+            <td class="mono-cell">$198,000</td>
+            <td class="mono-cell">$2.38M</td>
+          </tr>
+          <tr>
+            <td>Month 24 (Jun 2028)</td>
+            <td>~103</td>
+            <td>~671</td>
+            <td>2</td>
+            <td class="mono-cell">$350,200</td>
+            <td class="mono-cell">$4.2M</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ── Founder Profile ── -->
+<section class="founder-section">
+  <div class="container">
+    <div class="founder-header fade-in">
+      <p class="section-label">FOUNDER PROFILE</p>
+      <div class="section-rule"></div>
+      <h2 class="founder-name serif">Keith Bilous</h2>
+      <p class="founder-title">Founder &amp; CEO</p>
+    </div>
+    <div class="founder-grid">
+      <div class="founder-stat fade-in">
+        <div class="founder-stat-value mono">$50M</div>
+        <p class="founder-stat-desc">Founded ICUC, sold for $50M. Proven at scale.</p>
+      </div>
+      <div class="founder-stat fade-in">
+        <div class="founder-stat-value mono">1,000+</div>
+        <p class="founder-stat-desc">Live episodes produced. Deep domain expertise in live storytelling.</p>
+      </div>
+      <div class="founder-stat fade-in">
+        <div class="founder-stat-value mono">$15K/mo</div>
+        <p class="founder-stat-desc">Salary — below market for a CEO with a $50M exit. Aligned with investors.</p>
+      </div>
+      <div class="founder-stat fade-in">
+        <div class="founder-stat-value mono">68.83%</div>
+        <p class="founder-stat-desc">Ownership, 100% voting control. Clear decision-making authority.</p>
+      </div>
+      <div class="founder-stat fade-in">
+        <div class="founder-stat-value mono">$0</div>
+        <p class="founder-stat-desc">Outside money prior to this round. Self-funded to date.</p>
+      </div>
+      <div class="founder-stat fade-in">
+        <div class="founder-stat-value mono">100%</div>
+        <p class="founder-stat-desc">Full-time dedication to MiTL Studio. All-in.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Investment Terms ── -->
+<section class="section" id="the-round">
+  <div class="container">
+    <div class="section-centered fade-in">
+      <p class="section-label">INVESTMENT TERMS</p>
+      <h2 class="section-heading serif">The Round</h2>
+    </div>
+    <div class="terms-table fade-in">
+      <div class="terms-row">
+        <span class="terms-label">Raise</span>
+        <span class="terms-value">$2,500,000</span>
+      </div>
+      <div class="terms-row">
+        <span class="terms-label">Pre-Money Valuation</span>
+        <span class="terms-value">$12,500,000</span>
+      </div>
+      <div class="terms-row">
+        <span class="terms-label">Post-Money Valuation</span>
+        <span class="terms-value">$15,000,000</span>
+      </div>
+      <div class="terms-row">
+        <span class="terms-label">Investor Ownership</span>
+        <span class="terms-value">16.67%</span>
+      </div>
+      <div class="terms-row">
+        <span class="terms-label">Instrument</span>
+        <span class="terms-value">Series Seed Preferred Stock</span>
+      </div>
+      <div class="terms-row">
+        <span class="terms-label">Entity</span>
+        <span class="terms-value">Delaware C-Corp (fresh)</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Use of Funds ── -->
+<section class="funds-section">
+  <div class="container">
+    <div class="fade-in">
+      <p class="section-label">USE OF FUNDS</p>
+    </div>
+    <div class="funds-chart fade-in">
+      <div class="fund-row">
+        <span class="fund-label">Product &amp; Engineering</span>
+        <div class="fund-bar-wrap"><div class="fund-bar" data-width="30" style="width: 0%;"></div></div>
+        <span class="fund-pct">~30%</span>
+      </div>
+      <div class="fund-row">
+        <span class="fund-label">Content &amp; Production</span>
+        <div class="fund-bar-wrap"><div class="fund-bar" data-width="22" style="width: 0%;"></div></div>
+        <span class="fund-pct">~22%</span>
+      </div>
+      <div class="fund-row">
+        <span class="fund-label">Sales &amp; Go-to-Market</span>
+        <div class="fund-bar-wrap"><div class="fund-bar" data-width="18" style="width: 0%;"></div></div>
+        <span class="fund-pct">~18%</span>
+      </div>
+      <div class="fund-row">
+        <span class="fund-label">Operations &amp; Overhead</span>
+        <div class="fund-bar-wrap"><div class="fund-bar" data-width="25" style="width: 0%;"></div></div>
+        <span class="fund-pct">~25%</span>
+      </div>
+      <div class="fund-row">
+        <span class="fund-label">Licensing &amp; IP</span>
+        <div class="fund-bar-wrap"><div class="fund-bar" data-width="5" style="width: 0%;"></div></div>
+        <span class="fund-pct">~5%</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Team ── -->
+<section class="team-section">
+  <div class="container">
+    <div class="section-centered fade-in">
+      <p class="section-label">OUR PEOPLE</p>
+      <h2 class="section-heading serif">The Team</h2>
+      <p class="team-subtitle">7 today → 17 over 24 months + 4 advisory partners. All virtual.</p>
+    </div>
+    <div class="fade-in">
+      <p class="team-group-label">CORE TEAM</p>
+      <div class="team-grid">
+        <div class="team-member">
+          <p class="team-name serif">Keith Bilous</p>
+          <p class="team-role">Founder &amp; CEO</p>
+        </div>
+        <div class="team-member">
+          <p class="team-name serif">Melissa Niemann</p>
+          <p class="team-role">Chief Storyteller</p>
+        </div>
+        <div class="team-member">
+          <p class="team-name serif">Jon Andersen</p>
+          <p class="team-role">Team Member</p>
+        </div>
+        <div class="team-member">
+          <p class="team-name serif">Jimmy Barleao</p>
+          <p class="team-role">Executive Producer</p>
+        </div>
+        <div class="team-member">
+          <p class="team-name serif">Celine Interino</p>
+          <p class="team-role">Creative Leader</p>
+        </div>
+      </div>
+      <div class="team-grid" style="grid-template-columns: repeat(5, 1fr); max-width: 480px;">
+        <div class="team-member">
+          <p class="team-name serif">Jorge Bocobo</p>
+          <p class="team-role">Head Engineer</p>
+        </div>
+        <div class="team-member">
+          <p class="team-name serif">Matt Rouff</p>
+          <p class="team-role">Team Member</p>
+        </div>
+      </div>
+    </div>
+    <div class="team-divider"></div>
+    <div class="fade-in">
+      <p class="team-group-label">ADVISORY PARTNERS</p>
+      <div class="advisory-grid">
+        <div class="team-member">
+          <p class="team-name serif">Advisory Partner A</p>
+          <p class="team-role">Advisory Partner</p>
+        </div>
+        <div class="team-member">
+          <p class="team-name serif">Advisory Partner B</p>
+          <p class="team-role">Advisory Partner</p>
+        </div>
+        <div class="team-member">
+          <p class="team-name serif">Advisory Partner C</p>
+          <p class="team-role">Advisory Partner</p>
+        </div>
+        <div class="team-member">
+          <p class="team-name serif">Advisory Partner D</p>
+          <p class="team-role">Advisory Partner</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Investment Thesis ── -->
+<section class="thesis-section">
+  <div class="container">
+    <div class="section-centered fade-in">
+      <p class="section-label">INVESTMENT THESIS</p>
+      <h2 class="section-heading serif">Why This Is Investible</h2>
+    </div>
+    <div class="thesis-list">
+      <div class="thesis-item fade-in">
+        <span class="thesis-num">01</span>
+        <div class="thesis-content">
+          <h3 class="thesis-title serif">Proven Founder</h3>
+          <p class="thesis-desc">Keith built and sold a company for $50M. He has done this before — at scale.</p>
+        </div>
+      </div>
+      <div class="thesis-item fade-in">
+        <span class="thesis-num">02</span>
+        <div class="thesis-content">
+          <h3 class="thesis-title serif">Revenue on Day One</h3>
+          <p class="thesis-desc">This is not a pre-revenue company. $39K ARR with 2 paying customers and growing.</p>
+        </div>
+      </div>
+      <div class="thesis-item fade-in">
+        <span class="thesis-num">03</span>
+        <div class="thesis-content">
+          <h3 class="thesis-title serif">Three Revenue Engines</h3>
+          <p class="thesis-desc">Network (services), ConversationOS (SaaS), Licensing (IP). Diversified revenue at the seed stage is rare.</p>
+        </div>
+      </div>
+      <div class="thesis-item fade-in">
+        <span class="thesis-num">04</span>
+        <div class="thesis-content">
+          <h3 class="thesis-title serif">Disciplined Growth Plan</h3>
+          <p class="thesis-desc">Conservative model: $3.1M revenue, $4.2M expenses over 24 months. Cash-flow positive at Month 18. Team grows from 7 to 17 people.</p>
+        </div>
+      </div>
+      <div class="thesis-item fade-in">
+        <span class="thesis-num">05</span>
+        <div class="thesis-content">
+          <h3 class="thesis-title serif">Clear Path to Series A</h3>
+          <p class="thesis-desc">At $4.2M ARR with $1.46M in the bank and three revenue engines firing, the Series A targets $42–50M valuation (10–12x ARR) — a 3–4x step-up from seed.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Call to Action ── -->
+<section class="cta-section">
+  <div class="container fade-in">
+    <h2 class="cta-heading serif">Let's Build the Future of Live Storytelling.</h2>
+    <p class="cta-subtitle">We're raising $2.5M to scale three proven revenue engines. If this resonates, we'd love to talk.</p>
+    <div class="cta-buttons">
+      <a href="https://ro.am/keith" class="btn-primary" target="_blank" rel="noopener">LET'S TALK</a>
+      <a href="mailto:mornings@bapl.ai" class="btn-secondary">REQUEST MATERIALS</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ── -->
+<footer class="footer">
+  <p class="footer-brand serif">MiTL Studio — Mornings in the Lab</p>
+  <div class="footer-legal">
+    <p>Confidential — For Qualified Investors Only</p>
+    <p>&copy; 2026 MiTL Studio Inc. All rights reserved.</p>
+    <p><a href="mailto:mornings@bapl.ai">mornings@bapl.ai</a></p>
+  </div>
+</footer>
+
+<script>
+/* ── Sticky Nav on Scroll ── */
+(function() {
+  const nav = document.getElementById('mainNav');
+  const hero = document.getElementById('hero');
+  let ticking = false;
+
+  function onScroll() {
+    if (!ticking) {
+      window.requestAnimationFrame(function() {
+        const heroBottom = hero.offsetTop + hero.offsetHeight * 0.6;
+        if (window.scrollY > heroBottom) {
+          nav.classList.add('visible');
+        } else {
+          nav.classList.remove('visible');
+        }
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+})();
+
+/* ── Scroll-Triggered Fade-In ── */
+(function() {
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.fade-in').forEach(function(el) {
+    observer.observe(el);
+  });
+})();
+
+/* ── Fund Bar Animation ── */
+(function() {
+  const barsObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        const bars = entry.target.querySelectorAll('.fund-bar');
+        bars.forEach(function(bar, i) {
+          setTimeout(function() {
+            bar.style.width = bar.getAttribute('data-width') + '%';
+          }, i * 100);
+        });
+        barsObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  const chart = document.querySelector('.funds-chart');
+  if (chart) barsObserver.observe(chart);
+})();
+</script>
+</body>
+</html>

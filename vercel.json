@@ -1,0 +1,9 @@
+{
+  "buildCommand": "",
+  "outputDirectory": ".",
+  "framework": null,
+  "rewrites": [
+    { "source": "/about", "destination": "/index.html" },
+    { "source": "/((?!robots\\.txt|sitemap\\.xml|investors|assets).*)", "destination": "/index.html" }
+  ]
+}

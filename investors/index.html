@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MiTL Studios — Investor Briefing</title>
+<meta name="description" content="The Studio Defining the Future of Live Morning Media. Live in the morning. AI all day.">
+<meta property="og:title" content="MiTL Studios — Investor Briefing">
+<meta property="og:description" content="The Studio Defining the Future of Live Morning Media. Live in the morning. AI all day.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mitl.studio/investors">
+<meta property="og:site_name" content="MiTL Studio">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@keithbilous">
+<meta name="twitter:creator" content="@keithbilous">
+<meta name="twitter:title" content="MiTL Studios — Investor Briefing">
+<meta name="twitter:description" content="The Studio Defining the Future of Live Morning Media. Live in the morning. AI all day.">
+<link rel="canonical" href="https://mitl.studio/investors">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --gold: #C9A227;
+  --bg: #050505;
+  --bg-alt: #0a0a0a;
+  --text-primary: #ffffff;
+  --text-secondary: #a1a1aa;
+  --text-muted: #71717a;
+  --text-faint: #52525b;
+  --border: rgba(255,255,255,0.05);
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Space Grotesk', var(--font-sans);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg);
+  color: #d4d4d8;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::selection { background: rgba(255,255,255,0.3); color: white; }
+
+/* ---- NAV ---- */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+  padding: 1.25rem 1.5rem;
+  background: rgba(5,5,5,0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-inner { display: flex; align-items: center; justify-content: space-between; }
+.nav-links { display: none; align-items: center; gap: 0.5rem; font-size: 0.8125rem; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; transition: color 0.2s; }
+.nav-links a:hover { color: white; }
+.nav-sep { color: var(--text-faint); user-select: none; }
+.nav-current { color: white; font-weight: 500; margin-left: auto; font-size: 0.8125rem; display: none; }
+.nav-mobile-brand { font-family: var(--font-display); font-weight: 700; color: white; font-size: 1.125rem; }
+.nav-mobile-toggle { background: none; border: none; color: white; cursor: pointer; padding: 0.25rem; display: block; }
+.nav-mobile-toggle svg { width: 24px; height: 24px; }
+
+/* Mobile menu */
+.mobile-menu {
+  display: none; flex-direction: column; gap: 0.75rem;
+  padding: 1.5rem 0 0.5rem;
+  border-top: 1px solid var(--border);
+  margin-top: 1rem;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a { color: var(--text-secondary); text-decoration: none; font-size: 0.9375rem; padding: 0.25rem 0; }
+.mobile-menu a:hover { color: white; }
+
+@media (min-width: 768px) {
+  .nav-links { display: flex; }
+  .nav-current { display: block; }
+  .nav-mobile-brand { display: none; }
+  .nav-mobile-toggle { display: none; }
+  .mobile-menu { display: none !important; }
+}
+
+/* ---- LAYOUT ---- */
+.section {
+  padding: 5rem 1.5rem;
+  max-width: 64rem;
+  margin: 0 auto;
+}
+.section-narrow {
+  padding: 5rem 1.5rem;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+.text-center { text-align: center; }
+
+/* ---- TYPOGRAPHY ---- */
+.heading-hero {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: white;
+  font-size: clamp(2rem, 6vw, 3.75rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+.heading-section {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: white;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+.heading-sub {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: white;
+  font-size: 1.25rem;
+  line-height: 1.3;
+}
+.text-lg { font-size: 1.125rem; line-height: 1.7; }
+.text-base { font-size: 1rem; line-height: 1.7; }
+.text-sm { font-size: 0.875rem; }
+.text-xs { font-size: 0.75rem; }
+.text-gold { color: var(--gold); }
+.text-white { color: white; }
+.text-muted { color: var(--text-muted); }
+.text-secondary { color: var(--text-secondary); }
+.text-faint { color: var(--text-faint); }
+.font-bold { font-weight: 700; }
+.font-medium { font-weight: 500; }
+.font-light { font-weight: 300; }
+.uppercase { text-transform: uppercase; }
+.tracking-widest { letter-spacing: 0.1em; }
+.tracking-wide { letter-spacing: 0.05em; }
+.italic { font-style: italic; }
+
+/* ---- HERO ---- */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 8rem 1.5rem 5rem;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background: url('https://i.postimg.cc/wxc2BMd4/SHOW-COVERS-9.png') center/cover no-repeat;
+  opacity: 0.15;
+  filter: grayscale(0.5);
+}
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(5,5,5,0.6), var(--bg)); }
+.hero-content { position: relative; z-index: 1; max-width: 52rem; }
+
+/* ---- BUTTONS ---- */
+.btn-group { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 2rem; }
+.btn-primary {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 0.75rem 2rem;
+  background: white; color: black;
+  font-weight: 600; font-size: 0.875rem;
+  border-radius: 9999px; border: none;
+  text-decoration: none; cursor: pointer;
+  transition: opacity 0.2s;
+}
+.btn-primary:hover { opacity: 0.9; }
+.btn-secondary {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 0.75rem 2rem;
+  background: transparent; color: white;
+  font-weight: 600; font-size: 0.875rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(255,255,255,0.2);
+  text-decoration: none; cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+.btn-secondary:hover { border-color: rgba(255,255,255,0.4); background: rgba(255,255,255,0.05); }
+
+/* ---- DIVIDERS ---- */
+.divider { width: 100%; height: 1px; background: rgba(255,255,255,0.06); margin: 5rem 0; }
+.divider-gold { width: 100%; height: 1px; background: var(--gold); margin: 5rem 0; }
+
+/* ---- LABEL ---- */
+.section-label {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+}
+
+/* ---- IMAGE BLOCK ---- */
+.img-block { margin: 3rem 0; }
+.img-block img {
+  width: 100%; display: block;
+  border: 1px solid var(--border);
+  background: #0a0a0a;
+}
+.img-caption { margin-top: 0.75rem; }
+.img-caption p:first-child { font-size: 0.875rem; color: white; font-weight: 500; }
+.img-caption p:last-child { font-size: 0.625rem; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.25rem; }
+
+/* ---- TWO COL ---- */
+.two-col { display: grid; grid-template-columns: 1fr; gap: 3rem; margin: 2rem 0; }
+@media (min-width: 768px) { .two-col { grid-template-columns: 1fr 1fr; } }
+
+/* ---- INVESTOR Q&A ---- */
+.qa-item { margin-bottom: 3rem; }
+.qa-item h3 { font-size: 1.25rem; font-weight: 700; color: white; margin-bottom: 1rem; }
+.qa-item .answer { font-size: 1.125rem; color: var(--text-secondary); line-height: 1.7; }
+.qa-item .answer p { margin-bottom: 0.75rem; }
+.qa-item .answer .strong-answer { color: white; font-weight: 600; font-size: 1.25rem; margin-bottom: 0.5rem; }
+.qa-item .answer ul { padding-left: 1.25rem; margin: 0.5rem 0; }
+.qa-item .answer li { margin-bottom: 0.25rem; }
+
+/* ---- FOOTER ---- */
+.footer {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--text-faint);
+}
+.footer a { color: var(--text-faint); text-decoration: none; }
+.footer a:hover { color: var(--text-muted); }
+
+/* ---- SPACING ---- */
+.mt-1 { margin-top: 0.25rem; }
+.mt-2 { margin-top: 0.5rem; }
+.mt-3 { margin-top: 0.75rem; }
+.mt-4 { margin-top: 1rem; }
+.mt-6 { margin-top: 1.5rem; }
+.mt-8 { margin-top: 2rem; }
+.mt-12 { margin-top: 3rem; }
+.mt-16 { margin-top: 4rem; }
+.mt-20 { margin-top: 5rem; }
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-3 { margin-bottom: 0.75rem; }
+.mb-4 { margin-bottom: 1rem; }
+.mb-6 { margin-bottom: 1.5rem; }
+.mb-8 { margin-bottom: 2rem; }
+.mb-12 { margin-bottom: 3rem; }
+.space-y-2 > * + * { margin-top: 0.5rem; }
+.space-y-3 > * + * { margin-top: 0.75rem; }
+.space-y-4 > * + * { margin-top: 1rem; }
+.space-y-6 > * + * { margin-top: 1.5rem; }
+.space-y-8 > * + * { margin-top: 2rem; }
+
+/* ---- ANIMATE ---- */
+
+/* Base: all animated elements start hidden */
+.anim-fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+}
+.anim-fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Staggered children: each child in a .stagger container animates with delay */
+.stagger > * {
+  opacity: 0;
+  transform: translateY(20px);
+}
+.stagger.visible > * {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.stagger.visible > *:nth-child(1) { transition-delay: 0s; }
+.stagger.visible > *:nth-child(2) { transition-delay: 0.12s; }
+.stagger.visible > *:nth-child(3) { transition-delay: 0.24s; }
+.stagger.visible > *:nth-child(4) { transition-delay: 0.36s; }
+.stagger.visible > *:nth-child(5) { transition-delay: 0.48s; }
+.stagger.visible > *:nth-child(6) { transition-delay: 0.60s; }
+.stagger.visible > *:nth-child(7) { transition-delay: 0.72s; }
+.stagger.visible > *:nth-child(8) { transition-delay: 0.84s; }
+.stagger.visible > *:nth-child(9) { transition-delay: 0.96s; }
+.stagger.visible > *:nth-child(10) { transition-delay: 1.08s; }
+
+/* Hero stagger: tighter control for the hero entrance */
+.hero-stagger > * {
+  opacity: 0;
+  transform: translateY(30px);
+}
+.hero-stagger.visible > * {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.hero-stagger.visible > *:nth-child(1) { transition-delay: 0s; }
+.hero-stagger.visible > *:nth-child(2) { transition-delay: 0.2s; }
+.hero-stagger.visible > *:nth-child(3) { transition-delay: 0.4s; }
+.hero-stagger.visible > *:nth-child(4) { transition-delay: 0.6s; }
+.hero-stagger.visible > *:nth-child(5) { transition-delay: 0.8s; }
+.hero-stagger.visible > *:nth-child(6) { transition-delay: 1.0s; }
+
+/* Gold divider expand animation */
+.anim-divider {
+  transform: scaleX(0);
+  transform-origin: left;
+  opacity: 0;
+}
+.anim-divider.visible {
+  transform: scaleX(1);
+  opacity: 1;
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.4s ease;
+}
+
+/* Image fade + subtle scale */
+.anim-image {
+  opacity: 0;
+  transform: scale(0.95);
+}
+.anim-image.visible {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1), transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* List items: slide from left */
+.anim-slide-left > li {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+.anim-slide-left.visible > li {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1), transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.anim-slide-left.visible > li:nth-child(1) { transition-delay: 0s; }
+.anim-slide-left.visible > li:nth-child(2) { transition-delay: 0.1s; }
+.anim-slide-left.visible > li:nth-child(3) { transition-delay: 0.2s; }
+.anim-slide-left.visible > li:nth-child(4) { transition-delay: 0.3s; }
+.anim-slide-left.visible > li:nth-child(5) { transition-delay: 0.4s; }
+.anim-slide-left.visible > li:nth-child(6) { transition-delay: 0.5s; }
+.anim-slide-left.visible > li:nth-child(7) { transition-delay: 0.6s; }
+
+/* Caption fade (delayed after image) */
+.anim-caption {
+  opacity: 0;
+}
+.anim-caption.visible {
+  opacity: 1;
+  transition: opacity 0.5s ease 0.2s;
+}
+
+/* Q&A items: heading + answer stagger */
+.anim-qa {
+  opacity: 0;
+  transform: translateY(24px);
+}
+.anim-qa.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Two-column grid: left then right */
+.anim-two-col > * {
+  opacity: 0;
+  transform: translateY(20px);
+}
+.anim-two-col.visible > * {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.anim-two-col.visible > *:nth-child(1) { transition-delay: 0s; }
+.anim-two-col.visible > *:nth-child(2) { transition-delay: 0.2s; }
+
+/* ---- ARCH DIAGRAM ---- */
+.arch-diagram { margin: 2rem auto; max-width: 40rem; }
+.arch-diagram img { width: 100%; display: block; }
+</style>
+</head>
+<body>
+
+<!-- ====== NAV ====== -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <div class="nav-mobile-brand">MiTL Studio</div>
+    <div class="nav-links">
+      <a href="https://studio-ten-inky-20.vercel.app/" target="_blank" rel="noopener">MiTL Studio</a>
+      <span class="nav-sep">|</span>
+      <a href="https://mitl.network/" target="_blank" rel="noopener">MiTL Network</a>
+      <span class="nav-sep">|</span>
+      <a href="https://mitl.live/" target="_blank" rel="noopener">Mornings in the Lab</a>
+      <span class="nav-sep">|</span>
+      <a href="https://morningshowinabox.com/" target="_blank" rel="noopener">Morning Show in a Box</a>
+    </div>
+    <span class="nav-current">Investor Briefing</span>
+    <button class="nav-mobile-toggle" id="menuToggle" aria-label="Toggle menu">
+      <svg id="menuIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/>
+      </svg>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="https://studio-ten-inky-20.vercel.app/" target="_blank" rel="noopener">MiTL Studio</a>
+    <a href="https://mitl.network/" target="_blank" rel="noopener">MiTL Network</a>
+    <a href="https://mitl.live/" target="_blank" rel="noopener">Mornings in the Lab</a>
+    <a href="https://morningshowinabox.com/" target="_blank" rel="noopener">Morning Show in a Box</a>
+  </div>
+</nav>
+
+<!-- ====== HERO ====== -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-stagger" id="heroStagger">
+      <h1 class="heading-hero mb-6">The Studio Defining the Future of Live Morning Media.</h1>
+      <p class="text-lg text-white font-bold mb-3" style="font-size:1.5rem;">Live in the morning.<br>AI all day.</p>
+      <p class="text-secondary text-lg mt-4">A new format for live storytelling.</p>
+      <div class="btn-group">
+        <a href="https://mitl.studio/investors/brief" class="btn-primary" target="_blank" rel="noopener">View Investor Brief</a>
+        <a href="https://ro.am/keith" class="btn-secondary" target="_blank" rel="noopener">Schedule Strategic Review</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== INVESTMENT THESIS ====== -->
+<section class="section-narrow text-center">
+  <div>
+    <h2 class="heading-section mb-8 anim-fade-up">The Investment Thesis</h2>
+    <div class="space-y-3 text-lg text-secondary stagger">
+      <p>Morning is the only daily live reset.</p>
+      <p>It sets the tone for the rest of the day.</p>
+      <p>The opportunity isn't "going live."</p>
+      <p class="text-white font-medium">It's building trust — every morning — in real time.</p>
+    </div>
+  </div>
+
+  <div class="divider anim-divider"></div>
+
+  <div>
+    <div class="section-label anim-fade-up">THE FORMAT</div>
+    <div class="space-y-2 text-lg text-secondary stagger">
+      <p>Humans anchor truth live in the morning.</p>
+      <p>AI characters continue the story throughout the day.</p>
+      <p class="text-white font-medium mt-4">One persistent story world.</p>
+      <p class="text-white font-medium">Continuous presence.</p>
+    </div>
+  </div>
+
+  <div class="divider anim-divider"></div>
+
+  <div>
+    <div class="section-label anim-fade-up">PROOF</div>
+    <div class="stagger">
+      <p class="text-lg text-secondary">For 18+ months, MiTL Studios has delivered live daily and weekly across four recurring shows. We built the structure to sustain creative energy, protect character consistency, and operate under real audience pressure.</p>
+      <p class="text-lg text-white font-medium mt-4">That structure is becoming ConversationOS.</p>
+    </div>
+  </div>
+
+  <div class="divider-gold anim-divider"></div>
+
+  <div class="stagger">
+    <p class="text-lg text-white">The next dominant live franchise won't be built on streaming tools.</p>
+    <p class="text-lg text-white">It will be built on a new format:<br>Live trust in the morning.<br>AI continuity throughout the day.</p>
+    <p class="text-lg text-gold font-bold">MiTL Studios is building that format.</p>
+  </div>
+</section>
+
+<!-- ====== PROOF OF FORMAT ====== -->
+<section class="section text-center">
+  <h2 class="heading-section mb-8 anim-fade-up">Proof of the Format (Live)</h2>
+  <div class="img-block">
+    <img class="anim-image" src="https://i.postimg.cc/TYjVj4ps/One.jpg" alt="PREMIUM LIVE MORNING PRODUCTION WITH HUMAN HOSTS AND AI CHARACTERS SHARING A MOMENT BACK STAGE." referrerpolicy="no-referrer">
+    <div class="img-caption anim-caption">
+      <p>Human + AI Back stage, live in the morning.</p>
+      <p>Alt: PREMIUM LIVE MORNING PRODUCTION WITH HUMAN HOSTS AND AI CHARACTERS SHARING A MOMENT BACK STAGE.</p>
+    </div>
+  </div>
+  <div class="mt-8 stagger">
+    <p class="text-lg text-white font-medium">This isn't a concept deck.</p>
+    <p class="text-lg text-secondary">It's a format we run under real pressure.</p>
+  </div>
+</section>
+
+<!-- ====== WHEN A NEW DAILY FORMAT WORKS ====== -->
+<section class="section-narrow text-center">
+  <h2 class="heading-section mb-8 anim-fade-up">When a New Daily Format Works</h2>
+  <div class="space-y-3 text-lg text-secondary stagger">
+    <p>Morning is where trust is built.</p>
+    <p>Then the day continues.</p>
+    <p>Most formats stop when the stream ends.</p>
+    <p class="text-white font-bold">Ours doesn't.</p>
+  </div>
+  <div class="mt-8 stagger">
+    <p class="text-xs uppercase tracking-widest text-gold mb-4">MITL STUDIOS CREATED A DAILY STORYTELLING MODEL:</p>
+    <p class="text-lg text-secondary">human-anchored trust in the morning,</p>
+    <p class="text-lg text-secondary">AI-extended continuity throughout the day.</p>
+  </div>
+  <div class="divider anim-divider"></div>
+  <div class="stagger">
+    <p class="text-lg text-secondary">When a new format proves itself, structure follows.</p>
+    <p class="text-lg text-white font-medium">MiTL Studios is building that structure.</p>
+  </div>
+</section>
+
+<!-- ====== FORGED IN DAILY DELIVERY ====== -->
+<section class="section">
+  <h2 class="heading-section text-center mb-12 anim-fade-up">Forged in Daily Delivery</h2>
+  <div class="two-col anim-two-col">
+    <div class="space-y-4 text-lg text-secondary stagger">
+      <p>We didn't design this in a lab.</p>
+      <p>We built it by showing up.</p>
+      <p class="text-white font-bold">Thousands of Live Hours.</p>
+      <p>Daily cadence.</p>
+      <p>Real audience pressure.</p>
+      <p>Human hosts anchoring truth in the morning.</p>
+      <p>AI characters extending the story throughout the day.</p>
+      <p class="italic">This format wasn't imagined.</p>
+      <p class="text-white font-bold">It was forged in delivery.</p>
+    </div>
+    <div>
+      <ul class="space-y-3 text-lg text-secondary anim-slide-left" style="list-style: disc; padding-left: 1.25rem;">
+        <li>Built from real production, not theory</li>
+        <li>Refined through repetition, not assumptions</li>
+        <li>Sustains character consistency under pressure</li>
+        <li>Protects creative stamina at daily cadence</li>
+      </ul>
+    </div>
+  </div>
+  <div class="mt-12 text-center stagger">
+    <p class="text-lg text-secondary">Anyone can copy a format.</p>
+    <p class="text-lg text-secondary">Very few can sustain it long enough to build character equity and audience trust.</p>
+    <p class="text-lg text-secondary">That takes 6–12 months of daily delivery.</p>
+    <p class="text-lg text-white font-bold">We've already put in that time.</p>
+  </div>
+  <div class="divider-gold anim-divider"></div>
+  <div class="text-center stagger" style="display:flex; justify-content:center; gap:2rem; flex-wrap:wrap;">
+    <p class="text-xs uppercase tracking-widest text-white font-bold">PLATFORMS DISTRIBUTE FORMATS.</p>
+    <p class="text-xs uppercase tracking-widest text-white font-bold">WE DESIGN THEM.</p>
+  </div>
+</section>
+
+<!-- ====== THE CONVERSATION CONTINUES ====== -->
+<section class="section text-center">
+  <h2 class="heading-section mb-8 anim-fade-up">The Conversation Continues</h2>
+  <div class="img-block" style="max-width:28rem; margin: 0 auto;">
+    <img class="anim-image" src="https://i.postimg.cc/mk8Q4x3T/App-Cap.jpg" alt="COMPANION EXPERIENCE SHOWING AI CHARACTERS CONTINUING THE CONVERSATION THROUGHOUT THE DAY." referrerpolicy="no-referrer">
+    <div class="img-caption anim-caption">
+      <p>When the live show ends, the story continues.</p>
+      <p>Alt: COMPANION EXPERIENCE SHOWING AI CHARACTERS CONTINUING THE CONVERSATION THROUGHOUT THE DAY.</p>
+    </div>
+  </div>
+  <div class="mt-8 stagger">
+    <p class="text-lg text-secondary">Live builds trust.</p>
+    <p class="text-lg text-white font-medium">The companion keeps presence.</p>
+  </div>
+</section>
+
+<!-- ====== FRANCHISE ARCHITECTURE ====== -->
+<section class="section">
+  <h2 class="heading-section text-center mb-6 anim-fade-up">The Franchise Architecture</h2>
+  <div class="stagger" style="text-align:center;">
+    <p class="text-lg text-secondary text-center mb-2">MiTL is not a show concept.</p>
+    <p class="text-lg text-white text-center font-medium mb-12">It is a deployable daily franchise architecture.</p>
+  </div>
+
+  <div class="two-col anim-two-col">
+    <div>
+      <p class="text-xs uppercase tracking-widest text-gold mb-4 anim-fade-up">AT ITS CORE:</p>
+      <ol class="space-y-2 text-lg text-secondary anim-slide-left" style="list-style: decimal; padding-left: 1.25rem;">
+        <li>Structured recurring segments</li>
+        <li>Persistent AI character universe</li>
+        <li>Human-anchored morning trust model</li>
+        <li>Companion continuity layer</li>
+        <li>Production doctrine and operational playbook</li>
+        <li>Underlying structure: ConversationOS</li>
+      </ol>
+    </div>
+    <div>
+      <p class="text-xs uppercase tracking-widest text-gold mb-4 anim-fade-up">THIS ENABLES FRANCHISE DEPLOYMENT:</p>
+      <ul class="space-y-2 text-lg text-secondary anim-slide-left">
+        <li>→ Multi-territory localization</li>
+        <li>→ Host interchangeability without format erosion</li>
+        <li>→ Licensing at scale</li>
+        <li>→ Repeatable daily launch</li>
+        <li>→ Expansion beyond any single personality</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="divider anim-divider"></div>
+
+  <div class="text-center stagger">
+    <p class="text-lg text-secondary">Formats built around personalities fade.</p>
+    <p class="text-lg text-white font-bold">Formats built around architecture travel.</p>
+  </div>
+</section>
+
+<!-- ====== SYSTEM ARCHITECTURE ====== -->
+<section class="section text-center">
+  <h2 class="heading-section mb-6 anim-fade-up">System Architecture</h2>
+  <p class="text-lg text-secondary mb-8 anim-fade-up">The format is supported by a three-layer structure.</p>
+  <div class="arch-diagram">
+    <img class="anim-image" src="https://i.postimg.cc/02KQPR0r/Gemini-Generated-Image-l6fcxl6fcxl6fcxl.png" alt="THREE-LAYER ARCHITECTURE SHOWING STUDIO, COMPANION/DISTRIBUTION LAYER, AND CONVERSATIONOS FOUNDATION." referrerpolicy="no-referrer">
+  </div>
+  <div class="img-caption mt-4 anim-caption">
+    <p>Format first. Structure underneath. Scale follows.</p>
+    <p>Alt: THREE-LAYER ARCHITECTURE SHOWING STUDIO, COMPANION/DISTRIBUTION LAYER, AND CONVERSATIONOS FOUNDATION.</p>
+  </div>
+</section>
+
+<!-- ====== CONVERSATIONOS ====== -->
+<section class="section-narrow text-center">
+  <h2 class="heading-section mb-8 anim-fade-up">The Structure Layer — ConversationOS</h2>
+  <div class="space-y-3 text-lg text-secondary stagger">
+    <p>ConversationOS is the internal structure behind the format.</p>
+    <p>It protects creative stamina.</p>
+    <p>It maintains character consistency.</p>
+    <p>It enforces recurring segment discipline.</p>
+    <p>It makes daily delivery sustainable.</p>
+  </div>
+  <p class="text-xs uppercase tracking-widest text-gold mt-8 font-bold anim-fade-up">NOW BEING FORMALIZED INTO SOFTWARE.</p>
+  <div class="divider-gold anim-divider"></div>
+  <p class="text-lg text-white font-medium anim-fade-up">The format holds because the structure holds.</p>
+</section>
+
+<!-- ====== INFLUENCE LAYER (CIS) ====== -->
+<section class="section">
+  <h2 class="heading-section text-center mb-4 anim-fade-up">The Influence Layer (CIS — In Development)</h2>
+  <p class="text-xs uppercase tracking-widest text-muted text-center mb-8 anim-fade-up">CIS – IN DEVELOPMENT</p>
+
+  <div class="text-center text-lg text-secondary mb-8 stagger">
+    <p>Live influence is real.</p>
+    <p>It is poorly measured.</p>
+  </div>
+
+  <div class="two-col text-center mb-8 anim-two-col">
+    <div>
+      <p class="text-xs uppercase tracking-widest text-muted mb-2">VIEWS DON'T MEASURE</p>
+      <p class="text-lg text-white font-bold">trust.</p>
+    </div>
+    <div>
+      <p class="text-xs uppercase tracking-widest text-muted mb-2">FOLLOWERS DON'T MEASURE</p>
+      <p class="text-lg text-white font-bold">consistency.</p>
+    </div>
+  </div>
+
+  <div class="divider anim-divider"></div>
+
+  <div class="text-center">
+    <p class="text-xs uppercase tracking-widest text-gold mb-6 anim-fade-up">CIS IS BEING DEVELOPED TO MEASURE:</p>
+    <div class="two-col anim-two-col" style="max-width:32rem; margin:0 auto;">
+      <div class="stagger">
+        <p class="text-lg text-secondary">Trust depth</p>
+        <p class="text-lg text-secondary">Engagement quality</p>
+      </div>
+      <div class="stagger">
+        <p class="text-lg text-secondary">Cadence consistency</p>
+        <p class="text-lg text-secondary">Character equity over time</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-12 text-center stagger">
+    <p class="text-lg text-secondary">Influence built daily should compound.</p>
+    <p class="text-lg text-white font-bold">Not disappear.</p>
+  </div>
+</section>
+
+<!-- ====== WHY NOW ====== -->
+<section class="section-narrow text-center">
+  <h2 class="heading-section mb-8 anim-fade-up">Why Now</h2>
+  <div class="space-y-3 text-lg text-secondary stagger">
+    <p>Live is normalized.</p>
+    <p>Distribution is frictionless.</p>
+    <p>AI can now sustain character and tone.</p>
+  </div>
+  <div class="mt-8 stagger">
+    <p class="text-lg text-secondary">Trust is scarce.</p>
+    <p class="text-lg text-white font-bold" style="font-size:1.25rem;">Format innovation is next.</p>
+  </div>
+</section>
+
+<!-- ====== INVESTOR CONSIDERATIONS ====== -->
+<section class="section">
+    <h2 class="heading-section text-center mb-4 anim-fade-up">Investor Considerations</h2>
+    <div class="divider-gold anim-divider"></div>
+
+    <!-- Q1 -->
+    <div class="qa-item anim-qa">
+      <h3>"What breaks first at scale?"</h3>
+      <div class="answer">
+        <p class="strong-answer">Commitment.</p>
+        <p>Anyone can launch.</p>
+        <p>Very few can sustain cadence.</p>
+        <ul class="text-muted">
+          <li>Weekly.</li>
+          <li>Daily.</li>
+          <li>Monthly.</li>
+        </ul>
+        <p>It doesn't matter.</p>
+        <p>Creators don't collapse overnight.</p>
+        <p>They just stop showing up.</p>
+        <ul>
+          <li>Energy drops.</li>
+          <li>Tone drifts.</li>
+          <li>Characters lose edge.</li>
+          <li>The format softens.</li>
+        </ul>
+        <p>That's where most formats die.</p>
+        <p>ConversationOS exists to protect that consistency — so the structure holds when repetition gets hard.</p>
+      </div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="qa-item anim-qa">
+      <h3>"What compounds in this model?"</h3>
+      <div class="answer">
+        <p class="strong-answer">Character equity.</p>
+        <p>When you show up on a real cadence — weekly, daily, monthly — familiarity builds.</p>
+        <p>Familiarity builds trust.</p>
+        <p>Trust builds audience loyalty.</p>
+        <p>Over 12 months of sustained delivery, characters stop being segments.</p>
+        <p>They become part of the audience's routine.</p>
+        <p>That differentiation cannot be rushed.</p>
+        <p>It compounds with repetition.</p>
+        <p>ConversationOS exists to protect that cadence — so character equity accumulates instead of resetting.</p>
+      </div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="qa-item anim-qa">
+      <h3>"What is the most fragile element in this model?"</h3>
+      <div class="answer">
+        <p class="strong-answer">Trust integrity.</p>
+        <p>The human anchor must remain credible.</p>
+        <p>AI must extend trust — not simulate it.</p>
+        <p>If the audience senses manipulation instead of authenticity, the format fails.</p>
+        <p>Everything in the architecture exists to protect that trust.</p>
+      </div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="qa-item anim-qa">
+      <h3>"Is this personality-dependent?"</h3>
+      <div class="answer">
+        <p class="strong-answer">No.</p>
+        <p>The format is architecture, not personality.</p>
+        <ul class="text-muted">
+          <li>Structured segments.</li>
+          <li>Persistent character universe.</li>
+          <li>Production doctrine.</li>
+          <li>Infrastructure support.</li>
+        </ul>
+        <p>The system is designed to travel beyond any individual host.</p>
+      </div>
+    </div>
+
+    <!-- Q5 -->
+    <div class="qa-item anim-qa">
+      <h3>"What is the real moat?"</h3>
+      <div class="answer">
+        <p class="strong-answer">Character equity at daily cadence.</p>
+        <p>Trust compounds slowly.</p>
+        <p>Anyone can copy a structure.</p>
+        <p>Very few can sustain 6–12 months of daily live delivery long enough for character equity and audience trust to take hold.</p>
+        <p>We have already put in that time.</p>
+      </div>
+    </div>
+
+    <!-- Q6 -->
+    <div class="qa-item anim-qa">
+      <h3>"What are you spending the money on?"</h3>
+      <div class="answer">
+        <p>Capital is allocated toward formalizing the structure behind the format and activating early licensing revenue.</p>
+        <p class="text-white font-medium mt-4">Primary allocation:</p>
+        <ul>
+          <li>Engineering to convert ConversationOS from unified workflow into structured software</li>
+          <li>AI character continuity and memory systems</li>
+          <li>Companion experience refinement</li>
+          <li>Production system expansion</li>
+          <li>Sales leadership to drive immediate licensing of live formats</li>
+          <li>A small senior team (engineering + format operations)</li>
+        </ul>
+        <p class="mt-4">This is not speculative R&D.</p>
+        <p>It is formalizing what already runs live — and accelerating revenue through format deployment.</p>
+      </div>
+    </div>
+
+    <!-- Q7 -->
+    <div class="qa-item anim-qa">
+      <h3>"What are the first action items with the first $1M?"</h3>
+      <div class="answer">
+        <p>The first 6–12 months focus on structural durability and early revenue activation.</p>
+        <ol style="list-style: decimal; padding-left: 1.25rem; margin-top: 0.75rem;">
+          <li>Formalize ConversationOS into versioned software</li>
+          <li>Strengthen AI character continuity systems</li>
+          <li>Stabilize and scale the companion layer</li>
+          <li>Recruit sales leadership to license the live format</li>
+          <li>Deploy 2–3 additional licensed format instances</li>
+          <li>Package and document the franchise architecture for scale</li>
+        </ol>
+        <p class="mt-4 text-white font-medium">The objective is durability and revenue before aggressive expansion.</p>
+      </div>
+    </div>
+
+    <!-- Q8 -->
+    <div class="qa-item anim-qa">
+      <h3>"Is ConversationOS already built?"</h3>
+      <div class="answer">
+        <p>ConversationOS exists today as a unified workflow system operating across 15 integrated tools.</p>
+        <p>It supports live production.</p>
+        <p>It is not yet a fully consolidated software platform.</p>
+        <p class="text-white font-medium">The raise converts it into structured, standalone software.</p>
+      </div>
+    </div>
+
+    <!-- Q9 -->
+    <div class="qa-item anim-qa">
+      <h3>"Who are your target customers?"</h3>
+      <div class="answer">
+        <p>Primary customers are media operators seeking a scalable daily trust-based format.</p>
+        <p class="text-white font-medium mt-4">This includes:</p>
+        <ul>
+          <li>International broadcasters</li>
+          <li>Digital-native studios</li>
+          <li>Creator-led networks</li>
+          <li>Format-driven live operators</li>
+        </ul>
+        <p class="mt-4">The early focus is licensing the format and scaling the architecture.</p>
+      </div>
+    </div>
+
+    <!-- Q10 -->
+    <div class="qa-item anim-qa">
+      <h3>"What does success look like in three years?"</h3>
+      <div class="answer">
+        <p>Multiple licensed daily formats operating across markets.</p>
+        <p>Human-anchored trust live in the morning.</p>
+        <p>AI continuity throughout the day.</p>
+        <p>ConversationOS formalized into standalone software supporting format operators beyond MiTL Studios.</p>
+        <p>A subscription layer serving live format builders at scale.</p>
+        <p>Recurring licensing revenue.</p>
+        <p>Recurring software revenue.</p>
+        <p>Compounding character equity.</p>
+        <div class="mt-4">
+          <p class="text-white font-bold">One architecture.</p>
+          <p class="text-white font-bold">Many instances.</p>
+        </div>
+      </div>
+    </div>
+</section>
+
+<!-- ====== FINAL CTA ====== -->
+<section class="section-narrow text-center" style="padding-top:2rem;">
+  <h2 class="heading-section mb-8 anim-fade-up">Build the Next Morning Franchise Layer.</h2>
+  <div class="btn-group stagger">
+    <a href="https://mitl.studio/investors/brief" class="btn-primary" target="_blank" rel="noopener">View Investor Brief</a>
+    <a href="https://ro.am/keith" class="btn-secondary" target="_blank" rel="noopener">Schedule Strategic Review</a>
+  </div>
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <p>MITL STUDIOS</p>
+  
+</footer>
+
+<!-- ====== SCRIPTS ====== -->
+<script>
+// Mobile menu toggle
+const menuToggle = document.getElementById('menuToggle');
+const mobileMenu = document.getElementById('mobileMenu');
+const menuIcon = document.getElementById('menuIcon');
+let menuOpen = false;
+
+menuToggle.addEventListener('click', () => {
+  menuOpen = !menuOpen;
+  mobileMenu.classList.toggle('open', menuOpen);
+  if (menuOpen) {
+    menuIcon.innerHTML = '<path d="M18 6 6 18"/><path d="m6 6 12 12"/>';
+  } else {
+    menuIcon.innerHTML = '<path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/>';
+  }
+});
+
+// Hero entrance: trigger on page load after short delay
+window.addEventListener('DOMContentLoaded', () => {
+  setTimeout(() => {
+    const hero = document.getElementById('heroStagger');
+    if (hero) hero.classList.add('visible');
+  }, 100);
+});
+
+// Scroll-triggered animations — one observer for all animated elements
+const animSelectors = [
+  '.anim-fade-up',
+  '.stagger',
+  '.anim-divider',
+  '.anim-image',
+  '.anim-slide-left',
+  '.anim-caption',
+  '.anim-qa',
+  '.anim-two-col'
+];
+
+const scrollObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      scrollObserver.unobserve(entry.target);
+    }
+  });
+}, { rootMargin: '-60px', threshold: 0.15 });
+
+document.querySelectorAll(animSelectors.join(',')).forEach(el => {
+  // Don't observe hero-stagger children (they animate on load)
+  if (!el.closest('#heroStagger')) {
+    scrollObserver.observe(el);
+  }
+});
+</script>
+
+</body>
+</html>
