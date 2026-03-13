@@ -690,11 +690,102 @@ body {
 .fade-in {
   opacity: 0;
   transform: translateY(24px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* ── Hero Entrance Stagger ── */
+.hero-label,
+.hero-title,
+.hero-subtitle,
+.hero-metric,
+.scroll-cta {
+  opacity: 0;
+  transform: translateY(30px);
+}
+.hero-label.animate {
+  animation: heroIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.hero-title.animate {
+  animation: heroIn 1s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
+}
+.hero-subtitle.animate {
+  animation: heroIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.35s forwards;
+}
+.hero-metric.animate {
+  animation: heroIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.scroll-cta.animate {
+  animation: heroIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) 1.2s forwards;
+}
+@keyframes heroIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Counting Number Slot ── */
+.count-up .digit-slot {
+  display: inline-block;
+  overflow: hidden;
+  height: 1em;
+  vertical-align: bottom;
+  line-height: 1;
+}
+.count-up .digit-slot .digit-reel {
+  display: flex;
+  flex-direction: column;
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.count-up .digit-slot .digit-reel span {
+  height: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Stagger Delay Utility ── */
+.stagger-1 { transition-delay: 0.08s !important; }
+.stagger-2 { transition-delay: 0.16s !important; }
+.stagger-3 { transition-delay: 0.24s !important; }
+.stagger-4 { transition-delay: 0.32s !important; }
+.stagger-5 { transition-delay: 0.40s !important; }
+.stagger-6 { transition-delay: 0.48s !important; }
+.stagger-7 { transition-delay: 0.56s !important; }
+.stagger-8 { transition-delay: 0.64s !important; }
+.stagger-9 { transition-delay: 0.72s !important; }
+.stagger-10 { transition-delay: 0.80s !important; }
+
+/* ── Revenue Card Hover Lift ── */
+.revenue-card {
+  transform: translateY(0);
+  transition: border-color 0.2s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+.revenue-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+/* ── Terms Row Slide-In ── */
+.terms-row.fade-in {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+.terms-row.fade-in.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ── Number Value Animation (dark section) ── */
+.number-item.fade-in {
+  opacity: 0;
+  transform: translateY(20px) scale(0.97);
+}
+.number-item.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 
 /* ── Responsive ── */
@@ -749,15 +840,15 @@ body {
   <p class="hero-subtitle serif">The Future of Live Storytelling</p>
   <div class="hero-metrics">
     <div class="hero-metric">
-      <div class="hero-metric-value mono">$4.2M</div>
+      <div class="hero-metric-value mono count-up" data-value="4.2" data-prefix="$" data-suffix="M">$0M</div>
       <div class="hero-metric-label">PROJECTED ARR BY MONTH 24</div>
     </div>
     <div class="hero-metric">
-      <div class="hero-metric-value mono">$2.5M</div>
+      <div class="hero-metric-value mono count-up" data-value="2.5" data-prefix="$" data-suffix="M">$0M</div>
       <div class="hero-metric-label">SEED ROUND AT $12.5M PRE-MONEY</div>
     </div>
     <div class="hero-metric">
-      <div class="hero-metric-value mono">1,000+</div>
+      <div class="hero-metric-value mono count-up" data-value="1000" data-prefix="" data-suffix="+" data-comma="true">0+</div>
       <div class="hero-metric-label">LIVE EPISODES PRODUCED BY FOUNDER</div>
     </div>
   </div>
@@ -788,7 +879,7 @@ body {
       <h2 class="section-heading serif">Three Revenue Engines</h2>
     </div>
     <div class="revenue-grid">
-      <div class="revenue-card fade-in">
+      <div class="revenue-card fade-in stagger-1">
         <p class="engine-label">ENGINE 01</p>
         <h3 class="engine-title serif">The Network</h3>
         <p class="engine-price">$2K/mo per member</p>
@@ -798,7 +889,7 @@ body {
           <li>~60% gross margin</li>
         </ul>
       </div>
-      <div class="revenue-card fade-in">
+      <div class="revenue-card fade-in stagger-2">
         <p class="engine-label">ENGINE 02</p>
         <h3 class="engine-title serif">ConversationOS</h3>
         <p class="engine-price">$200/mo per subscriber</p>
@@ -808,7 +899,7 @@ body {
           <li>~90–95% SaaS gross margins</li>
         </ul>
       </div>
-      <div class="revenue-card fade-in">
+      <div class="revenue-card fade-in stagger-3">
         <p class="engine-label">ENGINE 03</p>
         <h3 class="engine-title serif">Character &amp; Format Licensing</h3>
         <p class="engine-price">$15K upfront + $5K/mo</p>
@@ -829,30 +920,30 @@ body {
       <p class="section-label">FINANCIAL PROJECTIONS</p>
       <h2 class="section-heading serif">The Numbers</h2>
     </div>
-    <div class="numbers-grid fade-in">
-      <div class="number-item">
-        <div class="number-value">$349,823</div>
+    <div class="numbers-grid">
+      <div class="number-item fade-in stagger-1">
+        <div class="number-value count-up" data-value="349823" data-prefix="$" data-suffix="" data-comma="true">$0</div>
         <div class="number-label">MRR at Month 24</div>
       </div>
-      <div class="number-item">
-        <div class="number-value">$4.2M</div>
+      <div class="number-item fade-in stagger-2">
+        <div class="number-value count-up" data-value="4.2" data-prefix="$" data-suffix="M">$0M</div>
         <div class="number-label">ARR at Month 24</div>
       </div>
-      <div class="number-item">
-        <div class="number-value">$3.13M</div>
+      <div class="number-item fade-in stagger-3">
+        <div class="number-value count-up" data-value="3.13" data-prefix="$" data-suffix="M">$0M</div>
         <div class="number-label">24-Month Total Revenue</div>
       </div>
-      <div class="number-item">
-        <div class="number-value">$4.16M</div>
+      <div class="number-item fade-in stagger-4">
+        <div class="number-value count-up" data-value="4.16" data-prefix="$" data-suffix="M">$0M</div>
         <div class="number-label">24-Month Total Expenses</div>
       </div>
     </div>
-    <div class="numbers-grid-2 fade-in">
-      <div class="number-item">
-        <div class="number-value">$1.46M</div>
+    <div class="numbers-grid-2">
+      <div class="number-item fade-in stagger-5">
+        <div class="number-value count-up" data-value="1.46" data-prefix="$" data-suffix="M">$0M</div>
         <div class="number-label">Ending Cash Position</div>
       </div>
-      <div class="number-item">
+      <div class="number-item fade-in stagger-6">
         <div class="number-value">65–70%</div>
         <div class="number-label">Blended Gross Margin</div>
       </div>
@@ -937,28 +1028,28 @@ body {
       <p class="founder-title">Founder &amp; CEO</p>
     </div>
     <div class="founder-grid">
-      <div class="founder-stat fade-in">
-        <div class="founder-stat-value mono">$50M</div>
+      <div class="founder-stat fade-in stagger-1">
+        <div class="founder-stat-value mono count-up" data-value="50" data-prefix="$" data-suffix="M">$0M</div>
         <p class="founder-stat-desc">Founded ICUC, sold for $50M. Proven at scale.</p>
       </div>
-      <div class="founder-stat fade-in">
-        <div class="founder-stat-value mono">1,000+</div>
+      <div class="founder-stat fade-in stagger-2">
+        <div class="founder-stat-value mono count-up" data-value="1000" data-prefix="" data-suffix="+" data-comma="true">0+</div>
         <p class="founder-stat-desc">Live episodes produced. Deep domain expertise in live storytelling.</p>
       </div>
-      <div class="founder-stat fade-in">
+      <div class="founder-stat fade-in stagger-3">
         <div class="founder-stat-value mono">$15K/mo</div>
         <p class="founder-stat-desc">Salary — below market for a CEO with a $50M exit. Aligned with investors.</p>
       </div>
-      <div class="founder-stat fade-in">
-        <div class="founder-stat-value mono">68.83%</div>
+      <div class="founder-stat fade-in stagger-4">
+        <div class="founder-stat-value mono count-up" data-value="68.83" data-prefix="" data-suffix="%">0%</div>
         <p class="founder-stat-desc">Ownership, 100% voting control. Clear decision-making authority.</p>
       </div>
-      <div class="founder-stat fade-in">
+      <div class="founder-stat fade-in stagger-5">
         <div class="founder-stat-value mono">$0</div>
         <p class="founder-stat-desc">Outside money prior to this round. Self-funded to date.</p>
       </div>
-      <div class="founder-stat fade-in">
-        <div class="founder-stat-value mono">100%</div>
+      <div class="founder-stat fade-in stagger-6">
+        <div class="founder-stat-value mono count-up" data-value="100" data-prefix="" data-suffix="%">0%</div>
         <p class="founder-stat-desc">Full-time dedication to MiTL Studio. All-in.</p>
       </div>
     </div>
@@ -972,28 +1063,28 @@ body {
       <p class="section-label">INVESTMENT TERMS</p>
       <h2 class="section-heading serif">The Round</h2>
     </div>
-    <div class="terms-table fade-in">
-      <div class="terms-row">
+    <div class="terms-table">
+      <div class="terms-row fade-in stagger-1">
         <span class="terms-label">Raise</span>
         <span class="terms-value">$2,500,000</span>
       </div>
-      <div class="terms-row">
+      <div class="terms-row fade-in stagger-2">
         <span class="terms-label">Pre-Money Valuation</span>
         <span class="terms-value">$12,500,000</span>
       </div>
-      <div class="terms-row">
+      <div class="terms-row fade-in stagger-3">
         <span class="terms-label">Post-Money Valuation</span>
         <span class="terms-value">$15,000,000</span>
       </div>
-      <div class="terms-row">
+      <div class="terms-row fade-in stagger-4">
         <span class="terms-label">Investor Ownership</span>
         <span class="terms-value">16.67%</span>
       </div>
-      <div class="terms-row">
+      <div class="terms-row fade-in stagger-5">
         <span class="terms-label">Instrument</span>
         <span class="terms-value">Series Seed Preferred Stock</span>
       </div>
-      <div class="terms-row">
+      <div class="terms-row fade-in stagger-6">
         <span class="terms-label">Entity</span>
         <span class="terms-value">Delaware C-Corp (fresh)</span>
       </div>
@@ -1113,35 +1204,35 @@ body {
       <h2 class="section-heading serif">Why This Is Investible</h2>
     </div>
     <div class="thesis-list">
-      <div class="thesis-item fade-in">
+      <div class="thesis-item fade-in stagger-1">
         <span class="thesis-num">01</span>
         <div class="thesis-content">
           <h3 class="thesis-title serif">Proven Founder</h3>
           <p class="thesis-desc">Keith built and sold a company for $50M. He has done this before — at scale.</p>
         </div>
       </div>
-      <div class="thesis-item fade-in">
+      <div class="thesis-item fade-in stagger-2">
         <span class="thesis-num">02</span>
         <div class="thesis-content">
           <h3 class="thesis-title serif">Revenue on Day One</h3>
           <p class="thesis-desc">This is not a pre-revenue company. $39K ARR with 2 paying customers and growing.</p>
         </div>
       </div>
-      <div class="thesis-item fade-in">
+      <div class="thesis-item fade-in stagger-3">
         <span class="thesis-num">03</span>
         <div class="thesis-content">
           <h3 class="thesis-title serif">Three Revenue Engines</h3>
           <p class="thesis-desc">Network (services), ConversationOS (SaaS), Licensing (IP). Diversified revenue at the seed stage is rare.</p>
         </div>
       </div>
-      <div class="thesis-item fade-in">
+      <div class="thesis-item fade-in stagger-4">
         <span class="thesis-num">04</span>
         <div class="thesis-content">
           <h3 class="thesis-title serif">Disciplined Growth Plan</h3>
           <p class="thesis-desc">Conservative model: $3.1M revenue, $4.2M expenses over 24 months. Cash-flow positive at Month 18. Team grows from 7 to 17 people.</p>
         </div>
       </div>
-      <div class="thesis-item fade-in">
+      <div class="thesis-item fade-in stagger-5">
         <span class="thesis-num">05</span>
         <div class="thesis-content">
           <h3 class="thesis-title serif">Clear Path to Series A</h3>
@@ -1175,16 +1266,102 @@ body {
 </footer>
 
 <script>
-/* ── Sticky Nav on Scroll ── */
+/* ══════════════════════════════════════════════════
+   MiTL Studio — Animation System
+   ══════════════════════════════════════════════════ */
+
+/* ── 1. Hero Entrance Stagger ── */
 (function() {
-  const nav = document.getElementById('mainNav');
-  const hero = document.getElementById('hero');
-  let ticking = false;
+  window.addEventListener('load', function() {
+    var label = document.querySelector('.hero-label');
+    var title = document.querySelector('.hero-title');
+    var subtitle = document.querySelector('.hero-subtitle');
+    var metrics = document.querySelectorAll('.hero-metric');
+    var scrollCta = document.querySelector('.scroll-cta');
+
+    // Stagger hero elements in
+    setTimeout(function() { if (label) label.classList.add('animate'); }, 100);
+    setTimeout(function() { if (title) title.classList.add('animate'); }, 100);
+    setTimeout(function() { if (subtitle) subtitle.classList.add('animate'); }, 100);
+
+    // Metrics stagger with counting
+    metrics.forEach(function(m, i) {
+      setTimeout(function() {
+        m.classList.add('animate');
+        // Trigger count-up for the value inside
+        var countEl = m.querySelector('.count-up');
+        if (countEl) startCountUp(countEl);
+      }, 550 + i * 180);
+    });
+
+    setTimeout(function() { if (scrollCta) scrollCta.classList.add('animate'); }, 100);
+  });
+})();
+
+/* ── 2. Count-Up Number Animation ── */
+function startCountUp(el) {
+  if (el.dataset.counted === 'true') return;
+  el.dataset.counted = 'true';
+
+  var target = parseFloat(el.dataset.value);
+  var prefix = el.dataset.prefix || '';
+  var suffix = el.dataset.suffix || '';
+  var useComma = el.dataset.comma === 'true';
+  var duration = 1400;
+  var startTime = null;
+
+  // Determine decimal places from target
+  var decimalPlaces = 0;
+  var valStr = String(el.dataset.value);
+  if (valStr.indexOf('.') !== -1) {
+    decimalPlaces = valStr.split('.')[1].length;
+  }
+
+  function formatNumber(num) {
+    var fixed = num.toFixed(decimalPlaces);
+    if (useComma) {
+      var parts = fixed.split('.');
+      parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+      return parts.join('.');
+    }
+    return fixed;
+  }
+
+  // Easing: cubic out
+  function easeOutCubic(t) {
+    return 1 - Math.pow(1 - t, 3);
+  }
+
+  function tick(now) {
+    if (!startTime) startTime = now;
+    var elapsed = now - startTime;
+    var progress = Math.min(elapsed / duration, 1);
+    var eased = easeOutCubic(progress);
+    var current = target * eased;
+
+    el.textContent = prefix + formatNumber(current) + suffix;
+
+    if (progress < 1) {
+      requestAnimationFrame(tick);
+    } else {
+      // Ensure final value is exact
+      el.textContent = prefix + formatNumber(target) + suffix;
+    }
+  }
+
+  requestAnimationFrame(tick);
+}
+
+/* ── 3. Sticky Nav on Scroll ── */
+(function() {
+  var nav = document.getElementById('mainNav');
+  var hero = document.getElementById('hero');
+  var ticking = false;
 
   function onScroll() {
     if (!ticking) {
       window.requestAnimationFrame(function() {
-        const heroBottom = hero.offsetTop + hero.offsetHeight * 0.6;
+        var heroBottom = hero.offsetTop + hero.offsetHeight * 0.6;
         if (window.scrollY > heroBottom) {
           nav.classList.add('visible');
         } else {
@@ -1198,38 +1375,47 @@ body {
   window.addEventListener('scroll', onScroll, { passive: true });
 })();
 
-/* ── Scroll-Triggered Fade-In ── */
+/* ── 4. Scroll-Triggered Fade-In + Count-Up ── */
 (function() {
-  const observer = new IntersectionObserver(function(entries) {
+  var observer = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry) {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
+
+        // If this element or its children have count-up, trigger them
+        var countEls = entry.target.querySelectorAll('.count-up');
+        countEls.forEach(function(el) {
+          // Small delay to let the fade-in start first
+          setTimeout(function() { startCountUp(el); }, 200);
+        });
+
+        observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
 
   document.querySelectorAll('.fade-in').forEach(function(el) {
     observer.observe(el);
   });
 })();
 
-/* ── Fund Bar Animation ── */
+/* ── 5. Fund Bar Growth Animation ── */
 (function() {
-  const barsObserver = new IntersectionObserver(function(entries) {
+  var barsObserver = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry) {
       if (entry.isIntersecting) {
-        const bars = entry.target.querySelectorAll('.fund-bar');
+        var bars = entry.target.querySelectorAll('.fund-bar');
         bars.forEach(function(bar, i) {
           setTimeout(function() {
             bar.style.width = bar.getAttribute('data-width') + '%';
-          }, i * 100);
+          }, i * 150);
         });
         barsObserver.unobserve(entry.target);
       }
     });
   }, { threshold: 0.2 });
 
-  const chart = document.querySelector('.funds-chart');
+  var chart = document.querySelector('.funds-chart');
   if (chart) barsObserver.observe(chart);
 })();
 </script>
