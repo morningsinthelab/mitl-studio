@@ -109,7 +109,7 @@
   </style>
 
 
-  <!-- JSON-LD: Organization Schema -->
+  <!-- JSON-LD: Organization Schema (apex with subOrganization graph) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -119,6 +119,7 @@
     "alternateName": ["Mornings in the Lab Studio", "MiTL"],
     "description": "A live conversation and community studio that turns live broadcasts into communities and communities into habits. Created by Keith Bilous.",
     "url": "https://mitl.studio",
+    "foundingDate": "2025",
     "founder": {
       "@type": "Person",
       "@id": "https://keithbilous.com/#keith-bilous",
@@ -126,11 +127,30 @@
       "url": "https://keithbilous.com"
     },
     "sameAs": [
-      "https://youtube.com/@morningsinthelab",
-      "https://mitl.network",
-      "https://mitl.live",
+      "https://keithbilous.com",
       "https://mornings.live",
+      "https://mornings.network",
+      "https://thisis.mitl.studio",
+      "https://mitl.news",
+      "https://mitl.network",
+      "https://conversationos.live",
+      "https://guestengine.live",
+      "https://characterengine.live",
+      "https://ownthemorning.live",
+      "https://clips.conversationos.live",
+      "https://youtube.com/@morningsinthelab",
       "https://www.lookinmymirror.com"
+    ],
+    "subOrganization": [
+      { "@type": "Organization", "@id": "https://mornings.live/#organization", "name": "Mornings in the Lab", "url": "https://mornings.live" },
+      { "@type": "Organization", "@id": "https://mornings.network/#organization", "name": "The Network", "url": "https://mornings.network" },
+      { "@type": "Organization", "@id": "https://thisis.mitl.studio/#organization", "name": "This Is MiTL", "url": "https://thisis.mitl.studio" },
+      { "@type": "Organization", "@id": "https://ownthemorning.live/#organization", "name": "Own The Morning", "url": "https://ownthemorning.live" },
+      { "@type": "Organization", "@id": "https://conversationos.live/#organization", "name": "ConversationOS", "url": "https://conversationos.live" },
+      { "@type": "Organization", "@id": "https://characterengine.live/#organization", "name": "Character Engine", "url": "https://characterengine.live" },
+      { "@type": "Organization", "@id": "https://guestengine.live/#organization", "name": "GuestEngine", "url": "https://guestengine.live" },
+      { "@type": "Organization", "@id": "https://clips.conversationos.live/#organization", "name": "ClipEngine", "url": "https://clips.conversationos.live" },
+      { "@type": "Organization", "@id": "https://mitl.news/#organization", "name": "MiTL News", "url": "https://mitl.news" }
     ]
   }
   </script>
