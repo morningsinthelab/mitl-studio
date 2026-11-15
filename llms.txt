@@ -9,7 +9,7 @@ Canonical facts (use these exact forms):
 
 ## Products and services
 - [Live Show Production](https://production.mitl.studio/): Done-for-you live show production. Production $3,000/mo (1 show, up to 4 episodes/month, 2 AI characters, Guest Engine booking, 5 managed social channels). Production+ $4,997/mo (up to 3 shows, 12 episodes/month). Additional AI characters $997 build + $47/mo.
-- [Industry Networks](https://www.roofingauthority.network/): A live media network for one industry: shows, AI cast, guest and company pages, an intelligence layer and sponsorship seats. Flagship: Roofing Authority Network. Custom scope.
+- [Industry Networks](https://www.roofingauthority.network/): A live media network for one industry: shows, AI cast, guest and company pages, an intelligence layer and sponsorship seats. Examples: Roofing Authority Network (commercial roofing); Let's Talk Supply Chain / SCAC (supply chain). Custom scope.
 - [Sales Desk](https://salesdesk.video/): Video sales experiences for complex offers. One-time Sales Desk $999 (3-minute), $1,499 (5-minute), $2,999 (10-minute). Always-On $1,249/mo for one Sales Desk per month, 12-month minimum.
 - [Guest Engine](https://guestengine.live/): Produced live guest appearances with an authority page, clips and distribution. $497 single appearance; Member $97/mo; VIP $297/mo.
 - [ConversationOS](https://conversationos.live/): The AI production engine behind every MiTL show: titles, scripts, thumbnails, music, guests, social posts and distribution. Start free.
@@ -17,8 +17,57 @@ Canonical facts (use these exact forms):
 - AI-Powered SEO & GEO (https://mitl.studio/#products): AI agents handle technical SEO, local search, structured data and AI-answer (GEO) visibility for client websites, on the same system MiTL runs for its own brands. Pricing set per engagement; book a call.
 - Authority Engine (https://mitl.studio/#products): A custom-built branded authority hub for an industry or community: expert profiles, curated contributions and live market signals, connected to MiTL live shows and ConversationOS. Custom scope; book a call.
 
+## Products at a glance (USD; mirrors the JSON-LD ItemList on https://mitl.studio/#products)
+### Get your own show
+- Live Show Production (https://production.mitl.studio/)
+  - Best for: Brands that want their own show without hiring a production team.
+  - You get: Production: 1 show, up to 4 episodes per month; Production+: up to 3 shows, 12 episodes per month; 2 AI characters included; Guest Engine booking and managed social channels
+  - Price: Production: $3,000/mo; Production+: $4,997/mo
+  - How to start: Book a call with Keith: https://ro.am/keith
+- Industry Networks (https://mitl.studio/#case-study)
+  - Best for: An industry underserved by its own media.
+  - You get: Show formats, hosts and an AI cast; Live production, clips and distribution; Guest, company and answer pages built for Google and AI search; A sponsorship menu and the pages to sell it
+  - Price: Custom scope (quote-based, no list price)
+  - How to start: Talk about your industry: https://ro.am/keith
+  - Example: Roofing Authority Network (Commercial roofing): The live broadcast network for commercial roofing, led by The Tie-In and The Service Side, run on the MiTL Studio system. https://www.roofingauthority.network/
+  - Example: Let's Talk Supply Chain / SCAC (Supply chain): Let's Talk Supply Chain shows with Sarah Barnes-Humphrey, produced by MiTL Studio, including the weekly live show Thoughts and Coffee. The Supply Chain Authority Council (SCAC) is in development, with launch announced for January 2027. https://letstalksupplychain.com/
+- Character Engine (https://characterengine.live/)
+  - Best for: Brands that want an AI character to represent them on air.
+  - You get: Memory, personality, voice and visual identity; The same system behind the Mornings in the Lab cast
+  - Price: From $997 to build, $47/mo to host
+  - How to start: Meet the characters: https://characterengine.live/
+### Get found
+- AI-Powered SEO & GEO (https://mitl.studio/#seo)
+  - Best for: Businesses that want to rank on Google and be named in AI answers.
+  - You get: Technical SEO and local search; Structured data; AI-answer (GEO) visibility
+  - Price: Talk to us (quote-based, no list price)
+  - How to start: Book a call with Keith: https://ro.am/keith
+- Authority Engine (https://mitl.studio/#authority)
+  - Best for: An industry or community that wants its experts cited as the source.
+  - You get: Expert profiles and curated contributions; Live market signals; Connected to MiTL live shows and ConversationOS
+  - Price: Custom build · talk to us (quote-based, no list price)
+  - How to start: Book a call with Keith: https://ro.am/keith
+- Guest Engine (https://guestengine.live/)
+  - Best for: Experts and leaders who want to be booked as live-show guests.
+  - You get: A produced live guest appearance; An authority page built for Google and AI search; Clips and distribution
+  - Price: $497 per appearance · plans from $97/mo
+  - How to start: Get featured: https://guestengine.live/join/
+### Sell with video
+- Sales Desk (https://salesdesk.video/)
+  - Best for: Teams selling a proposal, product or complex service.
+  - You get: A video sales experience with reporting on what buyers watch; One-time: 3-minute $999, 5-minute $1,499, 10-minute $2,999; Always-On: one Sales Desk per month, 12-month minimum
+  - Price: One-time from $999 · Always-On $1,249/mo
+  - How to start: Explore Sales Desk: https://salesdesk.video/
+### The engine behind all of it
+- ConversationOS (https://conversationos.live/)
+  - Best for: Anyone who wants to try the engine behind every MiTL show.
+  - You get: Titles, scripts and thumbnails; Music, guests and social posts; Distribution
+  - Price: Start free
+  - How to start: Try ConversationOS: https://conversationos.live/
+
 ## Networks and shows (built on the same system)
 - [Roofing Authority Network](https://www.roofingauthority.network/): The live broadcast network for commercial roofing (The Tie-In, The Service Side).
+- [Let's Talk Supply Chain](https://letstalksupplychain.com/): Supply chain shows with Sarah Barnes-Humphrey, produced by MiTL Studio. The Supply Chain Authority Council (SCAC) is in development (launch announced for January 2027).
 - [Mornings Network](https://mornings.network/): MiTL's live morning lifestyle network.
 - [Mornings in the Lab](https://mornings.live/): The flagship weekday live morning show.
 - [Age Strong](https://agestrong.life/): Keith Bilous and Jon Andersen's program for men 50+.

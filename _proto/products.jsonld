@@ -1,0 +1,375 @@
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "ItemList",
+   "@id": "https://mitl.studio/#products-list",
+   "name": "MiTL Studio products and services",
+   "description": "Grouped by outcome: get your own show, get found, sell with video, plus the ConversationOS engine. Prices in USD; quote-based offers carry no price.",
+   "numberOfItems": 8,
+   "itemListOrder": "https://schema.org/ItemListUnordered",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "item": {
+      "@type": "Service",
+      "@id": "https://mitl.studio/#production",
+      "name": "Live Show Production",
+      "serviceType": "Live show production",
+      "description": "Your own show, fully produced every week, without hiring a production team. Best for: Brands that want their own show without hiring a production team. Price: Production: $3,000/mo; Production+: $4,997/mo.",
+      "url": "https://production.mitl.studio/",
+      "provider": {
+       "@id": "https://mitl.studio/#organization"
+      },
+      "offers": [
+       {
+        "@type": "Offer",
+        "name": "Production: 1 show, up to 4 episodes per month",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+         "@type": "UnitPriceSpecification",
+         "price": "3000",
+         "priceCurrency": "USD",
+         "unitText": "MONTH"
+        },
+        "price": "3000",
+        "url": "https://production.mitl.studio/",
+        "seller": {
+         "@id": "https://mitl.studio/#organization"
+        }
+       },
+       {
+        "@type": "Offer",
+        "name": "Production+: up to 3 shows, 12 episodes per month",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+         "@type": "UnitPriceSpecification",
+         "price": "4997",
+         "priceCurrency": "USD",
+         "unitText": "MONTH"
+        },
+        "price": "4997",
+        "url": "https://production.mitl.studio/",
+        "seller": {
+         "@id": "https://mitl.studio/#organization"
+        }
+       }
+      ]
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "item": {
+      "@type": "Service",
+      "@id": "https://mitl.studio/#networks",
+      "name": "Industry Networks",
+      "serviceType": "Industry media network",
+      "description": "Your industry's own live network: shows, guests, an intelligence layer and sponsor seats. Best for: An industry underserved by its own media. Price: Custom scope. Examples: Roofing Authority Network (commercial roofing); Let's Talk Supply Chain / SCAC (supply chain).",
+      "url": "https://mitl.studio/#case-study",
+      "provider": {
+       "@id": "https://mitl.studio/#organization"
+      },
+      "offers": [
+       {
+        "@type": "Offer",
+        "name": "Industry Network build",
+        "description": "Quote-based. Custom scope per industry; book a call.",
+        "availability": "https://schema.org/InStock",
+        "url": "https://ro.am/keith",
+        "seller": {
+         "@id": "https://mitl.studio/#organization"
+        }
+       }
+      ],
+      "isRelatedTo": {
+       "@id": "https://mitl.studio/#industry-network-examples"
+      }
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "item": {
+      "@type": "Service",
+      "@id": "https://mitl.studio/#character",
+      "name": "Character Engine",
+      "serviceType": "AI character creation and hosting",
+      "description": "AI characters with memory, personality and a voice, built to represent your brand on air. Best for: Brands that want an AI character to represent them on air. Price: From $997 to build, $47/mo to host.",
+      "url": "https://characterengine.live/",
+      "provider": {
+       "@id": "https://mitl.studio/#organization"
+      },
+      "offers": [
+       {
+        "@type": "Offer",
+        "name": "AI character build (from)",
+        "priceCurrency": "USD",
+        "price": "997",
+        "url": "https://characterengine.live/",
+        "seller": {
+         "@id": "https://mitl.studio/#organization"
+        }
+       },
+       {
+        "@type": "Offer",
+        "name": "AI character hosting",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+         "@type": "UnitPriceSpecification",
+         "price": "47",
+         "priceCurrency": "USD",
+         "unitText": "MONTH"
+        },
+        "price": "47",
+        "url": "https://characterengine.live/",
+        "seller": {
+         "@id": "https://mitl.studio/#organization"
+        }
+       }
+      ]
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 4,
+     "item": {
+      "@type": "Service",
+      "@id": "https://mitl.studio/#seo",
+      "name": "AI-Powered SEO & GEO",
+      "serviceType": "Search engine optimization and generative engine optimization",
+      "description": "Get found on Google and named in AI answers, on the same system we run for our own brands. Best for: Businesses that want to rank on Google and be named in AI answers. Price: Talk to us.",
+      "url": "https://mitl.studio/#seo",
+      "provider": {
+       "@id": "https://mitl.studio/#organization"
+      },
+      "offers": [
+       {
+        "@type": "Offer",
+        "name": "AI-Powered SEO & GEO engagement",
+        "description": "Quote-based. Pricing set per engagement; book a call.",
+        "availability": "https://schema.org/InStock",
+        "url": "https://ro.am/keith",
+        "seller": {
+         "@id": "https://mitl.studio/#organization"
+        }
+       }
+      ]
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 5,
+     "item": {
+      "@type": "Service",
+      "@id": "https://mitl.studio/#authority",
+      "name": "Authority Engine",
+      "serviceType": "Industry authority platform",
+      "description": "A branded authority hub, built so search and AI cite your people as the source. Best for: An industry or community that wants its experts cited as the source. Price: Custom build · talk to us.",
+      "url": "https://mitl.studio/#authority",
+      "provider": {
+       "@id": "https://mitl.studio/#organization"
+      },
+      "offers": [
+       {
+        "@type": "Offer",
+        "name": "Authority Engine build",
+        "description": "Quote-based. Custom build; book a call.",
+        "availability": "https://schema.org/InStock",
+        "url": "https://ro.am/keith",
+        "seller": {
+         "@id": "https://mitl.studio/#organization"
+        }
+       }
+      ]
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 6,
+     "item": {
+      "@type": "Service",
+      "@id": "https://mitl.studio/#guest",
+      "name": "Guest Engine",
+      "serviceType": "Podcast and live show guest booking",
+      "description": "Get booked on live shows and produced into a month of content. Best for: Experts and leaders who want to be booked as live-show guests. Price: $497 per appearance · plans from $97/mo.",
+      "url": "https://guestengine.live/",
+      "provider": {
+       "@id": "https://mitl.studio/#organization"
+      },
+      "offers": [
+       {
+        "@type": "Offer",
+        "name": "Single guest appearance",
+        "priceCurrency": "USD",
+        "price": "497",
+        "url": "https://guestengine.live/",
+        "seller": {
+         "@id": "https://mitl.studio/#organization"
+        }
+       },
+       {
+        "@type": "Offer",
+        "name": "Member plan",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+         "@type": "UnitPriceSpecification",
+         "price": "97",
+         "priceCurrency": "USD",
+         "unitText": "MONTH"
+        },
+        "price": "97",
+        "url": "https://guestengine.live/",
+        "seller": {
+         "@id": "https://mitl.studio/#organization"
+        }
+       },
+       {
+        "@type": "Offer",
+        "name": "VIP plan",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+         "@type": "UnitPriceSpecification",
+         "price": "297",
+         "priceCurrency": "USD",
+         "unitText": "MONTH"
+        },
+        "price": "297",
+        "url": "https://guestengine.live/",
+        "seller": {
+         "@id": "https://mitl.studio/#organization"
+        }
+       }
+      ]
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 7,
+     "item": {
+      "@type": "Service",
+      "@id": "https://mitl.studio/#salesdesk",
+      "name": "Sales Desk",
+      "serviceType": "Video sales experiences",
+      "description": "Turn a proposal, product or complex service into a video sales experience. Best for: Teams selling a proposal, product or complex service. Price: One-time from $999 · Always-On $1,249/mo.",
+      "url": "https://salesdesk.video/",
+      "provider": {
+       "@id": "https://mitl.studio/#organization"
+      },
+      "offers": [
+       {
+        "@type": "Offer",
+        "name": "One-time Sales Desk, 3-minute",
+        "priceCurrency": "USD",
+        "price": "999",
+        "url": "https://salesdesk.video/",
+        "seller": {
+         "@id": "https://mitl.studio/#organization"
+        }
+       },
+       {
+        "@type": "Offer",
+        "name": "One-time Sales Desk, 5-minute",
+        "priceCurrency": "USD",
+        "price": "1499",
+        "url": "https://salesdesk.video/",
+        "seller": {
+         "@id": "https://mitl.studio/#organization"
+        }
+       },
+       {
+        "@type": "Offer",
+        "name": "One-time Sales Desk, 10-minute",
+        "priceCurrency": "USD",
+        "price": "2999",
+        "url": "https://salesdesk.video/",
+        "seller": {
+         "@id": "https://mitl.studio/#organization"
+        }
+       },
+       {
+        "@type": "Offer",
+        "name": "Sales Desk Always-On, one per month (12-month minimum)",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+         "@type": "UnitPriceSpecification",
+         "price": "1249",
+         "priceCurrency": "USD",
+         "unitText": "MONTH"
+        },
+        "price": "1249",
+        "url": "https://salesdesk.video/",
+        "seller": {
+         "@id": "https://mitl.studio/#organization"
+        }
+       }
+      ]
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 8,
+     "item": {
+      "@type": "Service",
+      "@id": "https://mitl.studio/#conversationos",
+      "name": "ConversationOS",
+      "serviceType": "AI show production software",
+      "description": "The AI engine that builds every episode: titles, scripts, thumbnails, guests and distribution. Best for: Anyone who wants to try the engine behind every MiTL show. Price: Start free.",
+      "url": "https://conversationos.live/",
+      "provider": {
+       "@id": "https://mitl.studio/#organization"
+      },
+      "offers": [
+       {
+        "@type": "Offer",
+        "name": "ConversationOS: start free",
+        "priceCurrency": "USD",
+        "price": "0",
+        "url": "https://conversationos.live/",
+        "seller": {
+         "@id": "https://mitl.studio/#organization"
+        }
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "@type": "ItemList",
+   "@id": "https://mitl.studio/#industry-network-examples",
+   "name": "Industry Networks examples",
+   "numberOfItems": 2,
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "item": {
+      "@type": "Organization",
+      "@id": "https://www.roofingauthority.network/#organization",
+      "name": "Roofing Authority Network",
+      "url": "https://www.roofingauthority.network/",
+      "description": "The live broadcast network for commercial roofing, led by The Tie-In and The Service Side, run on the MiTL Studio system."
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "item": {
+      "@type": "Organization",
+      "name": "Let's Talk Supply Chain",
+      "url": "https://letstalksupplychain.com/",
+      "description": "Let's Talk Supply Chain shows with Sarah Barnes-Humphrey, produced by MiTL Studio, including the weekly live show Thoughts and Coffee.",
+      "subOrganization": {
+       "@type": "Organization",
+       "name": "Supply Chain Authority Council",
+       "alternateName": "SCAC",
+       "description": "A Let's Talk Supply Chain initiative in development; launch announced for January 2027."
+      }
+     }
+    }
+   ]
+  }
+ ]
+}

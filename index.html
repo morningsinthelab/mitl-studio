@@ -176,7 +176,89 @@ footer a{display:block;color:var(--muted);text-decoration:none;margin-bottom:6px
 @media (max-width:900px){.grid,.steps,.proof{grid-template-columns:1fr 1fr}.case,.tiers{grid-template-columns:1fr}footer .cols{grid-template-columns:1fr 1fr}nav a:not(.btn){display:none}}
 @media (max-width:900px){.hero-media img{object-position:70% center;filter:brightness(.86) contrast(1.06) saturate(.92)}.hero-fade-x{display:none}.hero-fade-y{background:linear-gradient(to top,var(--bg) 0%,rgba(2,6,23,.80) 52%,rgba(2,6,23,.30) 100%)}.hero{min-height:0;align-items:stretch}}
 @media (max-width:600px){.grid,.steps,.proof{grid-template-columns:1fr}.hero{display:block;min-height:0}.hero-media{position:relative;inset:auto;height:auto;aspect-ratio:16/10}.hero-media img{object-position:58% 35%;filter:brightness(.9) contrast(1.05) saturate(.95)}.hero-fade-x{display:none}.hero-fade-y{background:linear-gradient(to top,#020617 0%,rgba(2,6,23,.35) 22%,rgba(2,6,23,0) 45%)}.hero-content{padding-top:20px;padding-bottom:40px}.hero h1,.hero .lede{text-shadow:none}}
+/* ===== Prototype: dual-readable products section ===== */
+.dual{position:relative;overflow:hidden}
+.dual:before{content:"";position:absolute;inset:-20% -10% auto auto;width:620px;height:620px;background:radial-gradient(circle,rgba(90,209,255,.10),transparent 65%);pointer-events:none;animation:drift 18s ease-in-out infinite alternate}
+@keyframes drift{to{transform:translate(-140px,120px)}}
+.dual-head .sub{margin-bottom:20px}
+.jump{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:8px}
+.jump a{margin-left:0;font-size:14px;text-decoration:none;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:7px 14px;transition:color .2s,border-color .2s,background .2s}
+.jump a:hover{color:var(--text);border-color:var(--accent);background:rgba(255,176,32,.08)}
+.og{border:0;padding:0;margin-top:44px;display:grid;grid-template-columns:minmax(260px,.8fr) 2fr;gap:20px;align-items:start}
+.og-media{position:sticky;top:84px;height:min(560px,72vh);border-radius:var(--radius);overflow:hidden;border:1px solid var(--line)}
+.og-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1);filter:saturate(.9) contrast(1.05)}
+.og:hover .og-media img{transform:scale(1.05)}
+#get-found .og-media img{object-position:50% 30%}#sell-with-video .og-media img{object-position:50% 25%}
+.og-media:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(2,6,23,.96) 0%,rgba(2,6,23,.55) 45%,rgba(2,6,23,.05) 100%)}
+.og-cap{position:absolute;left:0;right:0;bottom:0;padding:22px;z-index:1}
+.og-cap .num{display:inline-block;color:#111;background:var(--accent);font-weight:800;font-size:12px;letter-spacing:.08em;border-radius:999px;padding:3px 10px}
+.og-cap h3{margin:10px 0 6px;font-size:28px;line-height:1.1;letter-spacing:-.01em}
+.og-cap p{margin:0;color:#c9d2df;font-size:15px;max-width:30ch}
+.og-cards{display:grid;gap:16px;grid-template-columns:repeat(2,1fr)}
+.og-cards.n1{grid-template-columns:1fr}
+.pcard{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:22px;display:flex;flex-direction:column;gap:10px;transition:transform .25s ease,border-color .25s,box-shadow .25s}
+.pcard:hover{transform:translateY(-4px);border-color:rgba(255,176,32,.55);box-shadow:0 18px 40px -18px rgba(255,176,32,.35)}
+.pcard.wide{grid-column:1/-1;order:9}
+.pcard.wide .facts{grid-template-columns:1fr 1fr;column-gap:28px}
+.pcard-top{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.pcard .tag,.engine .tag{font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--accent2);font-weight:700}
+.pill{font-size:13px;font-weight:700;color:var(--text);background:rgba(255,176,32,.12);border:1px solid rgba(255,176,32,.35);border-radius:999px;padding:4px 10px;white-space:nowrap}
+.pcard h4{margin:0;font-size:21px;letter-spacing:-.01em}
+.pitch{margin:0;color:#c9d2df;font-size:15.5px}
+.facts{margin:4px 0 0;display:grid;gap:0;border-top:1px solid var(--line)}
+.facts>div{display:grid;grid-template-columns:96px 1fr;gap:12px;padding:9px 0;border-bottom:1px solid var(--line)}
+.facts dt{font-size:11.5px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:700;padding-top:3px}
+.facts dd{margin:0;font-size:14.5px;color:var(--text)}
+.facts dd ul{margin:0;padding-left:18px;color:#c9d2df}.facts dd li{margin-bottom:2px}
+.facts .pr dd{font-weight:700;color:var(--accent)}
+.facts a{color:var(--accent);font-weight:700;text-decoration:none}
+.pcard a.more{margin-top:auto;padding-top:4px;color:var(--accent);font-weight:700;text-decoration:none;font-size:15px}
+.pcard a.more:hover,.facts a:hover{text-decoration:underline}
+.avatars{display:flex;margin:2px 0}
+.avatars img{width:44px;height:44px;border-radius:50%;object-fit:cover;object-position:top;border:2px solid var(--panel);margin-left:-10px;transition:transform .25s}
+.avatars img:first-child{margin-left:0}
+.pcard:hover .avatars img{transform:translateY(-3px)}
+.pcard:hover .avatars img:nth-child(2n){transform:translateY(2px)}
+.examples h4{margin:6px 0 10px;font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
+.examples ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ex{border:1px solid var(--line);border-radius:12px;padding:14px 16px;background:linear-gradient(160deg,rgba(90,209,255,.06),rgba(255,176,32,.04));display:flex;flex-direction:column;gap:6px}
+.ex-ind{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--accent2);font-weight:700}
+.ex h5{margin:0;font-size:17px}
+.ex p{margin:0;color:#c9d2df;font-size:14px}
+.ex-status{font-size:12px;color:var(--muted)}
+.ex a{margin-top:auto;color:var(--accent);font-weight:700;text-decoration:none;font-size:14px}
+.engine{position:relative;margin-top:44px;display:grid;grid-template-columns:1.1fr 1.3fr auto;gap:28px;align-items:center;padding:26px 28px;border-radius:var(--radius);background:linear-gradient(90deg,rgba(90,209,255,.08),rgba(255,176,32,.05));isolation:isolate}
+.engine:before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;background:linear-gradient(110deg,rgba(90,209,255,.15) 20%,rgba(90,209,255,.9) 40%,rgba(255,176,32,.9) 50%,rgba(90,209,255,.15) 70%);background-size:300% 100%;animation:sheen 6s linear infinite;-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;z-index:-1}
+@keyframes sheen{from{background-position:100% 0}to{background-position:-200% 0}}
+.engine h3{margin:6px 0;font-size:26px}
+.engine .facts{margin:0}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--accent2);margin-right:8px;vertical-align:1px;box-shadow:0 0 0 0 rgba(90,209,255,.6);animation:pulse 2.2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(90,209,255,0)}100%{box-shadow:0 0 0 0 rgba(90,209,255,0)}}
+.glance{margin-top:44px;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--panel)}
+.glance table{width:100%;border-collapse:collapse;font-size:14.5px}
+.glance caption{text-align:left;padding:20px 22px 14px}
+.glance caption h3{margin:0 0 4px;font-size:22px}.glance caption span{color:var(--muted);font-size:14px}
+.glance th,.glance td{text-align:left;padding:12px 16px;border-top:1px solid var(--line);vertical-align:top}
+.glance thead th{font-size:11.5px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);background:rgba(255,255,255,.02)}
+.glance tbody th a{color:var(--text);text-decoration:none;font-weight:700}
+.glance tbody th small{display:block;font-weight:500;color:var(--muted);font-size:12.5px;margin-top:3px}
+.glance tbody tr{transition:background .2s}.glance tbody tr:hover{background:rgba(255,176,32,.05)}
+.glance td:nth-child(3){color:var(--accent);font-weight:700;white-space:nowrap}
+.glance td a{color:var(--accent);text-decoration:none;font-weight:600}
+.brands{padding-top:8px;border-top:0}.brands .group-label{margin-top:0}
+/* scroll reveal: only when JS is running, so no-JS readers and crawlers always see everything */
+.js .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.in{opacity:1;transform:none}
+.js .og-cards .reveal:nth-child(2){transition-delay:.08s}.js .og-cards .reveal:nth-child(3){transition-delay:.16s}
+@media (max-width:980px){.og{grid-template-columns:1fr}.og-media{position:relative;top:auto;height:auto;aspect-ratio:16/7}.engine{grid-template-columns:1fr;gap:16px}.engine .btn{justify-self:start}}
+@media (max-width:700px){.og-cards{grid-template-columns:1fr}.pcard.wide .facts{grid-template-columns:1fr}.examples ul{grid-template-columns:1fr}.og-media{aspect-ratio:4/3;min-height:0}.facts>div{grid-template-columns:84px 1fr}
+.glance thead{display:none}.glance table,.glance tbody,.glance tr,.glance th,.glance td{display:block;width:100%}.glance tbody tr{border-top:1px solid var(--line);padding:10px 0}
+.glance tbody th,.glance tbody td{border:0;padding:4px 18px;white-space:normal}.glance td:before{content:attr(data-label);display:block;font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:700}
+.pill{display:none}}
+@media (prefers-reduced-motion:reduce){.dual:before,.engine:before,.dot{animation:none}.js .reveal{opacity:1;transform:none;transition:none}.pcard,.og-media img,.avatars img{transition:none}.pcard:hover,.og:hover .og-media img,.pcard:hover .avatars img{transform:none}}
+
 </style>
+<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
 <header class="top">
@@ -259,90 +341,556 @@ footer a{display:block;color:var(--muted);text-decoration:none;margin-bottom:6px
   </div>
 </section>
 
-<section id="products">
-  <div class="wrap">
-    <h2>One studio. Everything behind the camera.</h2>
-    <p class="sub">Pick the outcome you need. Every product runs on the same engine.</p>
+<section id="products" class="dual" aria-labelledby="products-h">
+<div class="wrap">
+  <header class="dual-head reveal">
+    <div class="eyebrow">What we build</div>
+    <h2 id="products-h">One studio. Everything behind the camera.</h2>
+    <p class="sub">Pick the outcome you need. Every product runs on the same engine, ConversationOS.</p>
+    <nav class="jump" aria-label="Outcomes"><a href="#get-your-own-show">01 Get your own show</a><a href="#get-found">02 Get found</a><a href="#sell-with-video">03 Sell with video</a><a href="#at-a-glance">At a glance</a></nav>
+  </header>
 
-    <div class="outcome" id="get-your-own-show">
-      <div class="outcome-head"><span class="num">01</span><h3>Get your own show</h3></div>
-      <div class="grid">
-      <article class="card">
-        <span class="tag">Done for you</span>
-        <h3>Live Show Production</h3>
-        <p>Your own show, fully produced every week, without hiring a production team.</p>
-        <div class="price">From $3,000/mo</div>
+  <section class="og reveal" id="get-your-own-show" aria-labelledby="get-your-own-show-h">
+    <div class="og-media">
+      <picture><source srcset="/assets/proto/show.webp" type="image/webp"><img src="/assets/proto/show.jpg" loading="lazy" decoding="async" alt="Keith Bilous, Jon Andersen and the MiTL AI cast on a rooftop together"></picture>
+      <div class="og-cap"><span class="num">01</span><h3 id="get-your-own-show-h">Get your own show</h3><p>A show, a network or a cast of AI characters, produced for you.</p></div>
+    </div>
+    <div class="og-cards n3">
+      <article class="pcard reveal" id="production" aria-labelledby="production-h">
+        <div class="pcard-top"><span class="tag">Done for you</span><span class="pill">$3,000/mo · $4,997/mo</span></div>
+        <h4 id="production-h">Live Show Production</h4>
+        <p class="pitch">Your own show, fully produced every week, without hiring a production team.</p>
+        
+        <dl class="facts">
+          <div><dt>Best for</dt><dd>Brands that want their own show without hiring a production team.</dd></div>
+          <div><dt>You get</dt><dd><ul><li>Production: 1 show, up to 4 episodes per month</li><li>Production+: up to 3 shows, 12 episodes per month</li><li>2 AI characters included</li><li>Guest Engine booking and managed social channels</li></ul></dd></div>
+          <div class="pr"><dt>Price</dt><dd>Production: $3,000/mo; Production+: $4,997/mo</dd></div>
+          <div><dt>How to start</dt><dd><a href="https://ro.am/keith">Book a call with Keith</a></dd></div>
+        </dl>
         <a class="more" href="https://production.mitl.studio/">See production →</a>
       </article>
-      <article class="card">
-        <span class="tag">Flagship</span>
-        <h3>Industry Networks</h3>
-        <p>Your industry's own live network: shows, guests, an intelligence layer and sponsor seats.</p>
-        <div class="price">Custom scope · see Roofing Authority Network</div>
-        <a class="more" href="#case-study">Read the case study →</a>
+      <article class="pcard reveal wide" id="networks" aria-labelledby="networks-h">
+        <div class="pcard-top"><span class="tag">Flagship</span><span class="pill">Custom scope</span></div>
+        <h4 id="networks-h">Industry Networks</h4>
+        <p class="pitch">Your industry&#x27;s own live network: shows, guests, an intelligence layer and sponsor seats.</p>
+        <div class="examples"><h4>Networks we run</h4><ul><li class="ex">
+            <span class="ex-ind">Commercial roofing</span>
+            <h5>Roofing Authority Network</h5>
+            <p>The live broadcast network for commercial roofing, led by The Tie-In and The Service Side, run on the MiTL Studio system.</p>
+            <span class="ex-status">Live</span>
+            <a href="https://www.roofingauthority.network/">Visit Roofing Authority Network →</a>
+          </li><li class="ex">
+            <span class="ex-ind">Supply chain</span>
+            <h5>Let&#x27;s Talk Supply Chain / SCAC</h5>
+            <p>Let&#x27;s Talk Supply Chain shows with Sarah Barnes-Humphrey, produced by MiTL Studio, including the weekly live show Thoughts and Coffee. The Supply Chain Authority Council (SCAC) is in development, with launch announced for January 2027.</p>
+            <span class="ex-status">Live · SCAC in development</span>
+            <a href="https://letstalksupplychain.com/">Visit Let&#x27;s Talk Supply Chain →</a>
+          </li></ul></div>
+        <dl class="facts">
+          <div><dt>Best for</dt><dd>An industry underserved by its own media.</dd></div>
+          <div><dt>You get</dt><dd><ul><li>Show formats, hosts and an AI cast</li><li>Live production, clips and distribution</li><li>Guest, company and answer pages built for Google and AI search</li><li>A sponsorship menu and the pages to sell it</li></ul></dd></div>
+          <div class="pr"><dt>Price</dt><dd>Custom scope</dd></div>
+          <div><dt>How to start</dt><dd><a href="https://ro.am/keith">Talk about your industry</a></dd></div>
+        </dl>
+        <a class="more" href="https://mitl.studio/#case-study">Read the RAN case study →</a>
       </article>
-      <article class="card">
-        <span class="tag">AI cast</span>
-        <h3>Character Engine</h3>
-        <p>AI characters with memory, personality and a voice, built to represent your brand on air.</p>
-        <div class="price">From $997 to build · $47/mo to host</div>
+      <article class="pcard reveal" id="character" aria-labelledby="character-h">
+        <div class="pcard-top"><span class="tag">AI cast</span><span class="pill">From $997 · $47/mo</span></div>
+        <h4 id="character-h">Character Engine</h4>
+        <p class="pitch">AI characters with memory, personality and a voice, built to represent your brand on air.</p>
+        <div class="avatars" aria-hidden="true"><img src="/assets/cast/sterling-james.webp" width="48" height="48" loading="lazy" alt=""><img src="/assets/cast/preston-vale.webp" width="48" height="48" loading="lazy" alt=""><img src="/assets/cast/sophia-grant.webp" width="48" height="48" loading="lazy" alt=""><img src="/assets/cast/maya-reyes.webp" width="48" height="48" loading="lazy" alt=""><img src="/assets/cast/frankie.webp" width="48" height="48" loading="lazy" alt=""><img src="/assets/cast/tommy.webp" width="48" height="48" loading="lazy" alt=""></div>
+        <dl class="facts">
+          <div><dt>Best for</dt><dd>Brands that want an AI character to represent them on air.</dd></div>
+          <div><dt>You get</dt><dd><ul><li>Memory, personality, voice and visual identity</li><li>The same system behind the Mornings in the Lab cast</li></ul></dd></div>
+          <div class="pr"><dt>Price</dt><dd>From $997 to build, $47/mo to host</dd></div>
+          <div><dt>How to start</dt><dd><a href="https://characterengine.live/">Meet the characters</a></dd></div>
+        </dl>
         <a class="more" href="https://characterengine.live/">Meet the characters →</a>
       </article>
-      </div>
     </div>
-
-    <div class="outcome" id="get-found">
-      <div class="outcome-head"><span class="num">02</span><h3>Get found</h3></div>
-      <div class="grid">
-      <article class="card">
-        <span class="tag">Search + AI answers</span>
-        <h3>AI-Powered SEO &amp; GEO</h3>
-        <p>Get found on Google and named in AI answers. Our AI agents handle technical SEO, local search, structured data and AI-answer visibility for your sites, on the same system we run for our own brands.</p>
-        <div class="price">Talk to us</div>
-        <a class="more" href="https://ro.am/keith">Talk to us about SEO →</a>
+  </section>
+  <section class="og reveal" id="get-found" aria-labelledby="get-found-h">
+    <div class="og-media">
+      <picture><source srcset="/assets/proto/found.webp" type="image/webp"><img src="/assets/proto/found.jpg" loading="lazy" decoding="async" alt="Keith Bilous and Jon Andersen, MiTL Studio hosts, on a city rooftop"></picture>
+      <div class="og-cap"><span class="num">02</span><h3 id="get-found-h">Get found</h3><p>Be the name Google ranks and AI assistants cite.</p></div>
+    </div>
+    <div class="og-cards n3">
+      <article class="pcard reveal" id="seo" aria-labelledby="seo-h">
+        <div class="pcard-top"><span class="tag">Search + AI answers</span><span class="pill">Talk to us</span></div>
+        <h4 id="seo-h">AI-Powered SEO &amp; GEO</h4>
+        <p class="pitch">Get found on Google and named in AI answers, on the same system we run for our own brands.</p>
+        
+        <dl class="facts">
+          <div><dt>Best for</dt><dd>Businesses that want to rank on Google and be named in AI answers.</dd></div>
+          <div><dt>You get</dt><dd><ul><li>Technical SEO and local search</li><li>Structured data</li><li>AI-answer (GEO) visibility</li></ul></dd></div>
+          <div class="pr"><dt>Price</dt><dd>Talk to us</dd></div>
+          <div><dt>How to start</dt><dd><a href="https://ro.am/keith">Book a call with Keith</a></dd></div>
+        </dl>
+        <a class="more" href="https://mitl.studio/#seo">Talk to us about SEO →</a>
       </article>
-      <article class="card">
-        <span class="tag">Platform</span>
-        <h3>Authority Engine</h3>
-        <p>A branded authority hub for your industry or community: expert profiles, curated contributions and live market signals, built so search and AI cite your people as the source.</p>
-        <div class="price">Custom build · talk to us</div>
-        <a class="more" href="https://ro.am/keith">Talk to us about Authority Engine →</a>
+      <article class="pcard reveal" id="authority" aria-labelledby="authority-h">
+        <div class="pcard-top"><span class="tag">Platform</span><span class="pill">Custom build</span></div>
+        <h4 id="authority-h">Authority Engine</h4>
+        <p class="pitch">A branded authority hub, built so search and AI cite your people as the source.</p>
+        
+        <dl class="facts">
+          <div><dt>Best for</dt><dd>An industry or community that wants its experts cited as the source.</dd></div>
+          <div><dt>You get</dt><dd><ul><li>Expert profiles and curated contributions</li><li>Live market signals</li><li>Connected to MiTL live shows and ConversationOS</li></ul></dd></div>
+          <div class="pr"><dt>Price</dt><dd>Custom build · talk to us</dd></div>
+          <div><dt>How to start</dt><dd><a href="https://ro.am/keith">Book a call with Keith</a></dd></div>
+        </dl>
+        <a class="more" href="https://mitl.studio/#authority">Talk to us about Authority Engine →</a>
       </article>
-      <article class="card">
-        <span class="tag">Authority</span>
-        <h3>Guest Engine</h3>
-        <p>Get booked on live shows and produced into a month of content, with an authority page built for Google and AI search.</p>
-        <div class="price">$497 per appearance · plans from $97/mo</div>
+      <article class="pcard reveal wide" id="guest" aria-labelledby="guest-h">
+        <div class="pcard-top"><span class="tag">Authority</span><span class="pill">$497 · from $97/mo</span></div>
+        <h4 id="guest-h">Guest Engine</h4>
+        <p class="pitch">Get booked on live shows and produced into a month of content.</p>
+        
+        <dl class="facts">
+          <div><dt>Best for</dt><dd>Experts and leaders who want to be booked as live-show guests.</dd></div>
+          <div><dt>You get</dt><dd><ul><li>A produced live guest appearance</li><li>An authority page built for Google and AI search</li><li>Clips and distribution</li></ul></dd></div>
+          <div class="pr"><dt>Price</dt><dd>$497 per appearance · plans from $97/mo</dd></div>
+          <div><dt>How to start</dt><dd><a href="https://guestengine.live/join/">Get featured</a></dd></div>
+        </dl>
         <a class="more" href="https://guestengine.live/">Get featured →</a>
       </article>
-      </div>
     </div>
-
-    <div class="outcome single" id="sell-with-video">
-      <div class="outcome-head"><span class="num">03</span><h3>Sell with video</h3></div>
-      <div class="grid">
-      <article class="card">
-        <span class="tag">Sales video</span>
-        <h3>Sales Desk</h3>
-        <p>Turn a proposal, product or complex service into a video sales experience, with reporting on what buyers watch.</p>
-        <div class="price">One-time from $999 · Always-On $1,249/mo</div>
+  </section>
+  <section class="og reveal" id="sell-with-video" aria-labelledby="sell-with-video-h">
+    <div class="og-media">
+      <picture><source srcset="/assets/proto/video.webp" type="image/webp"><img src="/assets/proto/video.jpg" loading="lazy" decoding="async" alt="Keith Bilous and Jon Andersen with the MiTL cast in the studio lobby"></picture>
+      <div class="og-cap"><span class="num">03</span><h3 id="sell-with-video-h">Sell with video</h3><p>Let video walk buyers through the deal before the call.</p></div>
+    </div>
+    <div class="og-cards n1">
+      <article class="pcard reveal" id="salesdesk" aria-labelledby="salesdesk-h">
+        <div class="pcard-top"><span class="tag">Sales video</span><span class="pill">From $999 · $1,249/mo</span></div>
+        <h4 id="salesdesk-h">Sales Desk</h4>
+        <p class="pitch">Turn a proposal, product or complex service into a video sales experience.</p>
+        
+        <dl class="facts">
+          <div><dt>Best for</dt><dd>Teams selling a proposal, product or complex service.</dd></div>
+          <div><dt>You get</dt><dd><ul><li>A video sales experience with reporting on what buyers watch</li><li>One-time: 3-minute $999, 5-minute $1,499, 10-minute $2,999</li><li>Always-On: one Sales Desk per month, 12-month minimum</li></ul></dd></div>
+          <div class="pr"><dt>Price</dt><dd>One-time from $999 · Always-On $1,249/mo</dd></div>
+          <div><dt>How to start</dt><dd><a href="https://salesdesk.video/">Explore Sales Desk</a></dd></div>
+        </dl>
         <a class="more" href="https://salesdesk.video/">Explore Sales Desk →</a>
       </article>
-      </div>
     </div>
+  </section>
 
-    <div class="engine-band" id="conversationos">
-      <div>
-        <span class="tag">The engine behind all of it</span>
-        <h3>ConversationOS</h3>
-        <p>The AI engine that builds every episode: titles, scripts, thumbnails, guests and distribution.</p>
-      </div>
-      <div class="engine-cta">
-        <div class="price">Start free</div>
-        <a class="more" href="https://conversationos.live/">Try ConversationOS →</a>
-      </div>
+  <aside class="engine reveal" id="conversationos" aria-labelledby="conversationos-h">
+    <div class="engine-copy">
+      <span class="tag"><i class="dot" aria-hidden="true"></i>The engine behind all of it</span>
+      <h3 id="conversationos-h">ConversationOS</h3>
+      <p class="pitch">The AI engine that builds every episode: titles, scripts, thumbnails, guests and distribution.</p>
     </div>
+    <dl class="facts">
+          <div><dt>Best for</dt><dd>Anyone who wants to try the engine behind every MiTL show.</dd></div>
+          <div><dt>You get</dt><dd><ul><li>Titles, scripts and thumbnails</li><li>Music, guests and social posts</li><li>Distribution</li></ul></dd></div>
+          <div class="pr"><dt>Price</dt><dd>Start free</dd></div>
+          <div><dt>How to start</dt><dd><a href="https://conversationos.live/">Try ConversationOS</a></dd></div>
+        </dl>
+    <a class="btn" href="https://conversationos.live/">Try ConversationOS</a>
+  </aside>
 
+  <div class="glance reveal" id="at-a-glance">
+    <table>
+      <caption><h3>At a glance</h3><span>Every MiTL Studio product, who it's for, what it costs and how to start. Prices in USD.</span></caption>
+      <thead><tr><th scope="col">Product</th><th scope="col">Best for</th><th scope="col">Price</th><th scope="col">Start</th></tr></thead>
+      <tbody>
+      <tr><th scope="row" data-label="Product"><a href="https://production.mitl.studio/">Live Show Production</a></th><td data-label="Best for">Brands that want their own show without hiring a production team.</td><td data-label="Price">Production: $3,000/mo; Production+: $4,997/mo</td><td data-label="Start"><a href="https://ro.am/keith">Book a call with Keith</a></td></tr>
+      <tr><th scope="row" data-label="Product"><a href="https://mitl.studio/#case-study">Industry Networks<small>Examples: Roofing Authority Network · Let&#x27;s Talk Supply Chain / SCAC</small></a></th><td data-label="Best for">An industry underserved by its own media.</td><td data-label="Price">Custom scope</td><td data-label="Start"><a href="https://ro.am/keith">Talk about your industry</a></td></tr>
+      <tr><th scope="row" data-label="Product"><a href="https://characterengine.live/">Character Engine</a></th><td data-label="Best for">Brands that want an AI character to represent them on air.</td><td data-label="Price">From $997 to build, $47/mo to host</td><td data-label="Start"><a href="https://characterengine.live/">Meet the characters</a></td></tr>
+      <tr><th scope="row" data-label="Product"><a href="https://mitl.studio/#seo">AI-Powered SEO &amp; GEO</a></th><td data-label="Best for">Businesses that want to rank on Google and be named in AI answers.</td><td data-label="Price">Talk to us</td><td data-label="Start"><a href="https://ro.am/keith">Book a call with Keith</a></td></tr>
+      <tr><th scope="row" data-label="Product"><a href="https://mitl.studio/#authority">Authority Engine</a></th><td data-label="Best for">An industry or community that wants its experts cited as the source.</td><td data-label="Price">Custom build · talk to us</td><td data-label="Start"><a href="https://ro.am/keith">Book a call with Keith</a></td></tr>
+      <tr><th scope="row" data-label="Product"><a href="https://guestengine.live/">Guest Engine</a></th><td data-label="Best for">Experts and leaders who want to be booked as live-show guests.</td><td data-label="Price">$497 per appearance · plans from $97/mo</td><td data-label="Start"><a href="https://guestengine.live/join/">Get featured</a></td></tr>
+      <tr><th scope="row" data-label="Product"><a href="https://salesdesk.video/">Sales Desk</a></th><td data-label="Best for">Teams selling a proposal, product or complex service.</td><td data-label="Price">One-time from $999 · Always-On $1,249/mo</td><td data-label="Start"><a href="https://salesdesk.video/">Explore Sales Desk</a></td></tr>
+      <tr><th scope="row" data-label="Product"><a href="https://conversationos.live/">ConversationOS</a></th><td data-label="Best for">Anyone who wants to try the engine behind every MiTL show.</td><td data-label="Price">Start free</td><td data-label="Start"><a href="https://conversationos.live/">Try ConversationOS</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "ItemList",
+   "@id": "https://mitl.studio/#products-list",
+   "name": "MiTL Studio products and services",
+   "description": "Grouped by outcome: get your own show, get found, sell with video, plus the ConversationOS engine. Prices in USD; quote-based offers carry no price.",
+   "numberOfItems": 8,
+   "itemListOrder": "https://schema.org/ItemListUnordered",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "item": {
+      "@type": "Service",
+      "@id": "https://mitl.studio/#production",
+      "name": "Live Show Production",
+      "serviceType": "Live show production",
+      "description": "Your own show, fully produced every week, without hiring a production team. Best for: Brands that want their own show without hiring a production team. Price: Production: $3,000/mo; Production+: $4,997/mo.",
+      "url": "https://production.mitl.studio/",
+      "provider": {
+       "@id": "https://mitl.studio/#organization"
+      },
+      "offers": [
+       {
+        "@type": "Offer",
+        "name": "Production: 1 show, up to 4 episodes per month",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+         "@type": "UnitPriceSpecification",
+         "price": "3000",
+         "priceCurrency": "USD",
+         "unitText": "MONTH"
+        },
+        "price": "3000",
+        "url": "https://production.mitl.studio/",
+        "seller": {
+         "@id": "https://mitl.studio/#organization"
+        }
+       },
+       {
+        "@type": "Offer",
+        "name": "Production+: up to 3 shows, 12 episodes per month",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+         "@type": "UnitPriceSpecification",
+         "price": "4997",
+         "priceCurrency": "USD",
+         "unitText": "MONTH"
+        },
+        "price": "4997",
+        "url": "https://production.mitl.studio/",
+        "seller": {
+         "@id": "https://mitl.studio/#organization"
+        }
+       }
+      ]
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "item": {
+      "@type": "Service",
+      "@id": "https://mitl.studio/#networks",
+      "name": "Industry Networks",
+      "serviceType": "Industry media network",
+      "description": "Your industry's own live network: shows, guests, an intelligence layer and sponsor seats. Best for: An industry underserved by its own media. Price: Custom scope. Examples: Roofing Authority Network (commercial roofing); Let's Talk Supply Chain / SCAC (supply chain).",
+      "url": "https://mitl.studio/#case-study",
+      "provider": {
+       "@id": "https://mitl.studio/#organization"
+      },
+      "offers": [
+       {
+        "@type": "Offer",
+        "name": "Industry Network build",
+        "description": "Quote-based. Custom scope per industry; book a call.",
+        "availability": "https://schema.org/InStock",
+        "url": "https://ro.am/keith",
+        "seller": {
+         "@id": "https://mitl.studio/#organization"
+        }
+       }
+      ],
+      "isRelatedTo": {
+       "@id": "https://mitl.studio/#industry-network-examples"
+      }
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "item": {
+      "@type": "Service",
+      "@id": "https://mitl.studio/#character",
+      "name": "Character Engine",
+      "serviceType": "AI character creation and hosting",
+      "description": "AI characters with memory, personality and a voice, built to represent your brand on air. Best for: Brands that want an AI character to represent them on air. Price: From $997 to build, $47/mo to host.",
+      "url": "https://characterengine.live/",
+      "provider": {
+       "@id": "https://mitl.studio/#organization"
+      },
+      "offers": [
+       {
+        "@type": "Offer",
+        "name": "AI character build (from)",
+        "priceCurrency": "USD",
+        "price": "997",
+        "url": "https://characterengine.live/",
+        "seller": {
+         "@id": "https://mitl.studio/#organization"
+        }
+       },
+       {
+        "@type": "Offer",
+        "name": "AI character hosting",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+         "@type": "UnitPriceSpecification",
+         "price": "47",
+         "priceCurrency": "USD",
+         "unitText": "MONTH"
+        },
+        "price": "47",
+        "url": "https://characterengine.live/",
+        "seller": {
+         "@id": "https://mitl.studio/#organization"
+        }
+       }
+      ]
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 4,
+     "item": {
+      "@type": "Service",
+      "@id": "https://mitl.studio/#seo",
+      "name": "AI-Powered SEO & GEO",
+      "serviceType": "Search engine optimization and generative engine optimization",
+      "description": "Get found on Google and named in AI answers, on the same system we run for our own brands. Best for: Businesses that want to rank on Google and be named in AI answers. Price: Talk to us.",
+      "url": "https://mitl.studio/#seo",
+      "provider": {
+       "@id": "https://mitl.studio/#organization"
+      },
+      "offers": [
+       {
+        "@type": "Offer",
+        "name": "AI-Powered SEO & GEO engagement",
+        "description": "Quote-based. Pricing set per engagement; book a call.",
+        "availability": "https://schema.org/InStock",
+        "url": "https://ro.am/keith",
+        "seller": {
+         "@id": "https://mitl.studio/#organization"
+        }
+       }
+      ]
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 5,
+     "item": {
+      "@type": "Service",
+      "@id": "https://mitl.studio/#authority",
+      "name": "Authority Engine",
+      "serviceType": "Industry authority platform",
+      "description": "A branded authority hub, built so search and AI cite your people as the source. Best for: An industry or community that wants its experts cited as the source. Price: Custom build · talk to us.",
+      "url": "https://mitl.studio/#authority",
+      "provider": {
+       "@id": "https://mitl.studio/#organization"
+      },
+      "offers": [
+       {
+        "@type": "Offer",
+        "name": "Authority Engine build",
+        "description": "Quote-based. Custom build; book a call.",
+        "availability": "https://schema.org/InStock",
+        "url": "https://ro.am/keith",
+        "seller": {
+         "@id": "https://mitl.studio/#organization"
+        }
+       }
+      ]
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 6,
+     "item": {
+      "@type": "Service",
+      "@id": "https://mitl.studio/#guest",
+      "name": "Guest Engine",
+      "serviceType": "Podcast and live show guest booking",
+      "description": "Get booked on live shows and produced into a month of content. Best for: Experts and leaders who want to be booked as live-show guests. Price: $497 per appearance · plans from $97/mo.",
+      "url": "https://guestengine.live/",
+      "provider": {
+       "@id": "https://mitl.studio/#organization"
+      },
+      "offers": [
+       {
+        "@type": "Offer",
+        "name": "Single guest appearance",
+        "priceCurrency": "USD",
+        "price": "497",
+        "url": "https://guestengine.live/",
+        "seller": {
+         "@id": "https://mitl.studio/#organization"
+        }
+       },
+       {
+        "@type": "Offer",
+        "name": "Member plan",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+         "@type": "UnitPriceSpecification",
+         "price": "97",
+         "priceCurrency": "USD",
+         "unitText": "MONTH"
+        },
+        "price": "97",
+        "url": "https://guestengine.live/",
+        "seller": {
+         "@id": "https://mitl.studio/#organization"
+        }
+       },
+       {
+        "@type": "Offer",
+        "name": "VIP plan",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+         "@type": "UnitPriceSpecification",
+         "price": "297",
+         "priceCurrency": "USD",
+         "unitText": "MONTH"
+        },
+        "price": "297",
+        "url": "https://guestengine.live/",
+        "seller": {
+         "@id": "https://mitl.studio/#organization"
+        }
+       }
+      ]
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 7,
+     "item": {
+      "@type": "Service",
+      "@id": "https://mitl.studio/#salesdesk",
+      "name": "Sales Desk",
+      "serviceType": "Video sales experiences",
+      "description": "Turn a proposal, product or complex service into a video sales experience. Best for: Teams selling a proposal, product or complex service. Price: One-time from $999 · Always-On $1,249/mo.",
+      "url": "https://salesdesk.video/",
+      "provider": {
+       "@id": "https://mitl.studio/#organization"
+      },
+      "offers": [
+       {
+        "@type": "Offer",
+        "name": "One-time Sales Desk, 3-minute",
+        "priceCurrency": "USD",
+        "price": "999",
+        "url": "https://salesdesk.video/",
+        "seller": {
+         "@id": "https://mitl.studio/#organization"
+        }
+       },
+       {
+        "@type": "Offer",
+        "name": "One-time Sales Desk, 5-minute",
+        "priceCurrency": "USD",
+        "price": "1499",
+        "url": "https://salesdesk.video/",
+        "seller": {
+         "@id": "https://mitl.studio/#organization"
+        }
+       },
+       {
+        "@type": "Offer",
+        "name": "One-time Sales Desk, 10-minute",
+        "priceCurrency": "USD",
+        "price": "2999",
+        "url": "https://salesdesk.video/",
+        "seller": {
+         "@id": "https://mitl.studio/#organization"
+        }
+       },
+       {
+        "@type": "Offer",
+        "name": "Sales Desk Always-On, one per month (12-month minimum)",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+         "@type": "UnitPriceSpecification",
+         "price": "1249",
+         "priceCurrency": "USD",
+         "unitText": "MONTH"
+        },
+        "price": "1249",
+        "url": "https://salesdesk.video/",
+        "seller": {
+         "@id": "https://mitl.studio/#organization"
+        }
+       }
+      ]
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 8,
+     "item": {
+      "@type": "Service",
+      "@id": "https://mitl.studio/#conversationos",
+      "name": "ConversationOS",
+      "serviceType": "AI show production software",
+      "description": "The AI engine that builds every episode: titles, scripts, thumbnails, guests and distribution. Best for: Anyone who wants to try the engine behind every MiTL show. Price: Start free.",
+      "url": "https://conversationos.live/",
+      "provider": {
+       "@id": "https://mitl.studio/#organization"
+      },
+      "offers": [
+       {
+        "@type": "Offer",
+        "name": "ConversationOS: start free",
+        "priceCurrency": "USD",
+        "price": "0",
+        "url": "https://conversationos.live/",
+        "seller": {
+         "@id": "https://mitl.studio/#organization"
+        }
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "@type": "ItemList",
+   "@id": "https://mitl.studio/#industry-network-examples",
+   "name": "Industry Networks examples",
+   "numberOfItems": 2,
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "item": {
+      "@type": "Organization",
+      "@id": "https://www.roofingauthority.network/#organization",
+      "name": "Roofing Authority Network",
+      "url": "https://www.roofingauthority.network/",
+      "description": "The live broadcast network for commercial roofing, led by The Tie-In and The Service Side, run on the MiTL Studio system."
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "item": {
+      "@type": "Organization",
+      "name": "Let's Talk Supply Chain",
+      "url": "https://letstalksupplychain.com/",
+      "description": "Let's Talk Supply Chain shows with Sarah Barnes-Humphrey, produced by MiTL Studio, including the weekly live show Thoughts and Coffee.",
+      "subOrganization": {
+       "@type": "Organization",
+       "name": "Supply Chain Authority Council",
+       "alternateName": "SCAC",
+       "description": "A Let's Talk Supply Chain initiative in development; launch announced for January 2027."
+      }
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</section>
+
+<section id="brands" class="brands">
+  <div class="wrap">
     <div class="group-label">Our own brands, built on the same system</div>
     <div class="grid own">
       <article class="card">
@@ -497,5 +1045,12 @@ footer a{display:block;color:var(--muted);text-decoration:none;margin-bottom:6px
     <p style="margin-top:28px">© 2026 MiTL Studio. Real people on camera. AI behind it.</p>
   </div>
 </footer>
+<script>
+(function(){var els=document.querySelectorAll('.reveal');
+if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('in')});return}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.08});
+els.forEach(function(e){io.observe(e)});})();
+
+</script>
 </body>
 </html>
