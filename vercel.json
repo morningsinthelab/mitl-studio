@@ -2,8 +2,9 @@
   "buildCommand": "",
   "outputDirectory": ".",
   "framework": null,
-  "rewrites": [
-    { "source": "/about", "destination": "/index.html" },
-    { "source": "/((?!robots\\.txt|sitemap\\.xml|investors|assets).*)", "destination": "/index.html" }
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "headers": [
+    { "source": "/llms.txt", "headers": [{ "key": "Content-Type", "value": "text/plain; charset=utf-8" }] }
   ]
 }
