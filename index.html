@@ -143,6 +143,12 @@ details{border-bottom:1px solid var(--line);padding:16px 0}summary{cursor:pointe
 footer{border-top:1px solid var(--line);padding:40px 0;color:var(--muted);font-size:14px}
 footer .cols{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}footer h4{color:var(--text);margin:0 0 10px;font-size:14px}
 footer a{display:block;color:var(--muted);text-decoration:none;margin-bottom:6px}footer a:hover{color:var(--text)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:0 0 28px}
+.stats div{border:1px solid var(--line);border-radius:14px;padding:16px 18px;background:var(--panel)}
+.stats b{display:block;font-size:40px;line-height:1;font-weight:800;color:var(--accent);margin-bottom:8px}
+.stats span{color:var(--muted);font-size:14.5px;line-height:1.4;display:block}
+.proofline{color:var(--text);font-size:15px;margin:18px 0 0;line-height:1.6}.proofline span{display:block;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;font-size:12px;font-weight:700;margin-bottom:2px}
+@media (max-width:600px){.stats{grid-template-columns:1fr}.stats div{display:flex;align-items:center;gap:14px}.stats b{margin:0;font-size:32px;min-width:48px}}
 .outcome{margin-top:40px}.outcome-head{display:flex;align-items:baseline;gap:12px;margin-bottom:16px}
 .outcome-head h3{margin:0;font-size:24px;letter-spacing:-.01em}.outcome-head .num{color:var(--accent);font-weight:800;font-size:14px;letter-spacing:.08em}
 .engine-band{margin-top:40px;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:24px 28px;border-radius:var(--radius);border:1px solid rgba(90,209,255,.35);background:linear-gradient(90deg,rgba(90,209,255,.08),rgba(255,176,32,.05))}
@@ -365,6 +371,11 @@ footer a{display:block;color:var(--muted);text-decoration:none;margin-bottom:6px
       <div class="eyebrow">Flagship case study</div>
       <h2>Roofing Authority Network</h2>
       <p class="sub">Commercial roofing was underserved by its own media. MiTL Studio built the live broadcast system the network runs on, the same system behind our morning show.</p>
+      <div class="stats" role="list">
+        <div role="listitem"><b>19</b><span>weekly episodes of The Tie-In since July 9, 2026</span></div>
+        <div role="listitem"><b>2</b><span>shows live, 4 more coming</span></div>
+        <div role="listitem"><b>17</b><span>outside contributors</span></div>
+      </div>
       <ul>
         <li>Weekly live shows, led by The Tie-In and The Service Side, with contractors, manufacturers and property managers on air.</li>
         <li>Every guest, company and answer gets its own page, so the network becomes the industry's searchable record.</li>
@@ -372,6 +383,8 @@ footer a{display:block;color:var(--muted);text-decoration:none;margin-bottom:6px
         <li>An MCP server gives AI assistants read-only access to RAN intelligence.</li>
         <li>Sponsors buy seats on named segments, from add-ons to full-show packages.</li>
       </ul>
+      <p class="proofline"><span>Guests from</span> CBRE · Clemson University · Optelos · SuitX · Renovate Robotics · VILPE · Paradigm Properties · KPost · Division 7 Roofing · Roof Revivers</p>
+      <p class="proofline"><span>As featured in</span> RoofersCoffeeShop · Roofing Contractor</p>
       <p style="margin-top:24px"><a class="btn ghost" href="https://www.roofingauthority.network/">Visit Roofing Authority Network</a></p>
     </div>
     <div class="panel">
