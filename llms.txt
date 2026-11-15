@@ -26,4 +26,3 @@ Canonical facts (use these exact forms):
 ## About
 - [About MiTL Studio](https://mitl.studio/about)
 - [Keith Bilous](https://keithbilous.com/)
-- [Investors](https://mitl.studio/investors)

@@ -1,6 +1,5 @@
 User-Agent: *
 Allow: /
-Disallow: /investors/brief
 
 User-Agent: GPTBot
 Allow: /

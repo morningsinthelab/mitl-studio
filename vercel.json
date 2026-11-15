@@ -5,6 +5,32 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "headers": [
-    { "source": "/llms.txt", "headers": [{ "key": "Content-Type", "value": "text/plain; charset=utf-8" }] }
+    {
+      "source": "/llms.txt",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/investors",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/investors/:path*",
+      "destination": "/",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/api/subscribe",
+      "destination": "https://studio-ten-inky-20.vercel.app/api/subscribe"
+    }
   ]
 }
