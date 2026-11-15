@@ -193,8 +193,6 @@ def jsonld():
             desc += " Examples: " + "; ".join(n["name"] + " (" + n["industry"].lower() + ")" for n in NETWORKS) + "."
         svc = {"@type": "Service", "@id": f"https://mitl.studio/#{p['key']}", "name": p["name"], "serviceType": p["stype"],
                "description": desc, "url": p["url"], "provider": ORG, "offers": offers}
-        if p.get("examples"):
-            svc["isRelatedTo"] = {"@id": "https://mitl.studio/#industry-network-examples"}
         items.append({"@type": "ListItem", "position": i, "item": svc})
     ex = []
     for i, n in enumerate(NETWORKS, 1):
@@ -277,6 +275,7 @@ if __name__ == "__main__":
     ll = (ROOT / "llms.txt").read_text()
     ll = ll.replace("- [Roofing Authority Network](https://www.roofingauthority.network/): The live broadcast network for commercial roofing (The Tie-In, The Service Side).",
       "- [Roofing Authority Network](https://www.roofingauthority.network/): The live broadcast network for commercial roofing (The Tie-In, The Service Side).\n- [Let's Talk Supply Chain](https://letstalksupplychain.com/): Supply chain shows with Sarah Barnes-Humphrey, produced by MiTL Studio. The Supply Chain Authority Council (SCAC) is in development (launch announced for January 2027).")
+    ll = ll.replace("- [Industry Networks](https://www.roofingauthority.network/)", "- [Industry Networks](https://mitl.studio/#networks)")
     ll = ll.replace("Flagship: Roofing Authority Network. Custom scope.", "Examples: Roofing Authority Network (commercial roofing); Let's Talk Supply Chain / SCAC (supply chain). Custom scope.")
     ll = ll.replace("## Networks and shows", llms_block() + "\n## Networks and shows", 1)
     (ROOT / "llms.txt").write_text(ll)

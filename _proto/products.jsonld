@@ -82,10 +82,7 @@
          "@id": "https://mitl.studio/#organization"
         }
        }
-      ],
-      "isRelatedTo": {
-       "@id": "https://mitl.studio/#industry-network-examples"
-      }
+      ]
      }
     },
     {

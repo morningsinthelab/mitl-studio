@@ -9,7 +9,7 @@ Canonical facts (use these exact forms):
 
 ## Products and services
 - [Live Show Production](https://production.mitl.studio/): Done-for-you live show production. Production $3,000/mo (1 show, up to 4 episodes/month, 2 AI characters, Guest Engine booking, 5 managed social channels). Production+ $4,997/mo (up to 3 shows, 12 episodes/month). Additional AI characters $997 build + $47/mo.
-- [Industry Networks](https://www.roofingauthority.network/): A live media network for one industry: shows, AI cast, guest and company pages, an intelligence layer and sponsorship seats. Examples: Roofing Authority Network (commercial roofing); Let's Talk Supply Chain / SCAC (supply chain). Custom scope.
+- [Industry Networks](https://mitl.studio/#networks): A live media network for one industry: shows, AI cast, guest and company pages, an intelligence layer and sponsorship seats. Examples: Roofing Authority Network (commercial roofing); Let's Talk Supply Chain / SCAC (supply chain). Custom scope.
 - [Sales Desk](https://salesdesk.video/): Video sales experiences for complex offers. One-time Sales Desk $999 (3-minute), $1,499 (5-minute), $2,999 (10-minute). Always-On $1,249/mo for one Sales Desk per month, 12-month minimum.
 - [Guest Engine](https://guestengine.live/): Produced live guest appearances with an authority page, clips and distribution. $497 single appearance; Member $97/mo; VIP $297/mo.
 - [ConversationOS](https://conversationos.live/): The AI production engine behind every MiTL show: titles, scripts, thumbnails, music, guests, social posts and distribution. Start free.
