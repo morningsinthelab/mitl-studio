@@ -63,7 +63,8 @@
         "industry media networks",
         "video sales experiences",
         "generative engine optimization",
-        "supply chain media"
+        "supply chain media",
+        "AI enablement"
       ],
       "sameAs": [
         "https://www.linkedin.com/company/mitl-studio",
@@ -197,6 +198,21 @@
             },
             "description": "A custom-built branded authority hub for an industry or community: expert profiles, curated contributions and live market signals, connected to live shows and ConversationOS. Custom scope."
           }
+        },
+        {
+          "@type": "Offer",
+          "name": "Run on AI",
+          "url": "https://mitl.studio/#run-on-ai",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Run on AI",
+            "alternateName": "AI enablement for business owners",
+            "serviceType": "AI enablement",
+            "provider": {
+              "@id": "https://mitl.studio/#organization"
+            },
+            "description": "MiTL Studio runs on AI. Every first decision goes through AI before a person signs off. We teach business owners to run their business the same way, hands-on with them and their team: finding where AI fits in the operation, setting up the tools and agents, building the habits so the team decides AI-first, and keeping people in charge of the calls that matter. Pricing set per engagement."
+          }
         }
       ],
       "subjectOf": [
@@ -320,6 +336,11 @@ footer a{display:block;color:var(--muted);text-decoration:none;margin-bottom:6px
 .engine-band .price{font-weight:700;font-size:15px;margin-bottom:4px}.engine-band a.more{color:var(--accent);font-weight:700;text-decoration:none;font-size:15px;white-space:nowrap}
 .engine-cta{text-align:right;flex-shrink:0}
 .outcome.single .card{grid-column:span 2}@media (max-width:600px){.outcome.single .card{grid-column:auto}}
+.outcome-pair{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px;align-items:stretch}
+.outcome-pair .outcome{margin-top:0;display:flex;flex-direction:column}
+.outcome-pair .grid{grid-template-columns:1fr;flex:1}
+.outcome-pair .card{height:100%}
+@media (max-width:900px){.outcome-pair{grid-template-columns:1fr}}
 .grid.own .card{background:transparent;padding:18px 20px}.grid.own .card h3{font-size:17px}
 .cast-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px}.cast-head .sub{margin-bottom:28px}
 .cast-head a.more{color:var(--accent);font-weight:700;text-decoration:none;white-space:nowrap;margin-bottom:32px}
@@ -478,7 +499,8 @@ footer a{display:block;color:var(--muted);text-decoration:none;margin-bottom:6px
       </div>
     </div>
 
-    <div class="outcome single" id="sell-with-video">
+    <div class="outcome-pair">
+    <div class="outcome" id="sell-with-video">
       <div class="outcome-head"><span class="num">03</span><h3>Sell with video</h3></div>
       <div class="grid">
       <article class="card">
@@ -489,6 +511,21 @@ footer a{display:block;color:var(--muted);text-decoration:none;margin-bottom:6px
         <a class="more" href="https://salesdesk.video/">Explore Sales Desk →</a>
       </article>
       </div>
+    </div>
+
+    <div class="outcome" id="run-on-ai">
+      <div class="outcome-head"><span class="num">04</span><h3>Run your business on AI</h3></div>
+      <div class="grid">
+      <article class="card">
+        <span class="tag">AI enablement</span>
+        <h3>Run on AI</h3>
+        <p>MiTL Studio runs on AI. Every first decision goes through AI before a person signs off. We'll teach you to run your business the same way, hands-on with you and your team.</p>
+        <p>We'll find where AI fits in your operation, set up the tools and agents, build the habits so your team decides AI-first, and keep people in charge of the calls that matter.</p>
+        <div class="price">Talk to us</div>
+        <a class="more" href="https://ro.am/keith">Talk to us about Run on AI →</a>
+      </article>
+      </div>
+    </div>
     </div>
 
     <div class="engine-band" id="conversationos">
@@ -669,7 +706,7 @@ footer a{display:block;color:var(--muted);text-decoration:none;margin-bottom:6px
   <div class="wrap">
     <div class="cols">
       <div><h4>MiTL Studio</h4><a href="/about">About</a><a href="https://production.mitl.studio/">Production</a><a href="https://newsroom.mitl.studio/">Newsroom</a><a href="https://ro.am/keith">Book a call</a></div>
-      <div><h4>Products</h4><a href="https://conversationos.live/">ConversationOS</a><a href="https://guestengine.live/">Guest Engine</a><a href="https://salesdesk.video/">Sales Desk</a><a href="https://characterengine.live/">Character Engine</a></div>
+      <div><h4>Products</h4><a href="https://conversationos.live/">ConversationOS</a><a href="https://guestengine.live/">Guest Engine</a><a href="https://salesdesk.video/">Sales Desk</a><a href="https://characterengine.live/">Character Engine</a><a href="#run-on-ai">Run on AI</a></div>
       <div><h4>Networks and shows</h4><a href="https://www.roofingauthority.network/">Roofing Authority Network</a><a href="https://letstalksupplychain.com/">Let's Talk Supply Chain</a><a href="https://letstalksupplychain.com/scac">Supply Chain Authority Council</a><a href="https://mornings.network/">Mornings Network</a><a href="https://mornings.live/">Mornings in the Lab</a><a href="https://agestrong.life/">Age Strong</a></div>
       <div><h4>Connect</h4><a href="https://keithbilous.com/">Keith Bilous</a><a href="https://linkedin.com/in/keithbilous">LinkedIn</a><a href="https://x.com/keithbilous">X</a><a href="https://youtube.com/@morningsinthelab">YouTube</a></div>
     </div>

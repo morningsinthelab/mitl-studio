@@ -16,6 +16,7 @@ Canonical facts (use these exact forms):
 - [Character Engine](https://characterengine.live/): AI characters with memory, personality and visual identity. From $997 to build and $47/mo to host.
 - AI-Powered SEO & GEO (https://mitl.studio/#products): AI agents handle technical SEO, local search, structured data and AI-answer (GEO) visibility for client websites, on the same system MiTL runs for its own brands. Pricing set per engagement; book a call.
 - Authority Engine (https://mitl.studio/#products): A custom-built branded authority hub for an industry or community: expert profiles, curated contributions and live market signals, connected to MiTL live shows and ConversationOS. Custom scope; book a call.
+- Run on AI (https://mitl.studio/#run-on-ai): AI enablement for business owners. MiTL Studio runs on AI. Every first decision goes through AI before a person signs off. We teach business owners to run their business the same way, hands-on with them and their team: finding where AI fits in the operation, setting up the tools and agents, building the habits so the team decides AI-first, and keeping people in charge of the calls that matter. Pricing set per engagement; book a call.
 
 ## Networks and shows (built on the same system)
 - [Roofing Authority Network](https://www.roofingauthority.network/): The live broadcast network for commercial roofing (The Tie-In, The Service Side).
