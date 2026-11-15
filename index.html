@@ -143,9 +143,31 @@ details{border-bottom:1px solid var(--line);padding:16px 0}summary{cursor:pointe
 footer{border-top:1px solid var(--line);padding:40px 0;color:var(--muted);font-size:14px}
 footer .cols{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}footer h4{color:var(--text);margin:0 0 10px;font-size:14px}
 footer a{display:block;color:var(--muted);text-decoration:none;margin-bottom:6px}footer a:hover{color:var(--text)}
+.outcome{margin-top:40px}.outcome-head{display:flex;align-items:baseline;gap:12px;margin-bottom:16px}
+.outcome-head h3{margin:0;font-size:24px;letter-spacing:-.01em}.outcome-head .num{color:var(--accent);font-weight:800;font-size:14px;letter-spacing:.08em}
+.engine-band{margin-top:40px;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:24px 28px;border-radius:var(--radius);border:1px solid rgba(90,209,255,.35);background:linear-gradient(90deg,rgba(90,209,255,.08),rgba(255,176,32,.05))}
+.engine-band h3{margin:4px 0 6px;font-size:22px}.engine-band p{margin:0;color:var(--muted);font-size:15.5px;max-width:60ch}
+.engine-band .tag{font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--accent2);font-weight:700}
+.engine-band .price{font-weight:700;font-size:15px;margin-bottom:4px}.engine-band a.more{color:var(--accent);font-weight:700;text-decoration:none;font-size:15px;white-space:nowrap}
+.engine-cta{text-align:right;flex-shrink:0}
+.outcome.single .card{grid-column:span 2}@media (max-width:600px){.outcome.single .card{grid-column:auto}}
+.grid.own .card{background:transparent;padding:18px 20px}.grid.own .card h3{font-size:17px}
+.cast-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px}.cast-head .sub{margin-bottom:28px}
+.cast-head a.more{color:var(--accent);font-weight:700;text-decoration:none;white-space:nowrap;margin-bottom:32px}
+.cast-row{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.cast-card{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:var(--panel);aspect-ratio:3/4}
+.cast-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top}
+.cast-card:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(2,6,23,.97) 0%,rgba(2,6,23,.75) 34%,rgba(2,6,23,0) 62%)}
+.cast-meta{position:absolute;left:0;right:0;bottom:0;padding:12px;z-index:1}
+.cast-meta h3{margin:4px 0 2px;font-size:16px}.cast-meta p{margin:0;color:#c9d2df;font-size:12.5px;line-height:1.35}
+.cast-role{display:block;line-height:1.25;font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);font-weight:700}
+@media (max-width:1000px){.cast-row{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:700px){.engine-band{flex-direction:column;align-items:flex-start}.engine-cta{text-align:left}.cast-head{display:block}.cast-head a.more{display:inline-block;margin:0 0 20px}
+.cast-row{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding-bottom:8px}.cast-card{flex:0 0 62%;scroll-snap-align:start}}
 @media (max-width:900px){.grid,.steps,.proof{grid-template-columns:1fr 1fr}.case,.tiers{grid-template-columns:1fr}footer .cols{grid-template-columns:1fr 1fr}nav a:not(.btn){display:none}}
 @media (max-width:900px){.hero-media img{object-position:70% center;filter:brightness(.86) contrast(1.06) saturate(.92)}.hero-fade-x{display:none}.hero-fade-y{background:linear-gradient(to top,var(--bg) 0%,rgba(2,6,23,.80) 52%,rgba(2,6,23,.30) 100%)}.hero{min-height:0;align-items:stretch}}
-@media (max-width:600px){.grid,.steps,.proof{grid-template-columns:1fr}.hero-content{padding-top:150px;padding-bottom:40px}.hero-media{bottom:auto;height:min(118vw,600px)}.hero-media img{object-position:62% 30%}.hero-fade-y{background:linear-gradient(to top,#020617 0%,rgba(2,6,23,.80) 38%,rgba(2,6,23,.35) 75%,rgba(2,6,23,.15) 100%)}</style>
+@media (max-width:600px){.grid,.steps,.proof{grid-template-columns:1fr}.hero{display:block;min-height:0}.hero-media{position:relative;inset:auto;height:auto;aspect-ratio:16/10}.hero-media img{object-position:58% 35%;filter:brightness(.9) contrast(1.05) saturate(.95)}.hero-fade-x{display:none}.hero-fade-y{background:linear-gradient(to top,#020617 0%,rgba(2,6,23,.35) 22%,rgba(2,6,23,0) 45%)}.hero-content{padding-top:20px;padding-bottom:40px}.hero h1,.hero .lede{text-shadow:none}}
+</style>
 </head>
 <body>
 <header class="top">
@@ -153,6 +175,7 @@ footer a{display:block;color:var(--muted);text-decoration:none;margin-bottom:6px
     <a class="logo" href="/">MiTL <span>Studio</span></a>
     <nav>
       <a href="#products">Products</a>
+      <a href="#cast">AI cast</a>
       <a href="#case-study">Case study</a>
       <a href="#pricing">Pricing</a>
       <a href="/about">About</a>
@@ -188,13 +211,53 @@ footer a{display:block;color:var(--muted);text-decoration:none;margin-bottom:6px
   </div>
 </section>
 
+<section id="cast" class="cast">
+  <div class="wrap">
+    <div class="cast-head">
+      <div>
+        <div class="eyebrow">Meet the AI cast</div>
+        <h2>The characters of Mornings in the Lab.</h2>
+        <p class="sub">AI characters with names, backstories and running bits, on air alongside Keith, Jon and the human crew on Mornings in the Lab. Character Engine builds the same thing for your brand.</p>
+      </div>
+      <a class="more" href="https://characterengine.live/">Meet the characters →</a>
+    </div>
+    <ul class="cast-row">
+      <li class="cast-card">
+        <picture><source srcset="/assets/cast/sterling-james.webp" type="image/webp"><img src="/assets/cast/sterling-james.jpg" width="480" height="640" loading="lazy" decoding="async" alt="Sterling James, AI conversation desk anchor on Mornings in the Lab"></picture>
+        <div class="cast-meta"><span class="cast-role">Conversation Desk Anchor</span><h3>Sterling James</h3><p>Smooth delivery, sharp questions, zero fluff.</p></div>
+      </li>
+      <li class="cast-card">
+        <picture><source srcset="/assets/cast/preston-vale.webp" type="image/webp"><img src="/assets/cast/preston-vale.jpg" width="480" height="640" loading="lazy" decoding="async" alt="Preston Vale, AI conversation desk anchor on Mornings in the Lab"></picture>
+        <div class="cast-meta"><span class="cast-role">Conversation Desk Anchor</span><h3>Preston Vale</h3><p>Brings depth and gravitas to every segment.</p></div>
+      </li>
+      <li class="cast-card">
+        <picture><source srcset="/assets/cast/sophia-grant.webp" type="image/webp"><img src="/assets/cast/sophia-grant.jpg" width="480" height="640" loading="lazy" decoding="async" alt="Sophia Grant, AI center stage host on Mornings in the Lab"></picture>
+        <div class="cast-meta"><span class="cast-role">Center Stage Host</span><h3>Sophia Grant</h3><p>Data-driven insights delivered with personality.</p></div>
+      </li>
+      <li class="cast-card">
+        <picture><source srcset="/assets/cast/maya-reyes.webp" type="image/webp"><img src="/assets/cast/maya-reyes.jpg" width="480" height="640" loading="lazy" decoding="async" alt="Maya Reyes, AI community corner host on Mornings in the Lab"></picture>
+        <div class="cast-meta"><span class="cast-role">Community Corner Host</span><h3>Maya Reyes</h3><p>The pulse of the community, amplified.</p></div>
+      </li>
+      <li class="cast-card">
+        <picture><source srcset="/assets/cast/frankie.webp" type="image/webp"><img src="/assets/cast/frankie.jpg" width="480" height="640" loading="lazy" decoding="async" alt="Frankie, AI character, charismatic chaos mirror on Mornings in the Lab"></picture>
+        <div class="cast-meta"><span class="cast-role">The Charismatic Chaos Mirror</span><h3>Frankie</h3><p>Animated. Assertive. Street smart.</p></div>
+      </li>
+      <li class="cast-card">
+        <picture><source srcset="/assets/cast/tommy.webp" type="image/webp"><img src="/assets/cast/tommy.jpg" width="480" height="640" loading="lazy" decoding="async" alt="Tommy, AI character, deadpan reality checker on Mornings in the Lab"></picture>
+        <div class="cast-meta"><span class="cast-role">The Deadpan Reality Checker</span><h3>Tommy</h3><p>Skeptic. Validator. Self-improver.</p></div>
+      </li>
+    </ul>
+  </div>
+</section>
+
 <section id="products">
   <div class="wrap">
     <h2>One studio. Everything behind the camera.</h2>
-    <p class="sub">We do a number of things, and they all run on the same engine. Pick the outcome you need.</p>
+    <p class="sub">Pick the outcome you need. Every product runs on the same engine.</p>
 
-    <div class="group-label">For businesses</div>
-    <div class="grid">
+    <div class="outcome" id="get-your-own-show">
+      <div class="outcome-head"><span class="num">01</span><h3>Get your own show</h3></div>
+      <div class="grid">
       <article class="card">
         <span class="tag">Done for you</span>
         <h3>Live Show Production</h3>
@@ -210,33 +273,18 @@ footer a{display:block;color:var(--muted);text-decoration:none;margin-bottom:6px
         <a class="more" href="#case-study">Read the case study →</a>
       </article>
       <article class="card">
-        <span class="tag">Sales video</span>
-        <h3>Sales Desk</h3>
-        <p>Turn a proposal, product or complex service into a video sales experience, with reporting on what buyers watch.</p>
-        <div class="price">One-time from $999 · Always-On $1,249/mo</div>
-        <a class="more" href="https://salesdesk.video/">Explore Sales Desk →</a>
-      </article>
-      <article class="card">
-        <span class="tag">Authority</span>
-        <h3>Guest Engine</h3>
-        <p>Get booked on live shows and produced into a month of content, with an authority page built for Google and AI search.</p>
-        <div class="price">$497 per appearance · plans from $97/mo</div>
-        <a class="more" href="https://guestengine.live/">Get featured →</a>
-      </article>
-      <article class="card">
-        <span class="tag">Software</span>
-        <h3>ConversationOS</h3>
-        <p>The AI engine that builds every episode: titles, scripts, thumbnails, guests and distribution.</p>
-        <div class="price">Start free</div>
-        <a class="more" href="https://conversationos.live/">Try ConversationOS →</a>
-      </article>
-      <article class="card">
         <span class="tag">AI cast</span>
         <h3>Character Engine</h3>
         <p>AI characters with memory, personality and a voice, built to represent your brand on air.</p>
         <div class="price">From $997 to build · $47/mo to host</div>
         <a class="more" href="https://characterengine.live/">Meet the characters →</a>
       </article>
+      </div>
+    </div>
+
+    <div class="outcome" id="get-found">
+      <div class="outcome-head"><span class="num">02</span><h3>Get found</h3></div>
+      <div class="grid">
       <article class="card">
         <span class="tag">Search + AI answers</span>
         <h3>AI-Powered SEO &amp; GEO</h3>
@@ -251,10 +299,43 @@ footer a{display:block;color:var(--muted);text-decoration:none;margin-bottom:6px
         <div class="price">Custom build · talk to us</div>
         <a class="more" href="https://ro.am/keith">Talk to us about Authority Engine →</a>
       </article>
+      <article class="card">
+        <span class="tag">Authority</span>
+        <h3>Guest Engine</h3>
+        <p>Get booked on live shows and produced into a month of content, with an authority page built for Google and AI search.</p>
+        <div class="price">$497 per appearance · plans from $97/mo</div>
+        <a class="more" href="https://guestengine.live/">Get featured →</a>
+      </article>
+      </div>
+    </div>
+
+    <div class="outcome single" id="sell-with-video">
+      <div class="outcome-head"><span class="num">03</span><h3>Sell with video</h3></div>
+      <div class="grid">
+      <article class="card">
+        <span class="tag">Sales video</span>
+        <h3>Sales Desk</h3>
+        <p>Turn a proposal, product or complex service into a video sales experience, with reporting on what buyers watch.</p>
+        <div class="price">One-time from $999 · Always-On $1,249/mo</div>
+        <a class="more" href="https://salesdesk.video/">Explore Sales Desk →</a>
+      </article>
+      </div>
+    </div>
+
+    <div class="engine-band" id="conversationos">
+      <div>
+        <span class="tag">The engine behind all of it</span>
+        <h3>ConversationOS</h3>
+        <p>The AI engine that builds every episode: titles, scripts, thumbnails, guests and distribution.</p>
+      </div>
+      <div class="engine-cta">
+        <div class="price">Start free</div>
+        <a class="more" href="https://conversationos.live/">Try ConversationOS →</a>
+      </div>
     </div>
 
     <div class="group-label">Our own brands, built on the same system</div>
-    <div class="grid">
+    <div class="grid own">
       <article class="card">
         <span class="tag">Network</span>
         <h3>Mornings Network</h3>
