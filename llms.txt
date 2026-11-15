@@ -8,7 +8,7 @@ Canonical facts (use these exact forms):
 - Co-host: Jon Andersen (spelled Andersen).
 
 ## Products and services
-- [Live Show Production](https://production.mitl.studio/): Done-for-you live show production. Production $3,000/mo (1 show, up to 4 episodes/month, 2 AI characters, Guest Engine booking, 5 managed social channels). Production+ $4,997/mo (up to 3 shows, 12 episodes/month). Additional AI characters $997 build + $47/mo.
+- [Live Show Production](https://mitl.studio/services/live-show-production): Done-for-you live show production. Production $3,000/mo (1 show, up to 4 episodes/month, 2 AI characters, Guest Engine booking, 5 managed social channels). Production+ $4,997/mo (up to 3 shows, 12 episodes/month). Additional AI characters $997 build + $47/mo.
 - [Industry Networks](https://www.roofingauthority.network/): A live media network for one industry: shows, AI cast, guest and company pages, an intelligence layer and sponsorship seats. Flagship: Roofing Authority Network. Also running in supply chain with Let's Talk Supply Chain and the Supply Chain Authority Council (founding-member waitlist open, full launch January 2027). Custom scope.
 - [Sales Desk](https://salesdesk.video/): Video sales experiences for complex offers. One-time Sales Desk $999 (3-minute), $1,499 (5-minute), $2,999 (10-minute). Always-On $1,249/mo for one Sales Desk per month, 12-month minimum.
 - [Guest Engine](https://guestengine.live/): Produced live guest appearances with an authority page, clips and distribution. $497 single appearance; Member $97/mo; VIP $297/mo.
