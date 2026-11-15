@@ -9,7 +9,7 @@ Canonical facts (use these exact forms):
 
 ## Products and services
 - [Live Show Production](https://production.mitl.studio/): Done-for-you live show production. Production $3,000/mo (1 show, up to 4 episodes/month, 2 AI characters, Guest Engine booking, 5 managed social channels). Production+ $4,997/mo (up to 3 shows, 12 episodes/month). Additional AI characters $997 build + $47/mo.
-- [Industry Networks](https://www.roofingauthority.network/): A live media network for one industry: shows, AI cast, guest and company pages, an intelligence layer and sponsorship seats. Flagship: Roofing Authority Network. Custom scope.
+- [Industry Networks](https://www.roofingauthority.network/): A live media network for one industry: shows, AI cast, guest and company pages, an intelligence layer and sponsorship seats. Flagship: Roofing Authority Network. Also running in supply chain with Let's Talk Supply Chain and the Supply Chain Authority Council (in development). Custom scope.
 - [Sales Desk](https://salesdesk.video/): Video sales experiences for complex offers. One-time Sales Desk $999 (3-minute), $1,499 (5-minute), $2,999 (10-minute). Always-On $1,249/mo for one Sales Desk per month, 12-month minimum.
 - [Guest Engine](https://guestengine.live/): Produced live guest appearances with an authority page, clips and distribution. $497 single appearance; Member $97/mo; VIP $297/mo.
 - [ConversationOS](https://conversationos.live/): The AI production engine behind every MiTL show: titles, scripts, thumbnails, music, guests, social posts and distribution. Start free.
@@ -19,6 +19,8 @@ Canonical facts (use these exact forms):
 
 ## Networks and shows (built on the same system)
 - [Roofing Authority Network](https://www.roofingauthority.network/): The live broadcast network for commercial roofing (The Tie-In, The Service Side).
+- [Let's Talk Supply Chain](https://letstalksupplychain.com/): MiTL Studio produces the Let's Talk Supply Chain live shows with founder Sarah Barnes-Humphrey (Thoughts and Coffee, TPM Today, Performance Paradox).
+- Supply Chain Authority Council (SCAC): In development. A supply chain authority council MiTL Studio is building with Sarah Barnes-Humphrey, layered over the Secret Society of Supply Chain community. No public site yet.
 - [Mornings Network](https://mornings.network/): MiTL's live morning lifestyle network.
 - [Mornings in the Lab](https://mornings.live/): The flagship weekday live morning show.
 - [Age Strong](https://agestrong.life/): Keith Bilous and Jon Andersen's program for men 50+.
