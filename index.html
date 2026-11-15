@@ -310,6 +310,16 @@ h2{font-size:clamp(28px,4vw,42px);line-height:1.1;margin:0 0 14px;letter-spacing
 .card h3{margin:0;font-size:20px}.card .tag{font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--accent2);font-weight:700}
 .card p{margin:0;color:var(--muted);font-size:15.5px}.card .price{color:var(--text);font-weight:700;font-size:15px;margin-top:auto;padding-top:8px}
 .card a.more{color:var(--accent);font-weight:700;text-decoration:none;font-size:15px}
+.card p.inuse{font-size:13px;line-height:1.45;color:var(--muted)}
+.card.has-visual{padding:0 0 24px;overflow:hidden;height:100%}
+.card.has-visual > :not(.card-visual){margin-left:24px;margin-right:24px}
+.card-visual{margin:0;border:0;border-radius:0;background:transparent}
+.card-visual picture{display:block;width:100%}
+.card-visual img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;object-position:center 40%;background:var(--panel)}
+.card-visual.wide img{aspect-ratio:16/9;object-position:center 30%}
+.card-visual figcaption{margin:0;padding:8px 24px 2px;color:var(--muted);font-size:12px;line-height:1.4}
+.brand-pair-frames{display:grid;grid-template-columns:1fr;gap:4px}
+.brand-pair-frames picture,.brand-pair-frames img{display:block;width:100%}
 .group-label{color:var(--muted);text-transform:uppercase;letter-spacing:.12em;font-size:13px;margin:40px 0 14px;font-weight:700}
 .case{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:start}
 .case ul{margin:0;padding-left:20px;color:var(--muted)}.case li{margin-bottom:10px}
@@ -334,19 +344,34 @@ footer a{display:block;color:var(--muted);text-decoration:none;margin-bottom:6px
 .case2{margin-top:56px;padding-top:48px;border-top:1px solid var(--line)}
 .outcome{margin-top:40px}.outcome-head{display:flex;align-items:baseline;gap:12px;margin-bottom:16px}
 .outcome-head h3{margin:0;font-size:24px;letter-spacing:-.01em}.outcome-head .num{color:var(--accent);font-weight:800;font-size:14px;letter-spacing:.08em}
-.engine-band{margin-top:40px;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:24px 28px;border-radius:var(--radius);border:1px solid rgba(90,209,255,.35);background:linear-gradient(90deg,rgba(90,209,255,.08),rgba(255,176,32,.05))}
+.engine-band{margin-top:40px;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:16px 24px 16px 16px;border-radius:var(--radius);border:1px solid rgba(90,209,255,.35);background:linear-gradient(90deg,rgba(90,209,255,.08),rgba(255,176,32,.05))}
 .engine-band h3{margin:4px 0 6px;font-size:22px}.engine-band p{margin:0;color:var(--muted);font-size:15.5px;max-width:60ch}
 .engine-band .tag{font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--accent2);font-weight:700}
 .engine-band .price{font-weight:700;font-size:15px;margin-bottom:4px}.engine-band a.more{color:var(--accent);font-weight:700;text-decoration:none;font-size:15px;white-space:nowrap}
 .engine-cta{text-align:right;flex-shrink:0}
+.engine-visual{flex:0 0 240px;margin:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--panel)}
+.engine-visual picture{display:block;width:100%}
+.engine-visual img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;object-position:center 40%}
+.engine-visual figcaption{margin:0;padding:6px 10px 8px;color:var(--muted);font-size:12px;line-height:1.35}
+.engine-copy{flex:1;min-width:0}
 .outcome.single .card{grid-column:span 2}@media (max-width:600px){.outcome.single .card{grid-column:auto}}
 .outcome-pair{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px;align-items:stretch}
 .outcome-pair .outcome{margin-top:0;display:flex;flex-direction:column}
 .outcome-pair .grid{grid-template-columns:1fr;flex:1}
 .outcome-pair .card{height:100%}
 @media (max-width:900px){.outcome-pair{grid-template-columns:1fr}}
-.grid.own .card{background:transparent;padding:18px 20px}.grid.own .card h3{font-size:17px}
-.cast-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px}.cast-head .sub{margin-bottom:28px}
+.grid.own{align-items:start}.grid.own .card{background:transparent;padding:18px 20px}.grid.own .card h3{font-size:17px}
+.grid.own .card.has-visual{background:var(--panel);border:1px solid var(--line);padding:0 0 18px;overflow:hidden}
+.grid.own .card.has-visual > :not(.card-visual){margin-left:20px;margin-right:20px}
+.grid.own .card-visual figcaption{padding-left:20px;padding-right:20px}
+.cast-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px}.cast-head .sub{margin-bottom:0}
+.cast-works{margin:20px 0 28px}
+.cast-works > h3{margin:0 0 12px;font-size:13px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);font-weight:700}
+.cast-works-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px 18px}
+.cast-works-grid h4{margin:0 0 6px;font-size:16px;letter-spacing:-.01em}
+.cast-works-grid p{margin:0;color:var(--muted);font-size:14.5px;line-height:1.45}
+.cast-works-grid a{color:var(--accent);font-weight:700;text-decoration:none}
+@media (max-width:600px){.cast-works-grid{grid-template-columns:1fr}}
 .cast-head a.more{color:var(--accent);font-weight:700;text-decoration:none;white-space:nowrap;margin-bottom:32px}
 .cast-row{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
 .cast-card{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:var(--panel);aspect-ratio:3/4}
@@ -356,7 +381,7 @@ footer a{display:block;color:var(--muted);text-decoration:none;margin-bottom:6px
 .cast-meta h3{margin:4px 0 2px;font-size:16px}.cast-meta p{margin:0;color:#c9d2df;font-size:12.5px;line-height:1.35}
 .cast-role{display:block;line-height:1.25;font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);font-weight:700}
 @media (max-width:1000px){.cast-row{grid-template-columns:repeat(3,1fr)}}
-@media (max-width:700px){.engine-band{flex-direction:column;align-items:flex-start}.engine-cta{text-align:left}.cast-head{display:block}.cast-head a.more{display:inline-block;margin:0 0 20px}
+@media (max-width:700px){.engine-band{flex-direction:column;align-items:stretch}.engine-cta{text-align:left}.engine-visual{flex:1 1 auto;width:100%}.cast-head{display:block}.cast-head a.more{display:inline-block;margin:0 0 20px}
 .cast-row{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding-bottom:8px}.cast-card{flex:0 0 62%;scroll-snap-align:start}}
 @media (max-width:900px){.grid,.steps,.proof{grid-template-columns:1fr 1fr}.case,.tiers{grid-template-columns:1fr}footer .cols{grid-template-columns:1fr 1fr}nav a:not(.btn){display:none}}
 @media (max-width:900px){.hero-media img{object-position:70% center;filter:brightness(.86) contrast(1.06) saturate(.92)}.hero-fade-x{display:none}.hero-fade-y{background:linear-gradient(to top,var(--bg) 0%,rgba(2,6,23,.80) 52%,rgba(2,6,23,.30) 100%)}.hero{min-height:0;align-items:stretch}}
@@ -364,6 +389,7 @@ footer a{display:block;color:var(--muted);text-decoration:none;margin-bottom:6px
 
 .scene{margin:0 0 18px;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);background:var(--panel)}
 .scene picture{display:block;width:100%}.scene img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:center 40%;background:var(--panel)}
+.scene.workshop img{object-position:center 55%}
 .scene figcaption{margin:0;padding:8px 12px 10px;color:var(--muted);font-size:12.5px;line-height:1.4}
 .case>.scene{grid-column:1/-1;margin:0 0 10px}
 @media (min-width:901px){.scene img{aspect-ratio:2.2/1}}
@@ -464,6 +490,23 @@ footer a{display:block;color:var(--muted);text-decoration:none;margin-bottom:6px
       </div>
       <a class="more" href="https://characterengine.live/">Meet the characters →</a>
     </div>
+    <div class="cast-works">
+      <h3>Where the cast works</h3>
+      <div class="cast-works-grid">
+        <div>
+          <h4>On air</h4>
+          <p>Co-hosts and running bits on Mornings in the Lab.</p>
+        </div>
+        <div>
+          <h4>Selling</h4>
+          <p>Scenes that walk buyers through complex offers in <a href="https://salesdesk.video/">Sales Desk</a>.</p>
+        </div>
+        <div>
+          <h4>Teaching</h4>
+          <p>Story scenes for course lessons, like Briana Bass's More Than Fine relationship course.</p>
+        </div>
+      </div>
+    </div>
     <ul class="cast-row">
       <li class="cast-card">
         <picture><source srcset="/assets/cast/sterling-james.webp" type="image/webp"><img src="/assets/cast/sterling-james.jpg" width="480" height="640" loading="lazy" decoding="async" alt="Sterling James, AI conversation desk anchor on Mornings in the Lab"></picture>
@@ -508,24 +551,46 @@ footer a{display:block;color:var(--muted);text-decoration:none;margin-bottom:6px
         <figcaption>Illustrative scene of the MiTL AI cast — not a photograph of a real event.</figcaption>
       </figure>
       <div class="grid">
-      <article class="card">
+      <article class="card has-visual">
+        <figure class="card-visual">
+          <picture>
+            <source srcset="/assets/cards/production.webp" type="image/webp">
+            <img src="/assets/cards/production.jpg" width="1152" height="864" loading="lazy" decoding="async" alt="Illustrative scene of the MiTL AI cast: Tommy on a studio floor pointing toward camera as a crew films behind him. Not a photograph of a real production.">
+          </picture>
+          <figcaption>Illustrative scene of the MiTL AI cast — not a photograph of a real event.</figcaption>
+        </figure>
         <span class="tag">Done for you</span>
         <h3>Live Show Production</h3>
         <p>Your own show, fully produced every week, without hiring a production team.</p>
         <div class="price">From $3,000/mo</div>
         <a class="more" href="https://production.mitl.studio/">See production →</a>
       </article>
-      <article class="card">
+      <article class="card has-visual">
+        <figure class="card-visual">
+          <picture>
+            <source srcset="/assets/cards/industry-networks.webp" type="image/webp">
+            <img src="/assets/cards/industry-networks.jpg" width="1152" height="864" loading="lazy" decoding="async" alt="Illustrative scene of the MiTL AI cast: Sterling hosting a panel, with guests including a contractor in a high-visibility vest. Not a photograph of a real event.">
+          </picture>
+          <figcaption>Illustrative scene of the MiTL AI cast — not a photograph of a real event.</figcaption>
+        </figure>
         <span class="tag">Flagship</span>
         <h3>Industry Networks</h3>
         <p>Your industry's own live network: shows, guests, an intelligence layer and sponsor seats. Running now in commercial roofing and supply chain.</p>
         <div class="price">Custom scope · see Roofing Authority Network and Let's Talk Supply Chain / SCAC</div>
         <a class="more" href="#case-study">Read the case studies →</a>
       </article>
-      <article class="card">
+      <article class="card has-visual">
+        <figure class="card-visual">
+          <picture>
+            <source srcset="/assets/cards/character-engine.webp" type="image/webp">
+            <img src="/assets/cards/character-engine.jpg" width="1152" height="864" loading="lazy" decoding="async" alt="Illustrative scene of the MiTL AI cast: Frankie in a director's chair surrounded by holographic sketches of himself. Not a photograph of a real event.">
+          </picture>
+          <figcaption>Illustrative scene of the MiTL AI cast — not a photograph of a real event.</figcaption>
+        </figure>
         <span class="tag">AI cast</span>
         <h3>Character Engine</h3>
         <p>AI characters with memory, personality and a voice, built to represent your brand on air.</p>
+        <p class="inuse">In use: on air on Mornings in the Lab, selling in Sales Desk, and teaching in Briana Bass's More Than Fine course.</p>
         <div class="price">From $997 to build · $47/mo to host</div>
         <a class="more" href="https://characterengine.live/">Meet the characters →</a>
       </article>
@@ -542,21 +607,42 @@ footer a{display:block;color:var(--muted);text-decoration:none;margin-bottom:6px
         <figcaption>Illustrative scene of the MiTL AI cast — not a photograph of a real event.</figcaption>
       </figure>
       <div class="grid">
-      <article class="card">
+      <article class="card has-visual">
+        <figure class="card-visual">
+          <picture>
+            <source srcset="/assets/cards/seo-geo.webp" type="image/webp">
+            <img src="/assets/cards/seo-geo.jpg" width="1152" height="864" loading="lazy" decoding="async" alt="Illustrative scene of the MiTL AI cast: Maya at a laptop with a floating search and AI-answer interface. Not a photograph of a real event.">
+          </picture>
+          <figcaption>Illustrative scene of the MiTL AI cast — not a photograph of a real event.</figcaption>
+        </figure>
         <span class="tag">Search + AI answers</span>
         <h3>AI-Powered SEO &amp; GEO</h3>
         <p>Get found on Google and named in AI answers. Our AI agents handle technical SEO, local search, structured data and AI-answer visibility for your sites, on the same system we run for our own brands.</p>
         <div class="price">Talk to us</div>
         <a class="more" href="https://ro.am/keith">Talk to us about SEO →</a>
       </article>
-      <article class="card">
+      <article class="card has-visual">
+        <figure class="card-visual">
+          <picture>
+            <source srcset="/assets/cards/authority-engine.webp" type="image/webp">
+            <img src="/assets/cards/authority-engine.jpg" width="1152" height="864" loading="lazy" decoding="async" alt="Illustrative scene of the MiTL AI cast: Sophia on stage interviewing a guest in front of an audience. Not a photograph of a real event.">
+          </picture>
+          <figcaption>Illustrative scene of the MiTL AI cast — not a photograph of a real event.</figcaption>
+        </figure>
         <span class="tag">Platform</span>
         <h3>Authority Engine</h3>
         <p>A branded authority hub for your industry or community: expert profiles, curated contributions and live market signals, built so search and AI cite your people as the source.</p>
         <div class="price">Custom build · talk to us</div>
         <a class="more" href="https://ro.am/keith">Talk to us about Authority Engine →</a>
       </article>
-      <article class="card">
+      <article class="card has-visual">
+        <figure class="card-visual">
+          <picture>
+            <source srcset="/assets/cards/guest-engine.webp" type="image/webp">
+            <img src="/assets/cards/guest-engine.jpg" width="1152" height="864" loading="lazy" decoding="async" alt="Illustrative scene of the MiTL AI cast: Preston shaking hands with a guest in a green room. Not a photograph of a real event.">
+          </picture>
+          <figcaption>Illustrative scene of the MiTL AI cast — not a photograph of a real event.</figcaption>
+        </figure>
         <span class="tag">Authority</span>
         <h3>Guest Engine</h3>
         <p>Get booked on live shows and produced into a month of content, with an authority page built for Google and AI search.</p>
@@ -577,7 +663,14 @@ footer a{display:block;color:var(--muted);text-decoration:none;margin-bottom:6px
         <figcaption>Illustrative scene of the MiTL AI cast — not a photograph of a real event.</figcaption>
       </figure>
       <div class="grid">
-      <article class="card">
+      <article class="card has-visual">
+        <figure class="card-visual">
+          <picture>
+            <source srcset="/assets/cards/sales-desk.webp" type="image/webp">
+            <img src="/assets/cards/sales-desk.jpg" width="1152" height="864" loading="lazy" decoding="async" alt="Illustrative scene of the MiTL AI cast: a buyer watching Sophia present on a tablet during a video sales experience. Not a photograph of a real event.">
+          </picture>
+          <figcaption>Illustrative scene of the MiTL AI cast — not a photograph of a real event.</figcaption>
+        </figure>
         <span class="tag">Sales video</span>
         <h3>Sales Desk</h3>
         <p>Turn a proposal, product or complex service into a video sales experience, with reporting on what buyers watch.</p>
@@ -589,8 +682,22 @@ footer a{display:block;color:var(--muted);text-decoration:none;margin-bottom:6px
 
     <div class="outcome" id="run-on-ai">
       <div class="outcome-head"><span class="num">04</span><h3>Run your business on AI</h3></div>
+      <figure class="scene workshop">
+        <picture>
+          <source srcset="/assets/cards/run-on-ai.webp" type="image/webp">
+          <img src="/assets/cards/run-on-ai.jpg" width="1152" height="864" loading="lazy" decoding="async" alt="Illustrative scene of the MiTL AI cast: Sterling and Maya leading a hands-on workshop with a business team around laptops. Not a photograph of a real event.">
+        </picture>
+        <figcaption>Illustrative scene of the MiTL AI cast — not a photograph of a real event.</figcaption>
+      </figure>
       <div class="grid">
-      <article class="card">
+      <article class="card has-visual">
+        <figure class="card-visual">
+          <picture>
+            <source srcset="/assets/cards/run-on-ai.webp" type="image/webp">
+            <img src="/assets/cards/run-on-ai.jpg" width="1152" height="864" loading="lazy" decoding="async" alt="Illustrative scene of the MiTL AI cast: Sterling and Maya leading a hands-on workshop with a business team around laptops. Not a photograph of a real event.">
+          </picture>
+          <figcaption>Illustrative scene of the MiTL AI cast — not a photograph of a real event.</figcaption>
+        </figure>
         <span class="tag">AI enablement</span>
         <h3>Run on AI</h3>
         <p>MiTL Studio runs on AI. Every first decision goes through AI before a person signs off. We'll teach you to run your business the same way, hands-on with you and your team.</p>
@@ -603,7 +710,14 @@ footer a{display:block;color:var(--muted);text-decoration:none;margin-bottom:6px
     </div>
 
     <div class="engine-band" id="conversationos">
-      <div>
+      <figure class="engine-visual">
+        <picture>
+          <source srcset="/assets/cards/conversationos.webp" type="image/webp">
+          <img src="/assets/cards/conversationos.jpg" width="1152" height="864" loading="lazy" decoding="async" alt="Illustrative scene of the MiTL AI cast: Frankie and Tommy at a control desk with floating conversation and script bubbles. Not a photograph of a real event.">
+        </picture>
+        <figcaption>Illustrative scene of the MiTL AI cast — not a photograph of a real event.</figcaption>
+      </figure>
+      <div class="engine-copy">
         <span class="tag">The engine behind all of it</span>
         <h3>ConversationOS</h3>
         <p>The AI engine that builds every episode: titles, scripts, thumbnails, guests and distribution.</p>
@@ -628,7 +742,20 @@ footer a{display:block;color:var(--muted);text-decoration:none;margin-bottom:6px
         <p>Live every weekday at 8:00 AM ET. Real conversation, human hosts and an AI cast.</p>
         <a class="more" href="https://mornings.live/">Watch the show →</a>
       </article>
-      <article class="card">
+      <article class="card has-visual" id="age-strong">
+        <figure class="card-visual wide brand-pair">
+          <div class="brand-pair-frames">
+            <picture>
+              <source srcset="/assets/brands/age-strong.webp" type="image/webp">
+              <img src="/assets/brands/age-strong.jpg" width="1672" height="941" loading="lazy" decoding="async" alt="Illustrated scene of Keith Bilous training for Age Strong">
+            </picture>
+            <picture>
+              <source srcset="/assets/brands/age-strong-keith-jon.webp" type="image/webp">
+              <img src="/assets/brands/age-strong-keith-jon.jpg" width="1280" height="720" loading="lazy" decoding="async" alt="Illustrated scene of Jon Andersen spotting Keith Bilous on a squat">
+            </picture>
+          </div>
+          <figcaption>Illustrations from Age Strong.</figcaption>
+        </figure>
         <span class="tag">Lifestyle</span>
         <h3>Age Strong</h3>
         <p>Keith Bilous and Jon Andersen's program for men 50+ who want strength, energy and connection.</p>
