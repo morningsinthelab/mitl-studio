@@ -26,11 +26,5 @@
       "destination": "/",
       "permanent": true
     }
-  ],
-  "rewrites": [
-    {
-      "source": "/api/subscribe",
-      "destination": "https://studio-ten-inky-20.vercel.app/api/subscribe"
-    }
   ]
 }
