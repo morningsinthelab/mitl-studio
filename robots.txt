@@ -40,6 +40,12 @@ Allow: /
 User-Agent: Bytespider
 Allow: /
 
+User-Agent: CCBot
+Allow: /
+
+User-Agent: Perplexity-User
+Allow: /
+
 User-Agent: Googlebot
 Allow: /
 

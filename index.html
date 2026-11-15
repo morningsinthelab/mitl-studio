@@ -20,6 +20,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@keithbilous">
 <meta name="twitter:image" content="https://mitl.studio/og-image.jpg">
+<meta name="twitter:image:alt" content="MiTL Studio: AI characters and real hosts as one crew">
+<meta property="og:image:alt" content="MiTL Studio: AI characters and real hosts as one crew">
+<meta property="og:locale" content="en_US">
 <meta name="twitter:title" content="MiTL Studio | Run by AI. Anchored by people.">
 <meta name="twitter:description" content="Live shows, industry networks and sales video for brands that want to own their audience.">
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -40,7 +43,12 @@
         "MiTL"
       ],
       "url": "https://mitl.studio/",
-      "logo": "https://mitl.studio/og-image.jpg",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://mitl.studio/apple-touch-icon.png",
+        "width": 180,
+        "height": 180
+      },
       "description": "MiTL Studio is an AI studio that builds and runs live shows, industry media networks and video sales experiences. Human hosts stay on camera; AI handles production, guests and distribution.",
       "slogan": "Run by AI. Anchored by people.",
       "email": "keith@mitl.studio",
@@ -223,7 +231,8 @@
         {
           "@id": "https://mitl.studio/#lets-talk-supply-chain-live"
         }
-      ]
+      ],
+      "image": "https://mitl.studio/og-image.jpg"
     },
     {
       "@type": "Person",
@@ -238,8 +247,12 @@
       "sameAs": [
         "https://linkedin.com/in/keithbilous",
         "https://x.com/keithbilous",
-        "https://keithbilous.com"
-      ]
+        "https://keithbilous.com",
+        "https://youtube.com/@morningsinthelab"
+      ],
+      "knows": {
+        "@id": "https://mitl.studio/#jon-andersen"
+      }
     },
     {
       "@type": "WebSite",
@@ -248,7 +261,8 @@
       "name": "MiTL Studio",
       "publisher": {
         "@id": "https://mitl.studio/#organization"
-      }
+      },
+      "inLanguage": "en"
     },
     {
       "@type": "CreativeWorkSeries",
@@ -268,6 +282,89 @@
           "name": "Sarah Barnes-Humphrey"
         }
       }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://mitl.studio/#jon-andersen",
+      "name": "Jon Andersen",
+      "description": "Co-host of Mornings in the Lab with Keith, Jon & Friends and co-founder of Age Strong with Keith Bilous.",
+      "url": "https://agestrong.life/"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://mitl.studio/#webpage",
+      "url": "https://mitl.studio/",
+      "name": "MiTL Studio | AI Studio for Live Shows, Industry Networks & Sales Video",
+      "isPartOf": {
+        "@id": "https://mitl.studio/#website"
+      },
+      "about": {
+        "@id": "https://mitl.studio/#organization"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://mitl.studio/og-image.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://mitl.studio/#faq",
+      "isPartOf": {
+        "@id": "https://mitl.studio/#webpage"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does MiTL Studio actually do?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We build and run media that sells: live shows, industry networks, video sales experiences and the AI tools behind them. Real people stay on camera; AI handles production, guest booking and distribution."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need my own studio or team?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. You show up and talk. We handle production, guests, clips and publishing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the AI fit in?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AI characters appear on air as part of the cast, and our engine prepares episodes, books and preps guests, and turns each show into clips and posts. People make the calls on taste and timing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer SEO and GEO services?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Our AI agents run technical SEO, local search, structured data and AI-answer (GEO) work for client sites and for our own brands. Scope depends on how many sites and markets you have, so pricing is set on a call."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Authority Engine?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Authority Engine is a custom platform we build for an industry or community: a branded hub with expert profiles, curated contributions and live market signals, connected to our live shows and ConversationOS. Each build is scoped with the partner."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I get started?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Book a call with Keith. We'll pick the right starting point, whether that's one show, a Sales Desk or a guest appearance."
+          }
+        }
+      ]
     }
   ]
 }
