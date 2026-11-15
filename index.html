@@ -336,6 +336,33 @@ footer a{display:block;color:var(--muted);text-decoration:none;margin-bottom:6px
 @media (max-width:900px){.grid,.steps,.proof{grid-template-columns:1fr 1fr}.case,.tiers{grid-template-columns:1fr}footer .cols{grid-template-columns:1fr 1fr}nav a:not(.btn){display:none}}
 @media (max-width:900px){.hero-media img{object-position:70% center;filter:brightness(.86) contrast(1.06) saturate(.92)}.hero-fade-x{display:none}.hero-fade-y{background:linear-gradient(to top,var(--bg) 0%,rgba(2,6,23,.80) 52%,rgba(2,6,23,.30) 100%)}.hero{min-height:0;align-items:stretch}}
 @media (max-width:600px){.grid,.steps,.proof{grid-template-columns:1fr}.hero{display:block;min-height:0}.hero-media{position:relative;inset:auto;height:auto;aspect-ratio:16/10}.hero-media img{object-position:58% 35%;filter:brightness(.9) contrast(1.05) saturate(.95)}.hero-fade-x{display:none}.hero-fade-y{background:linear-gradient(to top,#020617 0%,rgba(2,6,23,.35) 22%,rgba(2,6,23,0) 45%)}.hero-content{padding-top:20px;padding-bottom:40px}.hero h1,.hero .lede{text-shadow:none}}
+/* proof names strip */
+.names{padding:18px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#0d1220;overflow:hidden}
+.names-track{display:flex;width:max-content;animation:names-scroll 60s linear infinite}
+.names:hover .names-track,.names:focus-within .names-track{animation-play-state:paused}
+.names-set{display:flex;align-items:center;gap:22px;padding-right:22px;white-space:nowrap;list-style:none;margin:0}
+.names-set li{display:flex;align-items:center;gap:22px;color:#d6dde8;font-weight:700;font-size:15px;letter-spacing:.01em}
+.names-set li.own{color:var(--text);font-weight:800}
+.names-set li.lbl{color:var(--muted);text-transform:uppercase;letter-spacing:.12em;font-size:11.5px;font-weight:700}
+.names-set li.lbl:not(:first-child){margin-left:18px}
+.names-set .dot{color:var(--accent);opacity:.7}
+@keyframes names-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.names{overflow-x:auto}.names-track{animation:none}.names-track .names-set[aria-hidden]{display:none}}
+/* AI visibility check */
+.aic-hero{margin-top:22px;max-width:760px;padding:16px 18px;border:1px solid rgba(90,209,255,.35);border-radius:14px;background:rgba(2,6,23,.55);backdrop-filter:blur(6px)}
+.aic-hero p.aic-kicker{margin:0 0 10px;font-size:14.5px;color:#c9d2df}.aic-hero p.aic-kicker b{color:var(--text)}.aic-hero p.aic-kicker a{color:var(--accent2);text-decoration:none;white-space:nowrap}
+.aic-form{display:flex;gap:10px;flex-wrap:wrap;align-items:stretch}
+.aic-form input[type=text],.aic-form input[type=email]{flex:1 1 200px;min-width:0;background:#0b0f17;border:1px solid var(--line);color:var(--text);border-radius:999px;padding:12px 18px;font:inherit;font-size:15px}
+.aic-form input:focus{outline:2px solid var(--accent2);outline-offset:1px;border-color:transparent}
+.aic-form button{border:0;cursor:pointer;font:inherit;font-size:15px}
+.aic-form .hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}
+.aic-status{flex-basis:100%;margin:2px 0 0;font-size:14px;color:var(--muted);min-height:0}.aic-status:empty{display:none}
+.aic-status.ok{color:#7ee2a8}.aic-status.err{color:#ffb4a8}.aic-status a{color:var(--accent)}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+#ai-check .aic-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:28px}
+#ai-check .aic-box{max-width:760px}
+@media (max-width:900px){#ai-check .aic-grid{grid-template-columns:1fr}}
+@media (max-width:600px){.aic-form button{width:100%}.aic-hero{padding:14px}}
 </style>
 </head>
 <body>
@@ -371,6 +398,19 @@ footer a{display:block;color:var(--muted);text-decoration:none;margin-bottom:6px
     <a class="btn" href="https://ro.am/keith">Book a call with Keith</a>
     <a class="btn ghost" href="#products">See what we build</a>
   </div>
+  <div class="aic-hero">
+    <p class="aic-kicker"><b>Not ready for a call?</b> Start with a free AI visibility check: see how ChatGPT, Perplexity and Google AI Overviews talk about your brand. <a href="#ai-check">What you get →</a></p>
+    <form class="aic-form" action="/api/ai-check" method="post" novalidate>
+      <label class="sr-only" for="aic-brand-hero">Brand or website</label>
+      <input id="aic-brand-hero" type="text" name="brand" placeholder="Brand or website" autocomplete="url" required maxlength="200">
+      <label class="sr-only" for="aic-email-hero">Work email</label>
+      <input id="aic-email-hero" type="email" name="email" placeholder="Work email" autocomplete="email" required maxlength="254">
+      <div class="hp" aria-hidden="true"><label>Leave this empty<input type="text" name="company_url" tabindex="-1" autocomplete="off"></label></div>
+      <input type="hidden" name="source" value="hero">
+      <button class="btn" type="submit">Get my free AI visibility check</button>
+      <p class="aic-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
   <div class="proof">
     <div><b>Live every weekday since August 2023</b>Mornings in the Lab, 8:00 AM ET. The show where we build and test everything we sell.</div>
     <div><b>Roofing Authority Network</b>A live broadcast network for commercial roofing, run on our system.</div>
@@ -378,6 +418,9 @@ footer a{display:block;color:var(--muted);text-decoration:none;margin-bottom:6px
   </div>
 
   </div>
+</section>
+<section class="names" aria-label="Shows we run, RAN guest companies and press">
+  <div class="names-track"><ul class="names-set"><li class="lbl">Shows and networks we run or produce</li><li class="own">Mornings in the Lab</li><li class="own"><span class="dot" aria-hidden="true">·</span>Roofing Authority Network</li><li class="own"><span class="dot" aria-hidden="true">·</span>Let's Talk Supply Chain</li><li class="lbl">RAN guests from</li><li>CBRE</li><li><span class="dot" aria-hidden="true">·</span>Clemson University</li><li><span class="dot" aria-hidden="true">·</span>Optelos</li><li><span class="dot" aria-hidden="true">·</span>SuitX</li><li><span class="dot" aria-hidden="true">·</span>Renovate Robotics</li><li><span class="dot" aria-hidden="true">·</span>VILPE</li><li><span class="dot" aria-hidden="true">·</span>Paradigm Properties</li><li><span class="dot" aria-hidden="true">·</span>KPost</li><li><span class="dot" aria-hidden="true">·</span>Division 7 Roofing</li><li><span class="dot" aria-hidden="true">·</span>Roof Revivers</li><li class="lbl">As featured in</li><li>RoofersCoffeeShop</li><li><span class="dot" aria-hidden="true">·</span>Roofing Contractor</li></ul><ul class="names-set" aria-hidden="true"><li class="lbl">Shows and networks we run or produce</li><li class="own">Mornings in the Lab</li><li class="own"><span class="dot" aria-hidden="true">·</span>Roofing Authority Network</li><li class="own"><span class="dot" aria-hidden="true">·</span>Let's Talk Supply Chain</li><li class="lbl">RAN guests from</li><li>CBRE</li><li><span class="dot" aria-hidden="true">·</span>Clemson University</li><li><span class="dot" aria-hidden="true">·</span>Optelos</li><li><span class="dot" aria-hidden="true">·</span>SuitX</li><li><span class="dot" aria-hidden="true">·</span>Renovate Robotics</li><li><span class="dot" aria-hidden="true">·</span>VILPE</li><li><span class="dot" aria-hidden="true">·</span>Paradigm Properties</li><li><span class="dot" aria-hidden="true">·</span>KPost</li><li><span class="dot" aria-hidden="true">·</span>Division 7 Roofing</li><li><span class="dot" aria-hidden="true">·</span>Roof Revivers</li><li class="lbl">As featured in</li><li>RoofersCoffeeShop</li><li><span class="dot" aria-hidden="true">·</span>Roofing Contractor</li></ul></div>
 </section>
 
 <section id="cast" class="cast">
@@ -584,6 +627,32 @@ footer a{display:block;color:var(--muted);text-decoration:none;margin-bottom:6px
   </div>
 </section>
 
+<section id="ai-check">
+  <div class="wrap">
+    <div class="eyebrow">Free · No call needed</div>
+    <h2>Free AI visibility check</h2>
+    <p class="sub">When buyers ask an AI about your category, does your brand come up? We run your brand through the major AI answer engines (ChatGPT, Perplexity and Google AI Overviews) and send you what they say about you, where you show up, and what's missing.</p>
+    <div class="aic-grid">
+      <div class="card"><span class="tag">01</span><h3>What they say about you</h3><p>How each engine describes your brand today, in its own words, including anything out of date or wrong.</p></div>
+      <div class="card"><span class="tag">02</span><h3>Where you show up</h3><p>The buyer questions where you get mentioned or cited, and who shows up instead when you don't.</p></div>
+      <div class="card"><span class="tag">03</span><h3>What's missing</h3><p>The gaps that keep AI answers from citing you, and the first things we'd fix.</p></div>
+    </div>
+    <div class="aic-box">
+      <form class="aic-form" action="/api/ai-check" method="post" novalidate>
+        <label class="sr-only" for="aic-brand">Brand or website</label>
+        <input id="aic-brand" type="text" name="brand" placeholder="Brand or website" autocomplete="url" required maxlength="200">
+        <label class="sr-only" for="aic-email">Work email</label>
+        <input id="aic-email" type="email" name="email" placeholder="Work email" autocomplete="email" required maxlength="254">
+        <div class="hp" aria-hidden="true"><label>Leave this empty<input type="text" name="company_url" tabindex="-1" autocomplete="off"></label></div>
+        <input type="hidden" name="source" value="section">
+        <button class="btn" type="submit">Get my free AI visibility check</button>
+        <p class="aic-status" role="status" aria-live="polite"></p>
+      </form>
+      <p class="note">Free. We email your results within 2 business days. We only use your email to send the check and follow up on it.</p>
+    </div>
+  </div>
+</section>
+
 <section id="pricing">
   <div class="wrap">
     <h2>Start with one show. Scale when it's proven.</h2>
@@ -676,5 +745,30 @@ footer a{display:block;color:var(--muted);text-decoration:none;margin-bottom:6px
     <p style="margin-top:28px">© 2026 MiTL Studio. Real people on camera. AI behind it.</p>
   </div>
 </footer>
+<script>
+(function(){
+  var MSG_FAIL='Something went wrong. Please try again, or <a href="https://ro.am/keith">book a call with Keith</a>.';
+  document.querySelectorAll('.aic-form').forEach(function(f){
+    var t0=Date.now();
+    f.addEventListener('submit',function(e){
+      e.preventDefault();
+      var st=f.querySelector('.aic-status'),btn=f.querySelector('button');
+      var brand=f.brand.value.trim(),email=f.email.value.trim();
+      st.className='aic-status';
+      if(brand.length<2){st.className+=' err';st.textContent='Add your brand name or website.';f.brand.focus();return;}
+      if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)){st.className+=' err';st.textContent='Add a valid email so we can send your results.';f.email.focus();return;}
+      btn.disabled=true;var label=btn.textContent;btn.textContent='Sending…';
+      fetch('/api/ai-check',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({brand:brand,email:email,company_url:f.company_url.value,source:f.source.value,elapsed_ms:Date.now()-t0})})
+        .then(function(r){return r.json().catch(function(){return {ok:false};})})
+        .then(function(d){
+          if(d&&d.ok){st.className='aic-status ok';st.textContent=d.message||'Thanks. Your AI visibility check is on its way.';f.reset();}
+          else{st.className='aic-status err';st.innerHTML=(d&&d.error)?d.error:MSG_FAIL;}
+        })
+        .catch(function(){st.className='aic-status err';st.innerHTML=MSG_FAIL;})
+        .finally(function(){btn.disabled=false;btn.textContent=label;});
+    });
+  });
+})();
+</script>
 </body>
 </html>
