@@ -17,6 +17,17 @@
   ],
   "redirects": [
     {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "universe.mitl.studio"
+        }
+      ],
+      "destination": "https://mitl.studio/",
+      "permanent": true
+    },
+    {
       "source": "/investors",
       "destination": "/",
       "permanent": true
