@@ -39,6 +39,72 @@
       "permanent": true
     },
     {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "apply.mitl.studio"
+        }
+      ],
+      "destination": "https://mitl.studio/",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "apply.mitl.studio"
+        }
+      ],
+      "destination": "https://mitl.studio/",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "3duniverse.mitl.studio"
+        }
+      ],
+      "destination": "https://mitl.studio/",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "3duniverse.mitl.studio"
+        }
+      ],
+      "destination": "https://mitl.studio/",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "newsroom.mitl.studio"
+        }
+      ],
+      "destination": "https://mitl.studio/",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "newsroom.mitl.studio"
+        }
+      ],
+      "destination": "https://mitl.studio/",
+      "permanent": true
+    },
+    {
       "source": "/investors",
       "destination": "/",
       "permanent": true
